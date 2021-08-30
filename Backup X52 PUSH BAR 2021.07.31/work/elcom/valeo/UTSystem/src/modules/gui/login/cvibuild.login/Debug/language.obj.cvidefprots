@@ -1,8 +1,0 @@
-[LoadPanelWithLanguage]
-Class="Function"
-Prototype="struct _SElException *LoadPanelWithLanguage(int parentPanel, const char *path, int panelResourceId, struct _SLanguageItem *table, int *pPanelHandle);"
-
-[LoadPanelExWithLanguage]
-Class="Function"
-Prototype="struct _SElException *LoadPanelExWithLanguage(int parentPanel, const char *path, int panelResourceId, struct _SLanguageItem *table, int *pPanelHandle);"
-

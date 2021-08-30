@@ -1,7 +1,0 @@
-LIBRARY dbs
-
-EXPORTS
-UnloadElcomModule
-InitializeElcomModule
-LoadElcomModule
-GetModuleAttribute

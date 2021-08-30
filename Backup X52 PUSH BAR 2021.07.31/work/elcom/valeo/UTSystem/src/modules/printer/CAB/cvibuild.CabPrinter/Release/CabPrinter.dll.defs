@@ -1,8 +1,0 @@
-LIBRARY CabPrinter
-
-EXPORTS
-Status
-Reset
-Write
-Disconnect
-Connect

@@ -1,7 +1,0 @@
-LIBRARY tester
-
-EXPORTS
-UnloadElcomModule
-InitializeElcomModule
-LoadElcomModule
-GetModuleAttribute

@@ -1,148 +1,0 @@
-8
-
-dir
-2256
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/gui
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
-
-
-
-2008-11-12T13:02:15.522731Z
-2254
-turcar
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-f28f5bb5-14c0-4e01-8f02-bd043d1da346
-
-kosu
-dir
-
-maintenance
-dir
-
-line_dio
-dir
-
-line_messaging
-dir
-
-line_product
-dir
-
-line_kosu
-dir
-
-info
-dir
-
-sensors
-dir
-
-visionconfig
-dir
-
-quality_editor
-dir
-
-panel
-dir
-
-settings
-dir
-
-rnr
-dir
-
-line_info
-dir
-
-database
-dir
-
-line_vizu
-dir
-
-tester
-dir
-
-canGUI
-dir
-
-statistic
-dir
-
-expertise
-dir
-
-login
-dir
-
-line_dio.new
-dir
-
-report
-dir
-
-messaging
-dir
-
-pause
-dir
-
-line_product.new
-dir
-
-line_kosu.new
-dir
-
-product
-dir
-
-printer
-dir
-
-tester_panel
-dir
-
-line_process
-dir
-
-eldaq
-dir
-
-calibration
-dir
-
-quality
-dir
-
-line_info.new
-dir
-
-line_vizu.new
-dir
-
-line_debug
-dir
-
-line_editor
-dir
-
-switch
-dir
-
-card
-dir
-

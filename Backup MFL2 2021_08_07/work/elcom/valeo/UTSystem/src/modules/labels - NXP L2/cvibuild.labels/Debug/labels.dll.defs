@@ -1,7 +1,0 @@
-LIBRARY labels
-
-EXPORTS
-UnloadElcomModule
-InitializeElcomModule
-LoadElcomModule
-GetModuleAttribute

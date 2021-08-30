@@ -1,76 +1,0 @@
-8
-
-dir
-2256
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/jig
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
-
-
-
-2008-08-07T21:40:39.544077Z
-2163
-turcar
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-f28f5bb5-14c0-4e01-8f02-bd043d1da346
-
-jig_x95_careg
-dir
-
-barCodeReader
-dir
-
-jigToyota445L
-dir
-
-jig_pl3_ihka
-dir
-
-jigFordMCP
-dir
-
-class
-dir
-
-jig_pl3_ihks
-dir
-
-jigSpecific.h
-file
-
-
-
-
-2008-11-12T09:49:07.828125Z
-5ecf62dd24caeb8a9ab88e7a48b7a750
-2007-06-27T13:56:03.507464Z
-685
-turcar
-
-debug
-dir
-
-jigFordMCP2
-dir
-
-jig_e89_ihka
-dir
-
-jigFordATC
-dir
-
-jig_x95_caman
-dir
-

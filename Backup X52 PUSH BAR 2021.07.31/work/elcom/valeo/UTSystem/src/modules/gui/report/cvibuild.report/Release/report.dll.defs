@@ -1,9 +1,0 @@
-LIBRARY report
-
-EXPORTS
-gs_InfoData
-pluginGetAttribute
-pluginGetInfo
-pluginLeave
-pluginRun
-pluginInitialize

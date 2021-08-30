@@ -1,1 +1,0 @@
-msgfmt.exe -o report.mo report.pot

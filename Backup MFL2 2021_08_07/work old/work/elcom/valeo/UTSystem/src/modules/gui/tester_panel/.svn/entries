@@ -1,52 +1,0 @@
-8
-
-dir
-2256
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/gui/tester_panel
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
-
-
-
-2008-11-12T11:45:49.395705Z
-2252
-turcar
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-f28f5bb5-14c0-4e01-8f02-bd043d1da346
-
-b2yy_eatc
-dir
-
-b2yy_mcp
-dir
-
-x95_caman
-dir
-
-E89
-dir
-
-x95_careg
-dir
-
-445l
-dir
-
-pl3_ihka
-dir
-
-pl3_ihks
-dir
-

@@ -1,1 +1,0 @@
--force-include-file "axis.h";"c:\work\elcom\valeo\UTSystem\src\modules\axis\class\axis.h" -force-include-file "Exception.c";"c:\work\elcom\valeo\UTSystem\src\shared\exception\Exception.c" -force-include-file "IaiAxis.c";"c:\work\elcom\valeo\UTSystem\src\modules\axis\IAI\IaiAxis.c" -force-include-file "IaiAxis.h";"c:\work\elcom\valeo\UTSystem\src\modules\axis\IAI\IaiAxis.h" 

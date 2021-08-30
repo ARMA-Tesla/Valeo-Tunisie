@@ -1,1 +1,0 @@
--force-include-file "sws_mfl_utils.c";"c:\work\elcom\valeo\UTSystem\src\modules\test nxp l2 last\sws_mfl\sws_mfl_utils.c" 

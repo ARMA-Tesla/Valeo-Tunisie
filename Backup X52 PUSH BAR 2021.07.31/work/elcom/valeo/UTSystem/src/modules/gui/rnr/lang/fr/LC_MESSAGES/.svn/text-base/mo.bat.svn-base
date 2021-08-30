@@ -1,1 +1,0 @@
-msgfmt.exe -o rnr.mo rnr.pot

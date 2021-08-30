@@ -1,34 +1,0 @@
-8
-
-dir
-2256
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/printer
-svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
-
-
-
-2008-02-11T09:44:03.881689Z
-1720
-pisalak
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-f28f5bb5-14c0-4e01-8f02-bd043d1da346
-
-ArgoxPrinter
-dir
-
-class
-dir
-

@@ -1,9 +1,0 @@
-LIBRARY quality
-
-EXPORTS
-gs_InfoData
-pluginGetAttribute
-pluginGetInfo
-pluginLeave
-pluginRun
-pluginInitialize
