@@ -1,0 +1,198 @@
+[Inhibit_Cylinder_Lock_Up]
+Class="Var"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[test_new]
+Class="Function"
+Prototype="struct _SElException *test_new(struct _STest **pTest);"
+
+[test_delete]
+Class="Function"
+Prototype="struct _SElException *test_delete(struct _STest **pTest);"
+
+[QueryParameterReal64]
+Class="Function"
+Prototype="struct _SElException *QueryParameterReal64(struct _STestParam *ppar, int step, const char *name, double *pValue);"
+
+[QueryParameterUInt32]
+Class="Function"
+Prototype="struct _SElException *QueryParameterUInt32(struct _STestParam *ppar, int step, const char *name, unsigned int *pValue);"
+
+[QueryParameterInt32]
+Class="Function"
+Prototype="struct _SElException *QueryParameterInt32(struct _STestParam *ppar, int step, const char *name, int *pValue);"
+
+[QueryParameterString]
+Class="Function"
+Prototype="struct _SElException *QueryParameterString(struct _STestParam *ppar, int step, const char *name, char buffer[], int bufferSize);"
+
+[SetParameterString]
+Class="Function"
+Prototype="struct _SElException *SetParameterString(struct _STestParam *ppar, int step, const char *name, const char *buffer);"
+
+[SetParameterInt32]
+Class="Function"
+Prototype="struct _SElException *SetParameterInt32(struct _STestParam *ppar, int step, const char *name, int pValue);"
+
+[SetParameterUInt32]
+Class="Function"
+Prototype="struct _SElException *SetParameterUInt32(struct _STestParam *ppar, int step, const char *name, unsigned int pValue);"
+
+[SetParameterReal64]
+Class="Function"
+Prototype="struct _SElException *SetParameterReal64(struct _STestParam *ppar, int step, const char *name, double pValue);"
+
+[CreateNewLimit]
+Class="Function"
+Prototype="struct _SElException *CreateNewLimit(struct _STestParam *ppar, int step, int index, char *limit_str, const char *description);"
+
+[CreateNewLimitEx]
+Class="Function"
+Prototype="struct _SElException *CreateNewLimitEx(struct _STestParam *ppar, int step, int index, char *min, char *max, const char *description);"
+
+[GetLimitConfiguration]
+Class="Function"
+Prototype="struct _SElException *GetLimitConfiguration(struct _STestParam *ppar, int step, int index, char buffer[], int bufferSize);"
+
+[LimitExist]
+Class="Function"
+Prototype="int LimitExist(struct _STestParam *ppar, int step, int index);"
+
+[CheckLimitSTRING]
+Class="Function"
+Prototype="struct _SElException *CheckLimitSTRING(struct _STestParam *ppar, int step, int index, char *value);"
+
+[CheckLimitINT32]
+Class="Function"
+Prototype="struct _SElException *CheckLimitINT32(struct _STestParam *ppar, int step, int index, int value);"
+
+[CheckLimitUINT32]
+Class="Function"
+Prototype="struct _SElException *CheckLimitUINT32(struct _STestParam *ppar, int step, int index, unsigned int value);"
+
+[CheckLimitREAL64]
+Class="Function"
+Prototype="struct _SElException *CheckLimitREAL64(struct _STestParam *ppar, int step, int index, double value);"
+
+[GetTestDescription]
+Class="Function"
+Prototype="struct _SElException *GetTestDescription(struct _STestParam *ppar, int step, char *desc, unsigned int descSize);"
+
+[GetSubTest]
+Class="Function"
+Prototype="struct _SElException *GetSubTest(struct _STestParam *ppar, int step, char *subtest);"
+
+[GetTestResult]
+Class="Function"
+Prototype="struct _SElException *GetTestResult(struct _STestParam *ppar, int *result);"
+
+[SetTestResult]
+Class="Function"
+Prototype="struct _SElException *SetTestResult(struct _STestParam *ppar, int step, int index, struct _SElException *pexception);"
+
+[SetTestSequenceResult]
+Class="Function"
+Prototype="struct _SElException *SetTestSequenceResult(struct _STestParam *ppar, int mode, struct _SElException *pexception);"
+
+[SetTestSequenceDuration]
+Class="Function"
+Prototype="struct _SElException *SetTestSequenceDuration(struct _STestParam *ppar, int mode, double duration);"
+
+[SetTestUsed]
+Class="Function"
+Prototype="struct _SElException *SetTestUsed(struct _STestParam *ppar, int step);"
+
+[SetTestDuration]
+Class="Function"
+Prototype="struct _SElException *SetTestDuration(struct _STestParam *ppar, int step, double duration);"
+
+[SetSubTestDuration]
+Class="Function"
+Prototype="struct _SElException *SetSubTestDuration(struct _STestParam *ppar, int step, int index, double duration);"
+
+[SetTestSequenceTime]
+Class="Function"
+Prototype="struct _SElException *SetTestSequenceTime(struct _STestParam *ppar, double duration);"
+
+[GetTestSequenceBarcode]
+Class="Function"
+Prototype="struct _SElException *GetTestSequenceBarcode(struct _STestParam *ppar, char *barcode, unsigned int barcode_size);"
+
+[SetTestValue]
+Class="Function"
+Prototype="struct _SElException *SetTestValue(struct _STestParam *ppar, int step, const char *name, const char *value);"
+
+[SetTestSequenceValue]
+Class="Function"
+Prototype="struct _SElException *SetTestSequenceValue(struct _STestParam *ppar, int mode, const char *name, const char *value);"
+
+[CameraSetJob]
+Class="Function"
+Prototype="struct _SElException *CameraSetJob(struct _STestParam *ppar, struct _Cameras *pcameras, int index);"
+
+[CameraConnect]
+Class="Function"
+Prototype="struct _SElException *CameraConnect(struct _Cameras *pcameras, int index);"
+
+[CameraSetParam]
+Class="Function"
+Prototype="struct _SElException *CameraSetParam(struct _Cameras *pcameras, int step, int timeout);"
+
+[CameraGetdata]
+Class="Function"
+Prototype="struct _SElException *CameraGetdata(struct _Cameras *pcameras, int step, int timeout, char *data);"
+
+[CameraGetdataX52_7]
+Class="Function"
+Prototype="struct _SElException *CameraGetdataX52_7(struct _Cameras *pcameras, int step, int timeout, char *data);"
+
+[CameraGetdataX52_9]
+Class="Function"
+Prototype="struct _SElException *CameraGetdataX52_9(struct _Cameras *pcameras, int step, int timeout, char *data);"
+
+[CameraGetdataVS11]
+Class="Function"
+Prototype="struct _SElException *CameraGetdataVS11(struct _Cameras *pcameras, int step, int timeout, char *data);"
+
+[GetResultREAL64formXMLString]
+Class="Function"
+Prototype="struct _SElException *GetResultREAL64formXMLString(struct _SELString *result, const char *path, double *value);"
+
+[GetResultSTRINGformXMLString]
+Class="Function"
+Prototype="struct _SElException *GetResultSTRINGformXMLString(struct _SELString *result, const char *path, char *buffer);"
+
+[CameraCheckJob_X52]
+Class="Function"
+Prototype="struct _SElException *CameraCheckJob_X52(struct _Cameras *pcameras);"
+
+[CameraSetNubrBouton]
+Class="Function"
+Prototype="struct _SElException *CameraSetNubrBouton(struct _Cameras *pcameras, int type, int timeout);"
+
+[LoadJobCamera2]
+Class="Function"
+Prototype="struct _SElException *LoadJobCamera2(struct _Cameras *pcameras, char *job);"
+

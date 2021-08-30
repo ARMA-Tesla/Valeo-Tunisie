@@ -1,0 +1,360 @@
+[Workspace Header]
+Version = 1900
+Pathname Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Pathname Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2019"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2019"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "automat.prj"
+Project 0001 Folder language Collapsed = True
+Project 0001 FolderId 8 Collapsed = True
+Drag Bar Left = 299
+Window Top = 163
+Window Left = 216
+Window Bottom = 664
+Window Right = 1006
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 1
+Window Confinement Region Enabled = True
+MainColumnWidth = 282
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1900
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/eldaq/class/eldaq.fp"
+File Type = "Function Panel"
+Disk Date = 3579821144
+In Projects = "1,"
+
+[File 0002]
+Path = "/c/Program Files (x86)/National Instruments/CVI2019/toolslib/toolbox/msxmldom.fp"
+File Type = "Function Panel"
+Disk Date = 3635234214
+In Projects = "1,"
+
+[File 0003]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat.c"
+File Type = "CSource"
+Disk Date = 3710584841
+In Projects = "1,"
+Source Window State = "1,1755,1755,1755,46,46,46,0,0,0,0,0,0,0,0,0,1726,0,1755,46,401,630,1,0,"
+Line Tags = "2642,2655,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 1
+
+[File 0004]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat_fnc.c"
+File Type = "CSource"
+Disk Date = 3707805778
+In Projects = "1,"
+Source Window State = "1,196,196,196,9,9,9,0,0,0,0,0,0,0,0,0,164,0,196,9,401,511,1,0,"
+Line Tags = "364,1680,"
+Window Top = 95
+Window Left = -244
+
+[File 0005]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/MES_FTP.h"
+File Type = "Include"
+Disk Date = 3683742162
+In Projects = "1,"
+Source Window State = "1,34,34,34,4,12,4,0,3,0,0,0,0,0,0,0,2,0,34,12,400,600,1,0,"
+Window Top = 31
+
+[File 0006]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat_fnc.h"
+File Type = "Include"
+Disk Date = 3676704530
+In Projects = "1,"
+Source Window State = "1,124,124,124,24,33,24,0,3,0,0,97,0,186,0,0,92,0,124,33,349,715,1,18,"
+Window Top = 38
+Window Left = -278
+
+[File 0007]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat.uir"
+File Type = "User Interface Resource"
+Disk Date = 3570134782
+In Projects = "1,"
+Window Top = 71
+Window Left = 30
+Window Height = 336
+Window Width = 715
+
+[File 0008]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/language/language.c"
+File Type = "CSource"
+Disk Date = 3464160586
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0009]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/local.h"
+File Type = "Include"
+Disk Date = 3666589934
+In Projects = "1,"
+Source Window State = "1,6,6,6,0,12,12,0,0,0,0,0,0,0,0,0,0,0,7,13,297,715,1,0,"
+Window Top = 30
+
+[File 0010]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat.h"
+File Type = "Include"
+Disk Date = 3570134782
+In Projects = "1,"
+Source Window State = "1,0,39,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,25,61,349,715,0,0,"
+Window Top = 30
+Window Left = 8
+
+[File 0011]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat_plugin.h"
+File Type = "Include"
+Disk Date = 3570369592
+In Projects = "1,"
+Source Window State = "1,14,14,14,21,26,26,0,3,0,0,0,0,0,0,0,0,0,14,21,349,715,0,0,"
+Window Top = 30
+Window Left = 8
+
+[File 0012]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+File Type = "CSource"
+Disk Date = 3309320854
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0013]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+File Type = "CSource"
+Disk Date = 3309320856
+In Projects = "1,"
+Source Window State = "1,176,176,176,6,6,6,0,0,0,0,0,0,0,0,0,155,0,176,6,400,600,1,0,"
+Window Top = 31
+
+[File 0014]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/exception/Exception.h"
+File Type = "Include"
+Disk Date = 3710326110
+In Projects = "1,"
+Source Window State = "1,4,4,4,5,5,5,0,0,0,0,0,0,0,0,0,1,0,4,5,281,630,1,0,"
+Window Top = 33
+Window Left = 10
+
+[File 0015]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/test/testseq.c"
+File Type = "CSource"
+Disk Date = 3701344352
+In Projects = "1,"
+Source Window State = "1,619,619,619,32,32,32,0,0,0,0,0,0,0,0,0,601,0,619,32,400,600,1,0,"
+Window Top = 31
+
+[File 0016]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/test/testseq.h"
+File Type = "Include"
+Disk Date = 3694342361
+In Projects = "1,"
+Source Window State = "1,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,401,735,1,0,"
+Window Top = 64
+Window Left = 26
+
+[File 0017]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/string/elstring.c"
+File Type = "CSource"
+Disk Date = 3309320852
+In Projects = "1,"
+Source Window State = "1,843,843,843,27,27,27,0,0,0,0,0,0,0,0,0,825,0,843,27,400,600,0,0,"
+
+[File 0018]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/test/eltest.c"
+File Type = "CSource"
+Disk Date = 3703244044
+In Projects = "1,"
+Source Window State = "1,80,80,80,20,20,20,0,0,0,0,0,0,0,0,0,80,0,80,20,400,600,0,0,"
+
+[File 0019]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/test/eltest.h"
+File Type = "Include"
+Disk Date = 3706174602
+In Projects = "1,"
+Source Window State = "1,43,43,43,7,7,7,0,0,0,0,0,0,0,0,0,43,0,43,7,401,630,1,0,"
+Window Top = 64
+Window Left = 26
+
+[File 0020]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+File Type = "CSource"
+Disk Date = 3309320858
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0021]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/shared/multithread/multithread.h"
+File Type = "Include"
+Disk Date = 3309320858
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0022]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/export.c"
+File Type = "CSource"
+Disk Date = 3706524583
+In Projects = "1,"
+Source Window State = "1,30,30,30,46,46,46,0,0,0,0,0,0,0,0,0,10,0,30,46,401,602,1,0,"
+Window Top = 33
+Window Left = 10
+
+[File 0023]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/export.h"
+File Type = "Include"
+Disk Date = 3666588270
+In Projects = "1,"
+Source Window State = "1,2,2,2,0,37,37,0,0,0,0,0,0,0,0,0,0,0,3,30,284,715,1,23,"
+Window Top = 40
+Window Left = -275
+
+[File 0024]
+Path Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Path Line0002 = "elcom/valeo/UTSystem/src/modules/automat/MES_FTP.lib"
+File Type = "Library"
+Disk Date = 3695020894
+In Projects = "1,"
+
+[Tab Order]
+Tab 0001 Line0001 = "/f/ARMA, WAEL/PROJETS VALEO X52/Backup Soft/Backup X52 PUSH BAR 2021.07.31/work/"
+Tab 0001 Line0002 = "elcom/valeo/UTSystem/src/modules/automat/automat.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = False
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Extended"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = "/c/FlexiTester.OK/application.exe"
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

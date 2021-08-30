@@ -1,0 +1,340 @@
+[Workspace Header]
+Version = 1900
+Pathname = "/c/work/elcom/valeo/UTSystem/src/app/application.cws"
+CVI Dir = "/c/programdata/ivi foundation/ivi/cvi2019"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2019"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "application.prj"
+Drag Bar Left = 195
+Window Top = 94
+Window Left = 179
+Window Bottom = 558
+Window Right = 953
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 5
+Window Confinement Region Enabled = True
+MainColumnWidth = 178
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1900
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 0
+Batch Build Release = False
+Batch Build Debug = True
+
+[File 0001]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/bklib/bklib2.fp"
+File Type = "Function Panel"
+Disk Date = 3309324454
+In Projects = "1,"
+
+[File 0002]
+Path = "/c/programdata/ivi foundation/ivi/cvi2019/toolslib/toolbox/msxmldom.fp"
+File Type = "Function Panel"
+Disk Date = 3635237814
+In Projects = "1,"
+
+[File 0003]
+Path = "/c/Users/MFL/Desktop/OFF.c"
+File Type = "CSource"
+Disk Date = 3708316053
+In Projects = ""
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,400,600,1,0,"
+Window Top = 30
+Window Z-Order = 4
+
+[File 0004]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/modules/elmodule.c"
+File Type = "CSource"
+Disk Date = 3467974792
+In Projects = "1,"
+Source Window State = "1,642,642,642,39,39,39,0,0,0,0,0,0,0,0,0,614,0,642,39,349,715,1,0,"
+Breakpoint 0001 = "403,0,enabled,"
+Window Top = 30
+Window Z-Order = 1
+
+[File 0005]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginargs.c"
+File Type = "CSource"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,100,100,100,14,21,21,0,0,0,0,0,0,0,0,0,84,0,115,33,349,676,1,0,"
+Breakpoint 0001 = "181,0,enabled,"
+Window Top = 32
+Window Left = 6
+
+[File 0006]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/motor/class/motor_module.c"
+File Type = "CSource"
+Disk Date = 3580375260
+In Projects = ""
+Source Window State = "1,85,85,85,4,19,19,0,0,0,0,0,0,0,0,0,71,0,83,0,349,715,1,0,"
+Breakpoint 0001 = "84,0,enabled,"
+Window Top = 32
+Window Left = 10
+
+[File 0007]
+Path = "/c/work/elcom/valeo/UTSystem/src/app/application.c"
+File Type = "CSource"
+Disk Date = 3564677548
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,371,630,1,0,"
+Window Top = 32
+Window Left = 10
+Window Z-Order = 5
+
+[File 0008]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+File Type = "CSource"
+Disk Date = 3309324452
+In Projects = "1,"
+Source Window State = "1,480,480,480,44,44,44,0,0,0,0,0,0,0,0,0,460,0,480,44,400,676,1,0,"
+Window Top = 299
+Window Left = 230
+Window Z-Order = 2
+
+[File 0009]
+Path = "/c/work/elcom/valeo/UTSystem/src/app/application.uir"
+File Type = "User Interface Resource"
+Disk Date = 3631259020
+In Projects = "1,"
+Window Top = 30
+Window Left = 8
+Window Height = 962
+Window Width = 1280
+Window Released = True
+
+[File 0010]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_plugin.h"
+File Type = "Include"
+Disk Date = 3564559240
+In Projects = "1,"
+Source Window State = "1,30,30,30,12,33,33,0,0,0,0,0,0,0,0,0,100,0,4,11,349,676,1,0,"
+
+[File 0011]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginargs.h"
+File Type = "Include"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,64,64,64,16,30,30,0,0,0,0,0,0,0,0,0,30,0,45,12,349,676,1,0,"
+
+[File 0012]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_plugininfo.c"
+File Type = "CSource"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,248,248,248,4,14,4,0,0,0,0,1,0,1,0,0,19,0,43,0,349,676,1,0,"
+Window Top = 272
+Window Left = 134
+
+[File 0013]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_plugininfo.h"
+File Type = "Include"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,36,36,36,22,33,33,0,3,0,0,0,0,0,0,0,88,0,36,22,349,676,1,0,"
+
+[File 0014]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginserver.h"
+File Type = "Include"
+Disk Date = 3564559240
+In Projects = "1,"
+Source Window State = "1,95,98,98,0,78,78,0,0,0,0,0,0,0,0,0,78,0,98,48,349,676,1,0,"
+
+[File 0015]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginserver_win32.c"
+File Type = "CSource"
+Disk Date = 3564577172
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,349,715,0,0,"
+
+[File 0016]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+File Type = "CSource"
+Disk Date = 3309324454
+In Projects = "1,"
+Source Window State = "1,20,20,20,18,33,33,0,0,0,0,0,0,0,0,0,46,0,66,23,284,676,1,0,"
+Window Top = 92
+Window Left = 38
+
+[File 0017]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.h"
+File Type = "Include"
+Disk Date = 3309324454
+In Projects = "1,"
+Source Window State = "1,12,12,12,18,30,30,0,3,0,0,0,0,0,0,0,0,0,12,18,284,676,1,0,"
+
+[File 0018]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/modules/elmodule.h"
+File Type = "Include"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,40,40,40,16,25,25,0,3,0,0,0,0,0,0,0,3,0,40,16,349,676,1,0,"
+
+[File 0019]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/EventFactory.c"
+File Type = "CSource"
+Disk Date = 3581605896
+In Projects = "1,"
+Source Window State = "1,285,285,285,33,33,33,0,0,0,0,0,0,0,0,0,271,0,285,33,349,715,1,0,"
+Window Top = 122
+Window Left = 58
+Window Z-Order = 3
+
+[File 0020]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/EventFactory.h"
+File Type = "Include"
+Disk Date = 3309324454
+In Projects = "1,"
+Source Window State = "1,57,57,57,35,56,35,0,3,0,0,0,0,0,0,0,36,0,57,56,349,676,1,0,"
+
+[File 0021]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+File Type = "CSource"
+Disk Date = 3309324456
+In Projects = "1,"
+Source Window State = "1,173,173,173,33,59,59,0,0,0,0,1,0,1,0,0,177,0,195,92,349,676,1,0,"
+Window Top = 32
+Window Left = 6
+
+[File 0022]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.h"
+File Type = "Include"
+Disk Date = 3573738894
+In Projects = "1,"
+Source Window State = "1,118,118,118,8,19,19,0,0,0,0,0,0,0,0,0,96,0,120,50,349,676,1,0,"
+
+[File 0023]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/objlist/objlist.c"
+File Type = "CSource"
+Disk Date = 3309324448
+In Projects = "1,"
+Source Window State = "1,19,19,19,13,16,16,0,0,0,0,0,0,0,0,0,229,0,205,70,193,676,1,0,"
+Window Top = 32
+Window Left = 6
+
+[File 0024]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/objlist/objlist.h"
+File Type = "Include"
+Disk Date = 3309324448
+In Projects = "1,"
+Source Window State = "1,14,14,14,18,34,34,0,0,0,0,0,0,0,0,0,0,0,5,20,349,676,1,0,"
+
+[Tab Order]
+Tab 0001 = "/c/work/elcom/valeo/UTSystem/src/app/application.c"
+Tab 0002 = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+Tab 0003 = "/c/work/elcom/valeo/UTSystem/src/shared/modules/elmodule.c"
+Tab 0004 = "/c/Users/MFL/Desktop/OFF.c"
+Tab 0005 = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/EventFactory.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = True
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = True
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

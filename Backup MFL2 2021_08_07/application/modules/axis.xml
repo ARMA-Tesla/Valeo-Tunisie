@@ -1,0 +1,63 @@
+<Axiss>
+	<Axis name="axis station 30 right">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="Serial" specificDll="modules/IaiAxis.dll">
+			<port>1</port>
+			<BaudRate>115200</BaudRate>
+			<DataBits>8</DataBits>
+			<StopBits>1</StopBits>
+			<Parity>none</Parity>	<!-- none, odd, even, mark, space -->
+			<Handshake>none</Handshake>
+		</Configuration>
+	</Axis>
+	<Axis name="axis station 30 left">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="Serial" specificDll="modules/IaiAxis.dll">
+			<port>2</port>
+			<BaudRate>115200</BaudRate>
+			<DataBits>8</DataBits>
+			<StopBits>1</StopBits>
+			<Parity>none</Parity>	<!-- none, odd, even, mark, space -->
+			<Handshake>none</Handshake>
+		</Configuration>
+	</Axis>
+	<Axis name="axis station 40 right">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="Serial" specificDll="modules/IaiAxis.dll">
+			<port>3</port>
+			<BaudRate>115200</BaudRate>
+			<DataBits>8</DataBits>
+			<StopBits>1</StopBits>
+			<Parity>none</Parity>	<!-- none, odd, even, mark, space -->
+			<Handshake>none</Handshake>
+		</Configuration>
+	</Axis>
+	<Axis name="axis station 40 left">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="Serial" specificDll="modules/IaiAxis.dll">
+			<port>4</port>
+			<BaudRate>115200</BaudRate>
+			<DataBits>8</DataBits>
+			<StopBits>1</StopBits>
+			<Parity>none</Parity>	<!-- none, odd, even, mark, space -->
+			<Handshake>none</Handshake>
+		</Configuration>
+	</Axis>
+	<Axis name="axis station 60 right">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="CAN" specificDll="modules/SmacAxis.dll">
+			<interface>CAN5</interface>
+			<ID_SMAC>1</ID_SMAC>
+			<ID_NODE>1</ID_NODE>
+		</Configuration>
+	</Axis>
+	<Axis name="axis station 60 left">
+		<MaxAxis>3</MaxAxis>
+		<Configuration type="CAN" specificDll="modules/SmacAxis.dll">
+			<interface>CAN4</interface>
+			<ID_SMAC>0</ID_SMAC>
+			<ID_NODE>32</ID_NODE>
+		</Configuration>
+	</Axis>
+	
+</Axiss>

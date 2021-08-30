@@ -1,0 +1,9 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\module.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\printers.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\printers.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\class\cvibuild.printers\Debug\printers_labels_module.obj.cvidefprots
+-dllName printers.dll
+-addNITypeInfo 

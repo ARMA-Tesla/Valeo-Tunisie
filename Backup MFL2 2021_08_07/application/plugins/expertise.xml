@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<configuration>
+    <plugins>
+        <plugin id="{0B89335B-D063-4678-AD25-3BB3123D2C2F}">
+          <name>Expetise Plugin</name>
+			<repeat>30</repeat>
+        </plugin>
+    </plugins>
+</configuration>

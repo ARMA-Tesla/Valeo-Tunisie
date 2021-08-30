@@ -1,0 +1,45 @@
+[_AlarmReset]
+callConv = 102
+name = AlarmReset
+paramSize = 8
+
+[_CurrentAnalog]
+callConv = 102
+name = CurrentAnalog
+paramSize = 28
+
+[_CurrentPosition]
+callConv = 102
+name = CurrentPosition
+paramSize = 12
+
+[_EnableAxis]
+callConv = 102
+name = EnableAxis
+paramSize = 8
+
+[_HomeReturn]
+callConv = 102
+name = HomeReturn
+paramSize = 8
+
+[_Initialize]
+callConv = 102
+name = Initialize
+paramSize = 8
+
+[_PresentAlarm]
+callConv = 102
+name = PresentAlarm
+paramSize = 12
+
+[_SetPosition]
+callConv = 102
+name = SetPosition
+paramSize = 24
+
+[_StopAxis]
+callConv = 102
+name = StopAxis
+paramSize = 8
+

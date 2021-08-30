@@ -1,0 +1,52 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/shared/exception
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2008-06-17T08:33:53.946928Z
+2078
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+Exception.c
+file
+
+
+
+
+2008-11-12T09:47:35.609375Z
+d10f8af1fd8faa26aaeb5bcaf611c6fe
+2008-04-17T12:11:56.698962Z
+1962
+turcar
+
+Exception.h
+file
+
+
+
+
+2008-11-12T09:47:35.609375Z
+d6e60cc8efd3386effa6630395530bc7
+2008-06-17T08:33:53.946928Z
+2078
+turcar
+

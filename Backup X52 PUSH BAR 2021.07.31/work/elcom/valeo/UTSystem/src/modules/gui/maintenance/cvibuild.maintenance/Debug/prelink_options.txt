@@ -1,0 +1,7 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance_plugin.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.obj.cvidefprots
+-dllName maintenance.dll

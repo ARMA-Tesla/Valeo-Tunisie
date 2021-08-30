@@ -1,0 +1,20 @@
+[tester_new]
+Class="Function"
+Prototype="struct _SElException *tester_new(struct _STester **pTester);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\tester\tester.c:220:2"
+
+[tester_delete]
+Class="Function"
+Prototype="struct _SElException *tester_delete(struct _STester **pTester);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\tester\tester.c:294:1"
+
+[JigThread]
+Class="Function"
+Prototype="struct _SElException *JigThread(struct _STester *me);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\tester\tester.c:1531:1"
+
+[TableThread]
+Class="Function"
+Prototype="struct _SElException *TableThread(struct _STester *me);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\tester\tester.c:1957:1"
+

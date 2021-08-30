@@ -1,0 +1,18 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\cmfb_piano.h.hdefs
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\cmfb_piano_utils.h.hdefs
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\test_panel.h.hdefs
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\test_plugin.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\test_cmfb_piano.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\cmfb_piano.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\cmfb_piano_utils.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\elstring.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\eltest.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\multithread.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\test_helper_functions.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\test_panel.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\test\cmfb_piano\cvibuild.test_cmfb_piano\Debug\testseq.obj.cvidefprots
+-dllName test_cmfb_piano.dll
+-addNITypeInfo 

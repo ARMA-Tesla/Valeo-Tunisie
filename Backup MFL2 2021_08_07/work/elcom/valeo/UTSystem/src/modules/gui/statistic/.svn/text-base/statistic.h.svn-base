@@ -1,0 +1,40 @@
+/**************************************************************************/
+/* LabWindows/CVI User Interface Resource (UIR) Include File              */
+/* Copyright (c) National Instruments 2007. All Rights Reserved.          */
+/*                                                                        */
+/* WARNING: Do not add to, delete from, or otherwise modify the contents  */
+/*          of this include file.                                         */
+/**************************************************************************/
+
+#include <userint.h>
+
+#ifdef __cplusplus
+    extern "C" {
+#endif
+
+     /* Panels and Controls: */
+
+#define  STAT                            1
+#define  STAT_CAL_DISPLAY                2       /* callback function: OnCalDisplay */
+#define  STAT_MONTH_PREV                 3       /* callback function: OnMonthChange */
+#define  STAT_MONTH_NEXT                 4       /* callback function: OnMonthChange */
+#define  STAT_DECORATION                 5
+#define  STAT_MONTH_DISPLAY              6
+#define  STAT_GRAPH                      7
+#define  STAT_BKTREE                     8
+
+
+     /* Menu Bars, Menus, and Menu Items: */
+
+          /* (no menu bars in the resource file) */
+
+
+     /* Callback Prototypes: */ 
+
+int  CVICALLBACK OnCalDisplay(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK OnMonthChange(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+
+
+#ifdef __cplusplus
+    }
+#endif

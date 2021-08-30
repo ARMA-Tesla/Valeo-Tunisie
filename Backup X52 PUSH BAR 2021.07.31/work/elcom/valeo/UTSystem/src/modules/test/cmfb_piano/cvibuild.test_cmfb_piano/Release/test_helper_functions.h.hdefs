@@ -1,0 +1,87 @@
+[uiPosWaveGes]
+Class="Var"
+
+
+
+
+
+[getMinDoubleArray]
+Class="Function"
+Prototype="double getMinDoubleArray(double *Array);"
+
+[getMaxDoubleArray]
+Class="Function"
+Prototype="double getMaxDoubleArray(double *Array);"
+
+[SaveGraphPNG]
+Class="Function"
+Prototype="void SaveGraphPNG(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+
+[MathFunction]
+Class="Function"
+Prototype="void MathFunction(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+
+[getMinDoubleArray2]
+Class="Function"
+Prototype="double getMinDoubleArray2(double *Array);"
+
+[getMaxDoubleArray2]
+Class="Function"
+Prototype="double getMaxDoubleArray2(double *Array);"
+
+[SaveGraphPNG2]
+Class="Function"
+Prototype="void SaveGraphPNG2(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+
+[MathFunction2]
+Class="Function"
+Prototype="void MathFunction2(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+
+[Camera_RegisterTCPServer]
+Class="Function"
+Prototype="struct _SElException *Camera_RegisterTCPServer(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_login]
+Class="Function"
+Prototype="struct _SElException *Camera_login(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_disconnect]
+Class="Function"
+Prototype="struct _SElException *Camera_disconnect(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_Trigger]
+Class="Function"
+Prototype="struct _SElException *Camera_Trigger(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_Read]
+Class="Function"
+Prototype="struct _SElException *Camera_Read(struct _SObjList *pModules, int IndexCamera, char data[8]);"
+
+[Camera_Online]
+Class="Function"
+Prototype="struct _SElException *Camera_Online(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_Offline]
+Class="Function"
+Prototype="struct _SElException *Camera_Offline(struct _SObjList *pModules, int IndexCamera);"
+
+[Camera_Set_Job]
+Class="Function"
+Prototype="struct _SElException *Camera_Set_Job(struct _SObjList *pModules, int IndexCamera, char *Job);"
+
+[Camera_Set_Step]
+Class="Function"
+Prototype="struct _SElException *Camera_Set_Step(struct _SObjList *pModules, int IndexCamera, int Step);"
+
+[PowerSetPower]
+Class="Function"
+Prototype="struct _SElException *PowerSetPower(struct _SObjList *pModules, const char *xml_file, const char *channel, double voltage, double current);"
+
+[MeasGapStation50]
+Class="Function"
+Prototype="struct _SElException *MeasGapStation50(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+
+[MeasGapStation60]
+Class="Function"
+Prototype="struct _SElException *MeasGapStation60(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+

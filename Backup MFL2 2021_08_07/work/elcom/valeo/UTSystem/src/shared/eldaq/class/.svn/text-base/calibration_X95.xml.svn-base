@@ -1,0 +1,450 @@
+<scales>
+	<channel name="ai0">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74050</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai1">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75290</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai2">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74580</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai3">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.76060</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai4">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74330</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai5">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74610</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai6">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74640</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai7">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74890</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai8">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75110</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai9">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.76080</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai10">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74940</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai11">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75970</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai12">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.76770</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai13">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.73040</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai14">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75210</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai15">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75190</value>
+					<real>13.49900</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai16">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75710</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai17">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75090</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai18">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75850</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai19">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.73540</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai20">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.76420</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai21">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74890</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai22">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74450</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai23">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74520</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai24">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74650</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai25">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75780</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai26">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75260</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai27">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74460</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai28">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.74580</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai29">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.76450</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai30">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75130</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+	<channel name="ai31">
+		<scale name="voltage" description="Voltage">
+			<calibration type="linear">
+				<measurement>
+					<value>0.00000</value>
+					<real>0.00000</real>
+				</measurement>
+				<measurement>
+					<value>6.75480</value>
+					<real>13.49830</real>
+				</measurement>
+			</calibration>
+		</scale>
+	</channel>
+</scales>

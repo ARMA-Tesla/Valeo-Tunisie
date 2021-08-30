@@ -1,0 +1,52 @@
+[gs_TestPanel2]
+Class="Var"
+
+[gs_TestPanel3]
+Class="Var"
+
+[gs_TestPanel4]
+Class="Var"
+
+[gs_TestPanel5]
+Class="Var"
+
+[IniTestPanel]
+Class="Function"
+Prototype="struct _SElException *IniTestPanel(const char *picture, int reset) __declspec(dllexport);"
+
+[CloseTestPanel]
+Class="Function"
+Prototype="struct _SElException *CloseTestPanel() __declspec(dllexport);"
+
+[SetTestPanelDescription]
+Class="Function"
+Prototype="struct _SElException *SetTestPanelDescription(int control, const char *description) __declspec(dllexport);"
+
+[SetPanelWarning]
+Class="Function"
+Prototype="struct _SElException *SetPanelWarning(int control, int status) __declspec(dllexport);"
+
+[SetPanelStationStatus]
+Class="Function"
+Prototype="struct _SElException *SetPanelStationStatus(int station, int status) __declspec(dllexport);"
+
+[SetTestPanelReferences]
+Class="Function"
+Prototype="struct _SElException *SetTestPanelReferences(char *RefValeo, char *RefCustomer) __declspec(dllexport);"
+
+[SetTestPanelMode]
+Class="Function"
+Prototype="struct _SElException *SetTestPanelMode(int mode) __declspec(dllexport);"
+
+[GetTestFunction]
+Class="Function"
+Prototype="struct _SElException *GetTestFunction(int index, struct _STestListItem **pTest, int *count) __declspec(dllexport);"
+
+[GetTestSeqFunction]
+Class="Function"
+Prototype="struct _SElException *GetTestSeqFunction(struct _STestSeq **pTestSeq) __declspec(dllexport);"
+
+[SetAnnotationAttribute_ALL]
+Class="Function"
+Prototype="void SetAnnotationAttribute_ALL(int Panel_Handle, int Control_ID, int Annotation_Index);"
+

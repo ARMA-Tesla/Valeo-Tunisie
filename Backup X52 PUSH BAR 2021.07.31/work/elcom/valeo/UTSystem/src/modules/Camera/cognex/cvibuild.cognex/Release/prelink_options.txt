@@ -1,0 +1,7 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\Cognex.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\cognex.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\Cognex.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\cvibuild.cognex\Release\Exception.obj.cvidefprots
+-dllName cognex.dll

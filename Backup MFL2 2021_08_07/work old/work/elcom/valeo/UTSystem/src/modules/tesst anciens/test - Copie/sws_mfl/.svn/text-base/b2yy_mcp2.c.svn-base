@@ -1,0 +1,3210 @@
+#include "b2yy_mcp2.h"
+#include "b2yy_mcp2_utils.h"
+#include <test\test_helper_functions.h>
+#include <stdio.h>
+
+const char* HISTORY = \
+"2008-08-06 [ZR] ver 1.21\
+  + Fixed test 4.11 defrost lever checkuing (Added confirm with OK button)\
+ 2008-06-13 [ZR] ver 1.20\
+  + Fixed test 5.11 for heat lever checking (Added confirm with OK button)\
+ 2008-05-15 [ZR] ver 1.10\
+  + Added test 4.11 for defrost lever checking\
+  * Tested with new hardware (keyence)";
+
+DEFINE_GLOBAL_VARIABLE();
+
+#define TEST_VOLTAGE			13.5
+#define TEST_CURRENT			0.5
+#define TEST_BLOWER_CURRENT		3.5
+
+#define MIN_VOLTAGE				13.25
+#define MAX_VOLTAGE				13.75
+
+#define CONFIG_FILE				"\\test_power_source.xml"
+
+#define CONNECT_BUTTON_HFS \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_SW4, "ch20", "com20")); \
+	} while(0)
+
+#define DISCONNECT_BUTTON_HFS \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_SW4, "ch20", "com20")); \
+	} while(0)
+
+#define CONNECT_LED_HFS \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_SW4, "ch10", "com10")); \
+	} while(0)
+
+#define DISCONNECT_LED_HFS \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_SW4, "ch10", "com10")); \
+	} while(0)
+
+#define CONNECT_BUTTON_HRW \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_SW4, "ch0", "com0")); \
+	} while(0)
+
+#define DISCONNECT_BUTTON_HRW \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_SW4, "ch0", "com0")); \
+	} while(0)
+
+#define CONNECT_LED_HRW \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_SW4, "ch30", "com30")); \
+	} while(0)
+
+#define DISCONNECT_LED_HRW \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_SW4, "ch30", "com30")); \
+	} while(0)
+
+#define CONNECT_KL15 \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_PSW1, "ch0", "com0")); \
+	} while(0)
+
+#define DISCONNECT_KL15 \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_PSW1, "ch0", "com0")); \
+	} while(0)
+
+#define CONNECT_KL30 \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_PSW1, "ch2", "com2")); \
+	} while(0)
+
+#define DISCONNECT_KL30 \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_PSW1, "ch2", "com2")); \
+	} while(0)
+
+#define CONNECT_KL58 \
+	do { \
+		checkSwtch( IviSwtch_Connect (vi_PSW1, "ch1", "com1")); \
+	} while(0)
+
+#define DISCONNECT_KL58 \
+	do { \
+		checkSwtch( IviSwtch_Disconnect (vi_PSW1, "ch1", "com1")); \
+	} while(0)
+
+STestSeq gs_TestSeq = ADD_TSI( B2YY);
+STestListItem gs_TestList[] = {
+	ADD_TI( "00.10", B2YY, 00_10),	/* Maintenance, Panel Connect */
+	ADD_TI( "00.11", B2YY, 00_11),	/* Maintenance, Panel Disconnect */
+
+	ADD_TI( "00.40", B2YY, 00_40),	/* Tester, Close Mask */
+	ADD_TI( "00.41", B2YY, 00_41),	/* Tester, Open Mask */
+
+	ADD_TI( "02.00", B2YY, 02_00),	/* HRW, Button */
+	ADD_TI( "02.10", B2YY, 02_10),	/* HRW, LED ON */
+	ADD_TI( "02.20", B2YY, 02_20),	/* HRW, LED OFF */
+
+	ADD_TI( "03.00", B2YY, 03_00),	/* HFS, Button */
+	ADD_TI( "03.10", B2YY, 03_10),	/* HFS, LED ON */
+	ADD_TI( "03.20", B2YY, 03_20),	/* HFS, LED OFF */
+
+	ADD_TI( "04.00", B2YY, 04_00),	/* AC, Activate blower switch */
+	ADD_TI( "04.10", B2YY, 04_10),	/* AC, Activate defrost */
+	ADD_TI( "04.11", B2YY, 04_11),	/* Check Defrost position */
+	ADD_TI( "04.20", B2YY, 04_20),	/* AC, Release blower switch */
+	ADD_TI( "04.30", B2YY, 04_30),	/* AC, Activate blower switch, Stand by mode */
+	ADD_TI( "04.40", B2YY, 04_40),	/* AC, Button */
+
+	ADD_TI( "05.00", B2YY, 05_00),	/* PTC, Activate blower switch */
+	ADD_TI( "05.10", B2YY, 05_10),	/* PTC, Heater max */
+	ADD_TI( "05.11", B2YY, 05_11),	/* Heater max position */
+	ADD_TI( "05.12", B2YY, 05_12),	/* Heater middle position */
+	ADD_TI( "05.20", B2YY, 05_20),	/* PTC, Release blower switch */
+	ADD_TI( "05.30", B2YY, 05_30),	/* PTC, Activate blower switch */
+
+	ADD_TI( "06.00", B2YY, 06_00),	/* Blower Position 4 */
+	ADD_TI( "06.10", B2YY, 06_10),	/* Blower Position 3 */
+	ADD_TI( "06.20", B2YY, 06_20),	/* Blower Position 2 */
+	ADD_TI( "06.30", B2YY, 06_30),	/* Blower Position 1 */
+	ADD_TI( "06.40", B2YY, 06_40),	/* Blower Position 0 */
+
+	ADD_TI( "07.00", B2YY, 07_00),	/* Broken pin detection */
+
+	ADD_TI( "08.00", B2YY, 08_00),  /* REC, check reci state */
+	ADD_TI( "08.10", B2YY, 08_10),  /* REC, Button wait for reci activate */
+	ADD_TI( "08.11", B2YY, 08_11),  /* REC, Button wait for reci deactivate */
+	ADD_TI( "08.20", B2YY, 08_20),  /* REC, Activate defrost - off */
+
+	ADD_TI( "10.00", B2YY, 10_00),	/* Camera, Visual Check */  
+	ADD_TI( "10.10", B2YY, 10_10),	/* Camera, Snap */   
+
+	ADD_TI( "20.00", B2YY, 20_00),	/* Symbols Check */
+	ADD_TI( "20.10", B2YY, 20_10),	/* LEDs Check */
+	ADD_TI( "20.20", B2YY, 20_20),	/* Golden Template Check */
+
+
+	ADD_TI_LAST_ENTRY
+};
+
+typedef struct _SB2YYConfig {
+	double			KL30;
+	double			TypicalCurrent;
+	double			BlowerCurrent;
+} SB2YYConfig, *SB2YYConfigPtr;
+
+static SB2YYConfig	gs_B2YY = {TEST_VOLTAGE, TEST_CURRENT, TEST_BLOWER_CURRENT}; 
+
+/*********************************************************************************
+ * Function Testsequence Init
+ *********************************************************************************/
+FCE_TESTSEQUENCE_INIT(B2YY)
+{
+	TESTSEQUENCEINIT_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(CAMERA);
+	TEST_USE(JIG);
+
+	PANEL_INI();
+
+	INITIALIZE(DAQ);
+	CAMERA_SET("cam0");
+
+	EXCCHECK( pjig->jig_SetSensor(pjig, "DisableLaser1", 0));
+	EXCCHECK( pjig->jig_SetSensor(pjig, "DisableLaser2", 0));
+
+	checkErr( eldaq_ConfigureMeasurement (vi_DAQ, "", 1000, 0.04));
+	checkErr( eldaq_StartMeasurement( vi_DAQ));
+	
+Error:
+	TESTSEQUENCEINIT_END();
+}
+
+/*********************************************************************************
+ * Function Testsequence Cleanup
+ *********************************************************************************/
+FCE_TESTSEQUENCE_CLEANUP(B2YY)
+{
+	TESTSEQUENCECLEANUP_BEGIN(); 
+	TEST_USE(POWER);
+	TEST_USE(PSW1);
+	TEST_USE(SW4);
+	TEST_USE(SW5);
+	TEST_USE(PSW);
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	TEST_USE(SENSORS);
+    TEST_USE(JIG);
+
+
+	PANEL_CLEAN();
+
+	INITIALIZE(POWER);
+	INITIALIZE(PSW1);
+	INITIALIZE(SW4);
+	INITIALIZE(SW5);
+	INITIALIZE(PSW);
+	INITIALIZE(DAQ);
+
+	TESTER_MASK_OPEN(5000);
+
+	checkErr(eldaq_StopMeasurement(vi_DAQ));
+	
+	POWER_RESET("CHANNEL1");
+	EXCCHECK( pjig->jig_SetSensor(pjig, "DisableLaser1", 1));
+	EXCCHECK( pjig->jig_SetSensor(pjig, "DisableLaser2", 1));
+
+	DISCONNECT_ALL(PSW1);
+	DISCONNECT_ALL(SW4);
+	DISCONNECT_ALL(SW5);
+	DISCONNECT_ALL(PSW);
+	DISCONNECT(BLOWERS);
+
+Error:
+	TESTSEQUENCECLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 00_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 00_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Maintenance, Panel Connect" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 00_10)
+{
+    TESTREGUIRE_BEGIN();
+
+/* Error: */
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 00_10)
+{
+    TESTINIT_BEGIN();
+	TEST_USE( PSW1 );
+	TEST_USE( SW4 );
+
+	INITIALIZE( PSW1 );
+	INITIALIZE( SW4 );
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+	CONNECT(KL58);
+
+	POWER_SET( "CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET( "CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 00_10)
+{
+    TEST_BEGIN();
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 00_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 00_11
+ *********************************************************************************/
+FCE_HELP(B2YY, 00_11)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Maintenance, Panel Disconnect" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 00_11)
+{
+    TESTREGUIRE_BEGIN();
+    
+/* Error: */
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 00_11)
+{
+    TESTINIT_BEGIN();
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 00_11)
+{
+    TEST_BEGIN();
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 00_11)
+{
+    TESTCLEANUP_BEGIN();
+	TEST_USE( PSW1 );
+	TEST_USE( SW4 );
+
+	INITIALIZE( PSW1 );
+	INITIALIZE( SW4 );
+
+	DISCONNECT(KL15);
+	DISCONNECT(KL30);
+	DISCONNECT(KL58);
+
+	POWER_VOLTAGE_SET( "CHANNEL1", 0.0);
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 00_40
+ *********************************************************************************/
+FCE_HELP(B2YY, 00_40)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Tester, Close Mask" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 00_40)
+{
+    TESTREGUIRE_BEGIN();
+	
+	REQUIRE( TESTER);
+	REQUIRE_END();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 00_40)
+{
+    TESTINIT_BEGIN();
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 00_40)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TESTER_MASK_CLOSE(TIMEOUT_DEFAULT);
+	TEST_HELP(_("Close Mask"));
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 00_40)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 00_41
+ *********************************************************************************/
+FCE_HELP(B2YY, 00_41)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Tester, Open Mask" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 00_41)
+{
+    TESTREGUIRE_BEGIN();
+
+	REQUIRE( TESTER);
+	REQUIRE_END();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 00_41)
+{
+    TESTINIT_BEGIN();
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 00_41)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	DISPLAY_CLEAR_ALL();
+	TESTER_MASK_OPEN(TIMEOUT_DEFAULT);
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 00_41)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 02_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 02_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "HRW, Button" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 02_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+/* Error: */
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 02_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+
+	CONNECT(BUTTON_HRW);
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 02_00)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value);
+	VARIABLE(REAL64, min);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai0", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+
+	TEST_HELP(_("Press Button HRW"));
+	DRAW_HIGHLIGHT(BUTTON_HRW);
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	min = 25.0;
+
+	do
+    {
+		Sleep(100);
+
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai0", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+
+		if(value<min)
+			min = value;
+
+		CHECK_FOR_LIMIT(REAL64, min);
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+	
+Error:
+	CHECK_BUTTON(BUTTON_HRW);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 02_00)
+{
+    TESTCLEANUP_BEGIN();
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+
+	DISCONNECT(BUTTON_HRW);
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 02_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 02_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "HRW, LED ON" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 02_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+/* Error: */
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 02_10)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 02_10)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+	INITIALIZE(DAQ);
+
+	CONNECT(LED_HRW);
+/*
+	ElSleep(50);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai3", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+*/	
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 02_10)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 02_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 02_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "HRW, LED OFF" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 02_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 02_20)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 02_20)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+	INITIALIZE(DAQ);
+
+	DISCONNECT(LED_HRW);
+/*
+	ElSleep(50);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai3", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+*/	
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 02_20)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 03_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 03_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Button HFS" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 03_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 03_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+
+	CONNECT(BUTTON_HFS);
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 03_00)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value);
+	VARIABLE(REAL64, min);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai2", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+
+	TEST_HELP(_("Press Button HFS"));
+	DRAW_HIGHLIGHT(BUTTON_HFS);
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	min = 25.0;
+
+	do
+    {
+		Sleep(100);
+
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai2", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+
+		if(value<min)
+			min = value;
+
+		CHECK_FOR_LIMIT(REAL64, min);
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_BUTTON(BUTTON_HFS);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 03_00)
+{
+    TESTCLEANUP_BEGIN();
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+
+	DISCONNECT(BUTTON_HFS);
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 03_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 03_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "HFS, LED ON" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 03_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 03_10)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 03_10)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+	INITIALIZE(DAQ);
+
+	CONNECT(LED_HFS);
+/*
+	ElSleep(50);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai1", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+*/	
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 03_10)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 03_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 03_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "HFS, LED OFF" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 03_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 03_20)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 03_20)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	TEST_USE(SW4);
+
+	INITIALIZE(SW4);
+	INITIALIZE(DAQ);
+
+	DISCONNECT(LED_HFS);
+/*
+	ElSleep(50);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai1", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+*/	
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 03_20)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "AC, Activate blower switch" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_00)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, timeout);
+	TIMEOUT_INIT();
+	bool_t ac_activated = FALSE;
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+	
+	TEST_HELP(_("Blower Position 1-4"));
+	DRAW_HIGHLIGHT(BLOWER_RIGHT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_ACTIVE);
+	TEST_HELP("");
+	
+	do
+    {
+		Sleep(100);
+		
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value)); //Uac
+		CHECK_FOR_LIMIT(REAL64, value);
+		if(!ac_activated)
+		{
+			TEST_HELP(_("Switch Off AC"));
+			CHECK_HIGHLIGHT(BLOWER_RIGHT);
+			DRAW_HIGHLIGHT(BUTTON_AC);
+			ac_activated = TRUE;
+		}
+
+	    TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+Error:
+	if(!ac_activated)
+		CHECK_HIGHLIGHT(BLOWER_RIGHT);
+	else
+		CHECK_HIGHLIGHT(BUTTON_AC);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "AC, Activate defrost" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_10)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_10)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+	bool_t is_help = FALSE;
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	/* wait for defrost switch */
+	do
+    {
+		Sleep(100);
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+		CHECK_FOR_LIMIT(REAL64, value);
+
+		if(!is_help)
+		{
+			TEST_HELP(_("Activate Defrost"));
+			DRAW_HIGHLIGHT(DEFROST);
+			EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+			is_help = TRUE;
+		}
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	if(is_help)
+	{
+		CHECK_HIGHLIGHT(DEFROST);
+		ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	}
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_11
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_11)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Check defrost lever" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_11)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_11)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_11)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(JIG);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state);
+	VARIABLE(UINT32, state_nok);
+	VARIABLE(UINT32, state_ok);
+	bool_t is_help = FALSE;
+	TIMEOUT_INIT();
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+#if 1
+	TEST_HELP(_("Distribution to defrost and press OK"));
+	DRAW_HIGHLIGHT(DEFROST);
+	is_help = TRUE;
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_OK", 1));
+
+	do
+	{
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_OK", &state_ok));
+		if(state_ok)
+			break;
+		TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	EXCCHECK( pjig->jig_GetSensor(pjig, "IsPosition_3", &state));
+	if (!state)
+	{
+		EXCTHROW(TEST_ERROR_HEAT_LEVER, "ERROR: Heat lever position.");
+	}
+
+#else
+	/* wait for heator */
+	do
+    {
+		Sleep(100);
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		EXCCHECK( pjig->jig_GetSensor(pjig, "IsPosition_3", &state));
+		if(state)
+			break;
+
+		if(!is_help)
+		{
+			TEST_HELP(_("Activate Defrost"));
+			DRAW_HIGHLIGHT(DEFROST);
+			EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+			is_help = TRUE;
+		}
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	if(is_help)
+	{
+		TESTER_BEEP();
+		TEST_HELP("");
+	}
+#endif
+
+Error:
+	if(is_help)
+	{
+		CHECK_HIGHLIGHT(DEFROST);
+	}
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	ptester->SetSensor(ptester, "INDICATOR_OK", 0);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_11)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "AC, Release blower switch" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_20)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_20)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, Delay);
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL( "Delay", &Delay, 100);
+
+	TEST_HELP(_("Blower Position 0"));
+	DRAW_HIGHLIGHT(BLOWER_LEFT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_RELEASE);
+	TEST_HELP("");
+
+	ElSleep(Delay);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value)); //Uac
+	LIMIT_CHECK(REAL64, value);
+
+	TESTER_BEEP();
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_LEFT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_20)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_30
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_30)
+{
+    HELP_BEGIN();
+    HELP_TEST( "AC, Activate blower switch, Stand by mode" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_30)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_30)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+	
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_30)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, Delay01);
+	VARIABLE(UINT32, Delay02);
+	VARIABLE(UINT32, Delay03);
+	VARIABLE(UINT32, Delay04);
+	TEST_USE(PSW1);
+	TEST_USE(PSW);
+	TEST_USE(SW5);
+	TEST_USE(DMM);
+
+	INITIALIZE(PSW1);
+	INITIALIZE(PSW);
+	INITIALIZE(SW5);
+	INITIALIZE(DAQ);
+	INITIALIZE(DMM);
+
+	PARAM_UINT32_OPTIONAL( "Delay01", &Delay01, 100);
+	PARAM_UINT32_OPTIONAL( "Delay02", &Delay02, 200);
+	PARAM_UINT32_OPTIONAL( "Delay03", &Delay03, 1000);
+	PARAM_UINT32_OPTIONAL( "Delay04", &Delay04, 100);
+
+	TEST_HELP(_("Blower Position 1-4"));
+	DRAW_HIGHLIGHT(BLOWER_RIGHT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_ACTIVE);
+	CHECK_HIGHLIGHT(BLOWER_RIGHT);
+	TEST_HELP("");
+
+	ElSleep(Delay01);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value)); //Uac
+	LIMIT_CHECK(REAL64, value);
+
+	DISCONNECT(KL15);
+
+	/* max expected value 100uA */
+	EXCCHECK( MeasCurrent(gs_Modules, CONFIG_FILE, "CHANNEL2", "ch2", 0.0001, &value, 0));
+	LIMIT_CHECK(REAL64, value*1000.0);
+
+	ElSleep(Delay03);
+	CONNECT(KL15);
+
+	ElSleep(Delay04);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value)); //Uac
+	LIMIT_CHECK(REAL64, value);
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_RIGHT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_30)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 04_40
+ *********************************************************************************/
+FCE_HELP(B2YY, 04_40)
+{
+    HELP_BEGIN();
+    HELP_TEST( "AC, Button" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 04_40)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 04_40)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 04_40)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, timeout);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	TEST_HELP(_("Press Button AC"));
+	DRAW_HIGHLIGHT(BUTTON_AC);
+
+	do
+    {
+		Sleep(100);
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai4", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+		CHECK_FOR_LIMIT(REAL64, value);
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_BUTTON(BUTTON_AC);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 04_40)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "PTC, Activate blower switch" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_00)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, Delay);
+
+	INITIALIZE(DAQ);
+	
+	PARAM_UINT32_OPTIONAL( "Delay", &Delay, 100);
+
+	TEST_HELP(_("Blower Position 1-4"));
+	DRAW_HIGHLIGHT(BLOWER_RIGHT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_ACTIVE);
+	TEST_HELP("");
+
+	ElSleep(Delay);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai5", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value)); //Uauxheat
+	LIMIT_CHECK(REAL64, value);
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_RIGHT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "PTC, Heater max" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_10)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_10)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, timeout);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+	
+	TEST_HELP(_("Heater Max"));
+	DRAW_HIGHLIGHT(HEATER_RIGHT);
+
+	/* wait for heator */
+	do
+    {
+		Sleep(100);
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai5", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+		CHECK_FOR_LIMIT(REAL64, value);
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(HEATER_RIGHT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_11
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_11)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Heater max position" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_11)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_11)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_11)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(JIG);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state);
+	VARIABLE(UINT32, state_nok);
+	VARIABLE(UINT32, state_ok);
+	bool_t is_help = FALSE;
+	TIMEOUT_INIT();
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+#if 1
+	TEST_HELP(_("Heater Max and press OK"));
+	DRAW_HIGHLIGHT(HEATER_RIGHT);
+	is_help = TRUE;
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_OK", 1));
+
+	do
+	{
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_OK", &state_ok));
+		if(state_ok)
+			break;
+		TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	EXCCHECK( pjig->jig_GetSensor(pjig, "IsPosition_2", &state));
+	if (!state)
+	{
+		EXCTHROW(TEST_ERROR_HEAT_LEVER, "ERROR: Heat lever position.");
+	}
+
+#else
+	/* wait for heator */
+	do
+    {
+		Sleep(100);
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		EXCCHECK( pjig->jig_GetSensor(pjig, "IsPosition_2", &state));
+		if(state)
+			break;
+
+		if(!is_help)
+		{
+			TEST_HELP(_("Heater Max"));
+			DRAW_HIGHLIGHT(HEATER_RIGHT);
+			EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+			is_help = TRUE;
+		}
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+#endif
+
+	if(is_help)
+	{
+		TESTER_BEEP();
+		TEST_HELP("");
+	}
+
+Error:
+	if(is_help)
+	{
+		CHECK_HIGHLIGHT(HEATER_RIGHT);
+		ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+		ptester->SetSensor(ptester, "INDICATOR_OK", 0);
+	}
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_11)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_12
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_12)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Heater middle position" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_12)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_12)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+	
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_12)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(JIG);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state);
+	VARIABLE(UINT32, state_nok);
+	bool_t is_help = FALSE;
+	TIMEOUT_INIT();
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	/* wait for heator */
+	do
+    {
+		Sleep(100);
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		EXCCHECK( pjig->jig_GetSensor(pjig, "IsPosition_2", &state));
+		if(!state)
+			break;
+
+		if(!is_help)
+		{
+			TEST_HELP(_("Heater Middle"));
+			DRAW_HIGHLIGHT(HEATER_LEFT);
+			EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+			is_help = TRUE;
+		}
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	if(is_help)
+	{
+		TESTER_BEEP();
+		TEST_HELP("");
+	}
+
+Error:
+	if(is_help)
+	{
+		CHECK_HIGHLIGHT(HEATER_LEFT);
+		ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	}
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_12)
+{
+    TESTCLEANUP_BEGIN();
+
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "PTC, Release Blower Switch" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_20)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_20)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, Delay);
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL( "Delay", &Delay, 100);
+	
+	TEST_HELP(_("Blower Position 0"));
+	DRAW_HIGHLIGHT(BLOWER_LEFT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_RELEASE);
+	TEST_HELP("");
+
+	ElSleep(Delay);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai5", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_LEFT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_20)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 05_30
+ *********************************************************************************/
+FCE_HELP(B2YY, 05_30)
+{
+    HELP_BEGIN();
+    HELP_TEST( "PTC, Activate Blower Switch" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 05_30)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 05_30)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 05_30)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value);
+	VARIABLE(UINT32, Delay);
+
+	INITIALIZE(DAQ);
+	
+	PARAM_UINT32_OPTIONAL( "Delay", &Delay, 200);
+
+	TEST_HELP(_("Blower Position 1-4"));
+	DRAW_HIGHLIGHT(BLOWER_RIGHT);
+	WAIT_FOR_BLOWER_STATE(BLOWER_ACTIVE);
+	TEST_HELP("");
+
+	ElSleep(Delay);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai5", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+
+	TESTER_BEEP();
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_RIGHT);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 05_30)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 06_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 06_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Blower Position 4" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 06_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 06_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	DISCONNECT(KL15);
+	DISCONNECT(KL30);
+	DISCONNECT(KL58);
+
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 06_00)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, voltage);
+	VARIABLE(REAL64, current);
+	VARIABLE(REAL64, resistance1);
+	VARIABLE(REAL64, resistance2);
+	VARIABLE(REAL64, resistance3);
+	VARIABLE(REAL64, resistance4);
+	
+	TEST_HELP(_("Blower Position 4"));
+	DRAW_HIGHLIGHT(BLOWER_4);
+	WAIT_FOR_BLOWER(POSITION_4);
+
+	READ_BLOWER(POSITION_4, &voltage, &current);
+	resistance4 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_1, &voltage, &current);
+	resistance1 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_2, &voltage, &current);
+	resistance2 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_3, &voltage, &current);
+	resistance3 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+
+	LIMIT_CHECK(REAL64, resistance1);
+	LIMIT_CHECK(REAL64, resistance2);
+	LIMIT_CHECK(REAL64, resistance3);
+	LIMIT_CHECK(REAL64, resistance4);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_4);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 06_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 06_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 06_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Blower Position 3" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 06_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 06_10)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 06_10)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, voltage);
+	VARIABLE(REAL64, current);
+	VARIABLE(REAL64, resistance1);
+	VARIABLE(REAL64, resistance2);
+	VARIABLE(REAL64, resistance3);
+	VARIABLE(REAL64, resistance4);
+
+	TEST_HELP(_("Blower Position 3"));
+	DRAW_HIGHLIGHT(BLOWER_3);
+	WAIT_FOR_BLOWER(POSITION_3);
+
+	READ_BLOWER(POSITION_4, &voltage, &current);
+	resistance4 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_1, &voltage, &current);
+	resistance1 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_2, &voltage, &current);
+	resistance2 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_3, &voltage, &current);
+	resistance3 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+
+	LIMIT_CHECK(REAL64, resistance1);
+	LIMIT_CHECK(REAL64, resistance2);
+	LIMIT_CHECK(REAL64, resistance3);
+	LIMIT_CHECK(REAL64, resistance4);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_3);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 06_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 06_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 06_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Blower Position 2" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 06_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 06_20)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 06_20)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, voltage);
+	VARIABLE(REAL64, current);
+	VARIABLE(REAL64, resistance1);
+	VARIABLE(REAL64, resistance2);
+	VARIABLE(REAL64, resistance3);
+	VARIABLE(REAL64, resistance4);
+
+	TEST_HELP(_("Blower Position 2"));
+	DRAW_HIGHLIGHT(BLOWER_2);
+	WAIT_FOR_BLOWER(POSITION_2);
+
+	READ_BLOWER(POSITION_3, &voltage, &current);
+	resistance3 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_4, &voltage, &current);
+	resistance4 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_1, &voltage, &current);
+	resistance1 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_2, &voltage, &current);
+	resistance2 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+
+	LIMIT_CHECK(REAL64, resistance1);
+	LIMIT_CHECK(REAL64, resistance2);
+	LIMIT_CHECK(REAL64, resistance3);
+	LIMIT_CHECK(REAL64, resistance4);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_2);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 06_20)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 06_30
+ *********************************************************************************/
+FCE_HELP(B2YY, 06_30)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Blower Position 1" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 06_30)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 06_30)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 06_30)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, voltage);
+	VARIABLE(REAL64, current);
+	VARIABLE(REAL64, resistance1);
+	VARIABLE(REAL64, resistance2);
+	VARIABLE(REAL64, resistance3);
+	VARIABLE(REAL64, resistance4);
+
+	TEST_HELP(_("Blower Position 1"));
+	DRAW_HIGHLIGHT(BLOWER_1);
+	WAIT_FOR_BLOWER(POSITION_1);
+
+	READ_BLOWER(POSITION_2, &voltage, &current);
+	resistance2 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_3, &voltage, &current);
+	resistance3 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_4, &voltage, &current);
+	resistance4 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_1, &voltage, &current);
+	resistance1 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+
+	LIMIT_CHECK(REAL64, resistance1);
+	LIMIT_CHECK(REAL64, resistance2);
+	LIMIT_CHECK(REAL64, resistance3);
+	LIMIT_CHECK(REAL64, resistance4);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_1);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 06_30)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 06_40
+ *********************************************************************************/
+FCE_HELP(B2YY, 06_40)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Blower Position 0" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 06_40)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 06_40)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.BlowerCurrent); 
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 06_40)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, voltage);
+	VARIABLE(REAL64, current);
+	VARIABLE(REAL64, resistance1);
+	VARIABLE(REAL64, resistance2);
+	VARIABLE(REAL64, resistance3);
+	VARIABLE(REAL64, resistance4);
+
+	TEST_HELP(_("Blower Position 0"));
+	DRAW_HIGHLIGHT(BLOWER_0);
+	WAIT_FOR_BLOWER(POSITION_0);
+
+	READ_BLOWER(POSITION_1, &voltage, &current);
+	resistance1 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_2, &voltage, &current);
+	resistance2 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_3, &voltage, &current);
+	resistance3 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+	READ_BLOWER(POSITION_4, &voltage, &current);
+	resistance4 = (current > 0.01) ? (voltage / current)*1000.0 : DEFAULT_MAX_RESISTANCE;
+
+	LIMIT_CHECK(REAL64, resistance1);
+	LIMIT_CHECK(REAL64, resistance2);
+	LIMIT_CHECK(REAL64, resistance3);
+	LIMIT_CHECK(REAL64, resistance4);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	CHECK_HIGHLIGHT(BLOWER_0);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 06_40)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 07_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 07_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Broken pin detection" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 07_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 07_00)
+{
+    TESTINIT_BEGIN();
+	
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 07_00)
+{
+    TEST_BEGIN();
+	TEST_USE(SENSORS);
+	VARIABLE(UINT32, state);
+
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_00", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_01", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_02", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_03", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_04", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_05", &state));
+	LIMIT_CHECK(UINT32, state);
+	EXCCHECK(psensors->GetState(psensors, "BPDETECT_06", &state));
+	LIMIT_CHECK(UINT32, state);
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 07_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 08_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 08_00)
+{
+    HELP_BEGIN();
+    HELP_TEST("REC, off");
+	HELP_PARAMETER( REQUIRED, "Limit01", "REAL64", "REC OUT1 (0.0;0.4)");	
+	HELP_PARAMETER( REQUIRED, "Limit02", "REAL64", "REC OUT2 (13.5;12.2)");
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 08_00)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 08_00)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 08_00)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai6", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+	checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai7", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value));
+	LIMIT_CHECK(REAL64, value);
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 08_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 08_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 08_10)
+{
+    HELP_BEGIN();
+    HELP_TEST("REC, Button pressed");
+	HELP_PARAMETER( OPTIONAL, "Timeout", "INT32", "Specifies timeout in [ms]");	
+	HELP_PARAMETER( REQUIRED, "Limit01", "REAL64", "REC OUT1 (13.5;12.2)");	
+	HELP_PARAMETER( REQUIRED, "Limit02", "REAL64", "REC OUT2 (0.0;0.4)");
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 08_10)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 08_10)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 08_10)
+{
+#if 1
+	TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value1);
+	VARIABLE(REAL64, value2);
+	VARIABLE(REAL64, min);
+	VARIABLE(REAL64, max);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	TEST_HELP(_("Press Button REC"));
+	DRAW_HIGHLIGHT(BUTTON_REC);
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	max = 0.0;
+	min = 9.9e39;
+
+	do
+    {
+		Sleep(50);
+
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if (state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai6", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value1));
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai7", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value2));
+
+		/* remember min, max values for test report */
+		min = ( value2 < min ) ? value2 : min;
+		max = ( value1 > max ) ? value1 : max;
+
+		CHECK_FOR_LIMIT(REAL64, max);
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	LIMIT_CHECK(REAL64, value2);
+
+	TESTER_BEEP();
+
+Error:
+	CHECK_BUTTON(BUTTON_REC);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+    TEST_END();
+#else
+	TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value1);
+	VARIABLE(REAL64, value2);
+	VARIABLE(REAL64, max);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	TEST_HELP(_("Press Button REC"));
+	DRAW_HIGHLIGHT(BUTTON_REC);
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	max = 0.0;
+
+	do
+    {
+		Sleep(50);
+
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai6", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value1));
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai7", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value2));
+
+		/* remember min, max values for test report */
+		if(value1>max) max = value1;
+
+		CHECK_FOR_LIMIT(REAL64, max);
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	LIMIT_CHECK(REAL64, value2);
+
+	TESTER_BEEP();
+
+
+Error:
+	CHECK_BUTTON(BUTTON_REC);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+    TEST_END();
+#endif
+}
+
+FCE_CLEANUP(B2YY, 08_10)
+{
+    TESTCLEANUP_BEGIN();
+	TEST_HELP("");    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 08_11
+ *********************************************************************************/
+FCE_HELP(B2YY, 08_11)
+{
+    HELP_BEGIN();
+    HELP_TEST("REC, press button. RECI function deactivated");
+	HELP_PARAMETER( OPTIONAL, "Timeout", "INT32", "Specifies timeout in [ms]");	
+	HELP_PARAMETER( REQUIRED, "Limit01", "REAL64", "REC OUT1 (0.0;0.4)");	
+	HELP_PARAMETER( REQUIRED, "Limit02", "REAL64", "REC OUT2 (12.2,13.5)");
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 08_11)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 08_11)
+{
+    TESTINIT_BEGIN();
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent); 
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 08_11)
+{
+    TEST_BEGIN();
+	TEST_USE(DAQ);
+	TEST_USE(TESTER);
+	VARIABLE(REAL64, value1);
+	VARIABLE(REAL64, value2);
+	VARIABLE(REAL64, min);
+	VARIABLE(REAL64, max);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	TEST_HELP(_("Press Button REC"));
+	DRAW_HIGHLIGHT(BUTTON_REC);
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+	max = 0.0;
+	min = 9.9e39;
+
+	do
+    {
+		Sleep(50);
+
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if (state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai6", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value1));
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai7", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value2));
+
+		/* remember min, max values for test report */
+		min = ( value1 < min ) ? value1 : min;
+		max = ( value2 > max ) ? value2 : max;
+
+		CHECK_FOR_LIMIT(REAL64, min);
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+	
+	LIMIT_CHECK(REAL64, value2);
+
+	TESTER_BEEP();
+
+Error:
+	CHECK_BUTTON(BUTTON_REC);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 08_11)
+{
+    TESTCLEANUP_BEGIN();
+
+	TEST_HELP("");
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 08_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 08_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "REC, Activate defrost" );
+	HELP_PARAMETER( OPTIONAL, "Timeout", "INT32", "Specifies timeout in [ms]");	
+	HELP_PARAMETER( REQUIRED, "Limit01", "REAL64", "REC OUT1 (0.0;0.4)");	
+	HELP_PARAMETER( REQUIRED, "Limit02", "REAL64", "REC OUT2 (13.5;12.2)");
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 08_20)
+{
+    TESTREGUIRE_BEGIN();
+    
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 08_20)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(PSW1);
+
+	INITIALIZE(PSW1);
+
+	CONNECT(KL15);
+	CONNECT(KL30);
+
+	POWER_SET("CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET("CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST(B2YY, 08_20)
+{
+    TEST_BEGIN();
+	TEST_USE(TESTER);
+	TEST_USE(DAQ);
+	VARIABLE(REAL64, value1);
+	VARIABLE(REAL64, value2);
+	VARIABLE(UINT32, timeout);
+	VARIABLE(UINT32, state_nok);
+	TIMEOUT_INIT();
+	bool_t is_help = FALSE;
+
+	INITIALIZE(DAQ);
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	/* wait for defrost switch */
+	do
+    {
+		Sleep(50);
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai6", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value1));
+		checkErr( eldaq_ReadMeasurement( vi_DAQ, "ai7", "voltage", ELDAQ_VAL_MEASUREMENT_MEAN, &value2));
+
+		CHECK_FOR_LIMIT(REAL64, value1);
+
+		if(!is_help)
+		{
+			TEST_HELP(_("Activate Defrost"));
+			DRAW_HIGHLIGHT(DEFROST);
+			EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+			is_help = TRUE;
+		}
+
+        TIMEOUT_CHECK(timeout);
+    }while(TRUE);
+
+	LIMIT_CHECK(REAL64, value2);
+
+	TESTER_BEEP();
+	TEST_HELP("");
+
+Error:
+	if(is_help)
+	{
+		CHECK_HIGHLIGHT(DEFROST);
+		ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	}
+    TEST_END();
+}
+
+FCE_CLEANUP(B2YY, 08_20)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 10_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 10_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Camera, Visual Check" );
+	HELP_PARAMETER( OPTIONAL, "Timeout", "INT32", "Specifies timeout in [ms]");	
+	HELP_PARAMETER( OPTIONAL, "TestDelay", "INT32", "Specifies required test time after mask is closed in [ms]");	
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 10_00)
+{
+    TESTREGUIRE_BEGIN();
+
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 10_00)
+{
+    TESTINIT_BEGIN();
+	TEST_USE(SW4);
+	TEST_USE(PSW1);
+
+	INITIALIZE(SW4);
+	INITIALIZE(PSW1);
+
+	CONNECT(LED_HRW);
+	CONNECT(LED_HFS);
+	CONNECT(KL58);
+	
+	POWER_SET( "CHANNEL1", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+	POWER_SET( "CHANNEL2", gs_B2YY.KL30, gs_B2YY.TypicalCurrent);
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST( B2YY, 10_00)
+{
+    TEST_BEGIN();
+	TEST_USE( TESTER );
+	VARIABLE(INT32, timeout);
+	clock_t	_start = clock();
+	clock_t	_stop;
+	
+	PARAM_UINT32_OPTIONAL( "Timeout", &timeout, 30000);
+
+	TESTER_IS_MASK_CLOSED(timeout);
+	TEST_HELP(_("Visual Check"));
+
+	_stop = clock();
+	if ( (( _stop - _start ) * 1000 / CLOCKS_PER_SEC ) > timeout)
+		timeout = (uint32_t)( timeout + ((_stop - _start) * 1000 / CLOCKS_PER_SEC));
+	
+	TESTER_OKNOK(timeout);
+	TEST_HELP("");
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP( B2YY, 10_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 10_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 10_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Camera, Snap" );
+	HELP_PARAMETER( OPTIONAL, "Delay", "UINT32", "Specifies delay before snap. Units are ms. Default value 200ms.");	
+	HELP_PARAMETER( OPTIONAL, "ShutterSpeed", "UINT32", "Specifies Shutter Speed. Default Value 4095.");	
+	HELP_PARAMETER( OPTIONAL, "ImageAvarage", "UINT32", "Specifies Image Average. Default Value 10.");	
+	HELP_PARAMETER( OPTIONAL, "AvarageGain", "REAL64", "Specifies Average Gain. Default Value 3.0.");	
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 10_10)
+{
+    TESTREGUIRE_BEGIN();
+
+	REQUIRE( CAMERA);
+	REQUIRE_END();
+
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 10_10)
+{
+    TESTINIT_BEGIN();
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST( B2YY, 10_10)
+{
+    TEST_BEGIN();
+	TEST_USE( CAMERA );
+	STRING( result, 256);
+	VARIABLE( UINT32, ShutterSpeed);
+	VARIABLE( UINT32, ImageAvarage);
+	VARIABLE( REAL64, AvarageGain);
+	VARIABLE( UINT32, Delay);
+
+	PARAM_UINT32_OPTIONAL( "ShutterSpeed", &ShutterSpeed, 4095);
+	PARAM_UINT32_OPTIONAL( "ImageAvarage", &ImageAvarage, 10);
+	PARAM_REAL64_OPTIONAL( "AvarageGain", &AvarageGain, 3.0);
+	PARAM_UINT32_OPTIONAL( "Delay", &Delay, 200);
+
+	EXCCHECK( pcamera->SetCameraAttribute(pcamera, "cam0", CAMERA_ATTR_SHUTTER_SPEED, ShutterSpeed));
+
+	if(ImageAvarage==1)
+		EXCCHECK( pcamera->Snap(pcamera, "cam0", "image_10_10"));
+	else if(ImageAvarage>1)
+		EXCCHECK( pcamera->SnapAverage(pcamera, "cam0", ImageAvarage, AvarageGain, "image_10_10"));
+
+Error:
+    TEST_END();
+}
+
+FCE_CLEANUP( B2YY, 10_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 20_00
+ *********************************************************************************/
+FCE_HELP(B2YY, 20_00)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Symbols Check" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 20_00)
+{
+    TESTREGUIRE_BEGIN();
+
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 20_00)
+{
+    TESTINIT_BEGIN();
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST( B2YY, 20_00)
+{
+    TEST_BEGIN();
+	TEST_USE( CAMERA );
+	STRING(config, 512);
+	STRING(path, 512);
+	
+	SELStringPtr result = NULL;
+	char* imgName;
+	char* taskName;
+	char* resultType;
+	double value;
+	bool_t first_fault = FALSE;
+	SElExceptionPtr pexc_res = NULL;
+
+	EXCCHECK( elstring_new("", &result));
+
+	while(LIMIT_EXIST())
+	{
+		LIMIT_CONFIGURATION(config);
+
+		imgName = strtok(config, ";");
+		taskName = strtok(NULL, ";");
+		resultType = strtok(NULL, ";");
+		
+		EXCCHECK( result->Empty(result));
+		EXCCHECK( pcamera->DoTask(pcamera, imgName, taskName, result));
+
+		sprintf(path, "//task/step/%s", resultType);
+		RESULT_XMLSTRING_GET(REAL64, result, path, &value);
+		value = ( value < 0.0 ) ? IMAQCAM_VAL_GT_INVALID_VALUE : value;
+		
+		LIMIT_CHECK_EXT(REAL64, value, pexception);
+		if(pexception && !first_fault)
+		{
+			char fileName[512];
+			char filePath[512];
+			
+			sprintf(fileName, "%s_FAULT_%s.png",
+					((STestParamPtr)pTID)->Barcode,
+					((STestParamPtr)pTID)->Time);
+			
+			sprintf(filePath, "%s\\%s",
+					((STestParamPtr)pTID)->TicketDirPath,
+					fileName);
+			
+			pcamera->SaveImage(pcamera, imgName, filePath);
+			TEST_VALUE_SET( "image", fileName); 
+			
+			first_fault = TRUE;
+			pexc_res = pexception;
+			pexception = NULL;
+		}
+		else
+		{
+			EXCDELETE(pexception);
+		}
+	};
+
+	EXCCHECK(pexc_res);
+
+Error:
+	elstring_delete(&result);
+    TEST_END();
+}
+
+FCE_CLEANUP( B2YY, 20_00)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 20_10
+ *********************************************************************************/
+FCE_HELP(B2YY, 20_10)
+{
+    HELP_BEGIN();
+    HELP_TEST( "LEDs Check" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 20_10)
+{
+    TESTREGUIRE_BEGIN();
+
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 20_10)
+{
+    TESTINIT_BEGIN();
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST( B2YY, 20_10)
+{
+    TEST_BEGIN();
+	TEST_USE( CAMERA );
+	STRING(config, 512);
+	STRING(path, 512);
+	SELStringPtr result = NULL;
+	bool_t first_fault = FALSE;
+	SElExceptionPtr pexc_res = NULL;
+
+	EXCCHECK( elstring_new("", &result));
+
+	while(LIMIT_EXIST())
+	{
+		char* imgName;
+		char* taskName;
+		char* resultType;
+		double value;
+		
+		LIMIT_CONFIGURATION(config);
+
+		imgName = strtok(config, ";");
+		taskName = strtok(NULL, ";");
+		resultType = strtok(NULL, ";");
+		
+		EXCCHECK( result->Empty(result));
+		EXCCHECK( pcamera->DoTask(pcamera, imgName, taskName, result));
+
+		sprintf(path, "//task/step/%s", resultType);
+		RESULT_XMLSTRING_GET(REAL64, result, path, &value);	
+		value = ( value < 0.0 ) ? IMAQCAM_VAL_GT_INVALID_VALUE : value;
+		
+		LIMIT_CHECK_EXT(REAL64, value, pexception);
+		if(pexception && !first_fault)
+		{
+			char fileName[512];
+			char filePath[512];
+			
+			sprintf(fileName, "%s_FAULT_%s.png",
+					((STestParamPtr)pTID)->Barcode,
+					((STestParamPtr)pTID)->Time);
+			
+			sprintf(filePath, "%s\\%s",
+					((STestParamPtr)pTID)->TicketDirPath,
+					fileName);
+			
+			pcamera->SaveImage(pcamera, imgName, filePath);
+			TEST_VALUE_SET( "image", fileName); 
+			
+			first_fault = TRUE;
+			pexc_res = pexception;
+			pexception = NULL;
+		}
+		else
+		{
+			EXCDELETE(pexception);
+		}
+	};
+
+	EXCCHECK(pexc_res);
+
+Error:
+	elstring_delete(&result);
+    TEST_END();
+}
+
+FCE_CLEANUP( B2YY, 20_10)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}
+
+/*********************************************************************************
+ * Function 20_20
+ *********************************************************************************/
+FCE_HELP(B2YY, 20_20)
+{
+    HELP_BEGIN();
+    HELP_TEST( "Golden Template Check" );
+
+Error:
+    HELP_END();
+}
+
+FCE_CHECK(B2YY, 20_20)
+{
+    TESTREGUIRE_BEGIN();
+
+Error:
+    TESTREGUIRE_END();
+}
+
+FCE_INIT(B2YY, 20_20)
+{
+    TESTINIT_BEGIN();
+
+Error:    
+    TESTINIT_END();
+}
+
+FCE_TEST( B2YY, 20_20)
+{
+    TEST_BEGIN();
+	TEST_USE( CAMERA );
+	STRING(config, 512);
+	STRING(path, 512);
+	STRING(defectedImage, 256);
+	SELStringPtr result = NULL;
+
+	EXCCHECK( elstring_new("", &result));
+
+	while(LIMIT_EXIST())
+	{
+		char* imgName;
+		char* taskName;
+		char* resultType;
+		double value;
+		
+		LIMIT_CONFIGURATION(config);
+
+		imgName = strtok(config, ";");
+		taskName = strtok(NULL, ";");
+		resultType = strtok(NULL, ";");
+		
+		EXCCHECK( result->Empty(result));
+		EXCCHECK( pcamera->DoTask(pcamera, imgName, taskName, result));
+
+		sprintf(path, "//task/step/%s", resultType);
+		RESULT_XMLSTRING_GET(REAL64, result, path, &value);
+		
+		LIMIT_CHECK_EXT(REAL64, value, pexception);
+		if(pexception)
+		{
+			char fileName[512];
+			char filePath[512];
+			
+			sprintf(fileName, "%s_FAULT_%s.png",
+					((STestParamPtr)pTID)->Barcode,
+					((STestParamPtr)pTID)->Time);
+			
+			sprintf(filePath, "%s\\%s",
+					((STestParamPtr)pTID)->TicketDirPath,
+					fileName);
+
+			pcamera->SaveImage(pcamera, "GoldenTemplateResult", filePath);
+			TEST_VALUE_SET( "image", fileName); 
+			
+			EXCCHECK(pexception);
+		}
+	};
+
+Error:
+	elstring_delete(&result);
+    TEST_END();
+}
+
+FCE_CLEANUP( B2YY, 20_20)
+{
+    TESTCLEANUP_BEGIN();
+    
+Error:    
+    TESTCLEANUP_END();
+}

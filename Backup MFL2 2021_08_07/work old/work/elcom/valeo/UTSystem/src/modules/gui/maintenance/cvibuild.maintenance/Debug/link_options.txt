@@ -1,0 +1,44 @@
+-nologo
+-out:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.dll
+-def:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.dll.defs
+-implib:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.lib
+-ignoreexports
+-dependenciesMapFile:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\dependencies.lnk.in
+-arch:x86
+-timestamp
+-debug:2
+-loadextmod
+-res:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\resources.res
+-entry:_CVIDllMainStartupCodeForDebugging@12
+-base:0x400000
+-linked:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\linkersummary.txt
+-dlldeps:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\dlldependencies.txt
+-licensing:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\linkerlicensing.txt
+-browsedeps:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\moduledependencies.txt
+-stackreserve:131072
+-stackcommit:4096
+-in:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\Exception.obj
+-in:c:\work\elcom\valeo\UTSystem\src\modules\gui\maintenance\cvibuild.maintenance\Debug\maintenance.obj
+-more:c:\program files\national instruments\cvi2015\bin\msvc\cvistart.lib
+-more:c:\program files\national instruments\cvi2015\bin\msvc\cvi.lib
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\advapi32.lib
+-more:c:\ProgramData\National Instruments\CVI2015\bin\msvc\analysis.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cviauto.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cvidotnet.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cvinetstreams.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cvinetv.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cvintwrk.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\cvitdms.lib
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\gdi32.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\gpib.lib
+-more:c:\Program Files\National Instruments\Shared\CVI\Bin\msvc\ivi.lib
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\kernel32.lib
+-more:c:\Program Files\National Instruments\Shared\CVI\Bin\msvc\NIDAQmx.lib
+-more:c:\Program Files\National Instruments\Shared\CVI\Bin\msvc\nimaxconfig.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\nivxi.lib
+-more:c:\Program Files\National Instruments\CVI2015\bin\msvc\omp.lib
+-more:c:\Program Files\National Instruments\CVI2015\toolslib\toolbox\msvc\toolbox.obj
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\user32.lib
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\uuid.lib
+-more:c:\Program Files\National Instruments\Shared\CVI\Bin\msvc\visa.lib
+-more:C:\Program Files\Windows Kits\8.1\Lib\winv6.3\um\x86\winmm.lib

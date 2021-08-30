@@ -1,0 +1,1314 @@
+#include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
+
+
+2 24 "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Release\\manifest.xml"
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  65535  ""
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0L
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "test_cmfb_piano (Release x86)\0"
+            VALUE "FileVersion", "1.0\0"
+            VALUE "InternalName", "test_cmfb_piano\0"
+            VALUE "LegalCopyright", "Copyright ©  2021\0"
+            VALUE "OriginalFilename", "test_cmfb_piano.dll\0"
+            VALUE "ProductName", " test_cmfb_piano\0"
+            VALUE "ProductVersion", "1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 0x4b0
+    END
+END
+
+test.uir UIRFileType "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\test.uir"
+
+CVIDLLexports CVIDLLprototypes
+{
+   "struct _SElException *CMFB_20_00_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_00_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_00_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_00_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_00_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_10_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_10_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_10_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_10_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_10_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_20_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_20_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_20_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_20_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_20_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_30_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_30_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_30_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_30_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_30_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_400_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_400_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_400_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_400_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_400_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_409_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_409_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_409_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_409_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_409_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_40_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_40_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_40_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_40_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_40_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_50_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_50_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_50_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_50_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_50_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_60_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_60_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_60_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_60_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_60_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_20_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_00_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_00_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_00_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_00_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_00_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_01_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_01_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_01_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_01_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_01_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_10_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_10_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_10_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_10_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_10_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_20_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_20_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_20_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_20_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_20_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_30_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_00_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_00_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_00_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_00_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_00_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_01_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_01_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_01_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_01_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_01_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_02_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_02_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_02_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_02_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_02_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_03_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_03_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_03_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_03_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_03_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_04_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_04_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_04_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_04_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_04_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_05_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_05_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_05_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_05_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_05_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_06_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_06_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_06_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_06_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_06_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_07_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_07_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_07_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_07_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_07_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_08_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_08_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_08_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_08_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_08_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_09_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_09_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_09_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_09_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_09_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_100_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_100_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_100_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_100_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_100_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_109_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_109_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_109_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_109_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_109_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_14_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_14_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_14_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_14_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_14_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_15_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_15_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_15_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_15_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_15_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_16_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_16_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_16_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_16_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_16_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_17_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_17_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_17_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_17_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_17_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_19_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_19_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_19_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_19_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_19_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_200_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_200_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_200_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_200_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_200_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_209_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_209_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_209_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_209_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_209_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_20_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_20_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_20_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_20_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_20_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_300_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_300_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_300_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_300_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_300_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_309_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_309_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_309_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_309_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_309_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_30_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_30_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_30_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_30_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_30_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_400_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_400_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_400_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_400_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_400_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_700_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_700_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_700_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_700_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_700_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_709_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_709_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_709_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_709_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_709_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_70_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_70_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_70_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_70_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_70_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_40_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_00_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_00_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_00_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_00_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_00_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_01_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_01_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_01_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_01_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_01_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_02_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_02_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_02_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_02_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_02_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_03_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_03_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_03_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_03_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_03_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_04_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_04_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_04_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_04_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_04_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_05_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_05_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_05_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_05_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_05_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_06_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_06_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_06_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_06_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_06_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_07_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_07_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_07_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_07_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_07_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_08_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_08_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_08_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_08_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_08_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_09_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_09_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_09_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_09_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_09_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_100_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_100_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_100_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_100_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_100_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_109_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_109_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_109_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_109_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_109_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_14_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_14_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_14_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_14_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_14_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_15_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_15_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_15_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_15_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_15_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_16_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_16_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_16_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_16_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_16_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_17_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_17_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_17_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_17_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_17_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_19_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_19_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_19_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_19_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_19_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_200_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_200_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_200_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_200_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_200_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_209_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_209_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_209_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_209_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_209_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_20_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_20_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_20_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_20_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_20_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_300_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_300_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_300_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_300_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_300_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_309_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_309_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_309_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_309_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_309_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_30_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_30_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_30_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_30_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_30_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_400_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_400_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_400_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_400_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_400_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_700_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_700_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_700_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_700_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_700_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_709_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_709_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_709_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_709_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_709_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_70_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_70_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_70_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_70_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_70_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_50_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_00_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_00_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_00_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_00_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_00_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_01_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_01_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_01_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_01_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_01_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_02_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_02_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_02_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_02_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_02_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_03_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_03_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_03_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_03_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_03_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_04_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_04_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_04_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_04_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_04_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_05_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_05_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_05_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_05_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_05_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_06_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_06_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_06_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_06_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_06_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_07_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_07_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_07_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_07_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_07_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_080_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_080_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_080_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_080_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_080_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_08_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_08_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_08_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_08_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_08_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_09_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_09_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_09_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_09_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_09_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_100_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_100_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_100_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_100_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_100_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_109_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_109_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_109_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_109_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_109_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_10_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_10_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_10_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_10_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_10_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_14_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_14_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_14_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_14_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_14_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_15_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_15_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_15_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_15_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_15_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_30_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_30_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_30_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_30_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_30_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_310_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_310_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_310_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_310_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_310_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_319_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_319_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_319_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_319_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_319_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_31_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_31_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_31_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_31_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_31_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_320_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_320_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_320_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_320_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_320_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_40_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_40_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_40_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_40_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_40_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_410_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_410_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_410_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_410_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_410_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_419_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_419_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_419_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_419_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_419_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_41_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_41_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_41_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_41_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_41_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_500_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_500_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_500_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_500_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_500_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_509_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_509_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_509_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_509_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_509_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_50_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_50_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_50_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_50_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_50_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_60_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_60_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_60_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_60_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_60_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_800_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_800_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_800_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_800_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_800_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_60_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_70_90_check(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_70_90_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_70_90_help(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_70_90_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_70_90_test(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_cleanup(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CMFB_init(void *pTID, int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CameraCheckJob_X52(struct _Cameras *pcameras);"
+   "\n",
+   "struct _SElException *CameraConnect(struct _Cameras *pcameras, int index);"
+   "\n",
+   "struct _SElException *CameraGetdata(struct _Cameras *pcameras, int step, int timeout, char *data);"
+   "\n",
+   "struct _SElException *CameraGetdataVS11(struct _Cameras *pcameras, int step, int timeout, char *data);"
+   "\n",
+   "struct _SElException *CameraGetdataX52_7(struct _Cameras *pcameras, int step, int timeout, char *data);"
+   "\n",
+   "struct _SElException *CameraGetdataX52_9(struct _Cameras *pcameras, int step, int timeout, char *data);"
+   "\n",
+   "struct _SElException *CameraSetJob(struct _STestParam *ppar, struct _Cameras *pcameras, int index);"
+   "\n",
+   "struct _SElException *CameraSetNubrBouton(struct _Cameras *pcameras, int type, int timeout);"
+   "\n",
+   "struct _SElException *CameraSetParam(struct _Cameras *pcameras, int step, int timeout);"
+   "\n",
+   "struct _SElException *Camera_Offline(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *Camera_Online(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *Camera_Read(struct _SObjList *pModules, int IndexCamera, char data[128]);"
+   "\n",
+   "struct _SElException *Camera_RegisterTCPServer(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *Camera_Set_Job(struct _SObjList *pModules, int IndexCamera, char *Job);"
+   "\n",
+   "struct _SElException *Camera_Set_Step(struct _SObjList *pModules, int IndexCamera, int Step);"
+   "\n",
+   "struct _SElException *Camera_Trigger(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *Camera_disconnect(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *Camera_login(struct _SObjList *pModules, int IndexCamera);"
+   "\n",
+   "struct _SElException *CheckAxis(struct _axis *paxis, int axis, double position, double timeout);"
+   "\n",
+   "struct _SElException *CheckAxis2(struct _axis *paxis, int axis, double position, double timeout);"
+   "\n",
+   "struct _SElException *CheckDirectory(const char *directory);"
+   "\n",
+   "struct _SElException *CheckLimitINT32(struct _STestParam *ppar, int step, int index, int value);"
+   "\n",
+   "struct _SElException *CheckLimitREAL64(struct _STestParam *ppar, int step, int index, double value);"
+   "\n",
+   "struct _SElException *CheckLimitSTRING(struct _STestParam *ppar, int step, int index, char *value);"
+   "\n",
+   "struct _SElException *CheckLimitUINT32(struct _STestParam *ppar, int step, int index, unsigned int value);"
+   "\n",
+   "struct _SElException *CloseTestPanel() __declspec(dllexport);"
+   "\n",
+   "struct _SElException *CreateNewLimit(struct _STestParam *ppar, int step, int index, char *limit_str, const char *description);"
+   "\n",
+   "struct _SElException *CreateNewLimitEx(struct _STestParam *ppar, int step, int index, char *min, char *max, const char *description);"
+   "\n",
+   "int DllEntryPoint(struct HINSTANCE__ *hinstDLL, unsigned long fdwReason, void *lpvReserved);"
+   "\n",
+   "int DllMain(struct HINSTANCE__ *hinstDLL, unsigned long fdwReason, void *lpvReserved);"
+   "\n",
+   "void ElSleep(unsigned long time);"
+   "\n",
+   "struct _SElException *GetLimitConfiguration(struct _STestParam *ppar, int step, int index, char buffer[], int bufferSize);"
+   "\n",
+   "struct _SElException *GetResultREAL64formXMLString(struct _SELString *result, const char *path, double *value);"
+   "\n",
+   "struct _SElException *GetResultSTRINGformXMLString(struct _SELString *result, const char *path, char *buffer);"
+   "\n",
+   "struct _SElException *GetSubTest(struct _STestParam *ppar, int step, char *subtest);"
+   "\n",
+   "struct _SElException *GetTestDescription(struct _STestParam *ppar, int step, char *desc, unsigned int descSize);"
+   "\n",
+   "struct _SElException *GetTestFunction(int index, struct _STestListItem **pTest, int *test_count) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *GetTestResult(struct _STestParam *ppar, int *result);"
+   "\n",
+   "struct _SElException *GetTestSeqFunction(struct _STestSeq **pTestSeq) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *GetTestSequenceBarcode(struct _STestParam *ppar, char *barcode, unsigned int barcode_size);"
+   "\n",
+   "struct _SElException *Get_GAP_Measures(struct _SObjList *pModules, double *Mean_GAP_50, double *Mean_GAP_60);"
+   "\n",
+   "struct _SElException *IniTestPanel(const char *picture, int reset) __declspec(dllexport);"
+   "\n",
+   "int LimitExist(struct _STestParam *ppar, int step, int index);"
+   "\n",
+   "struct _SElException *LineaTable1D(double *InputTable, struct _SCalibration *pScaleInfo, int size, double *OutputTable);"
+   "\n",
+   "struct _SElException *LoadJobCamera2(struct _Cameras *pcameras, char *job);"
+   "\n",
+   "void LogAxisError(char *Error);"
+   "\n",
+   "void MathFunction(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+   "\n",
+   "void MathFunction2(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+   "\n",
+   "struct _SElException *MeasGapStation50(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+   "\n",
+   "struct _SElException *MeasGapStation60(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+   "\n",
+   "struct _SElException *MoveAxis(struct _axis *paxis, int axis, double position);"
+   "\n",
+   "struct _SElException *MoveAxis2(struct _axis *paxis, int axis, double position);"
+   "\n",
+   "struct _SElException *MoveToPush(struct _axiss *paxiss, int index, int check, double position_axis_Z, double position_axis_Y, double position_axis_X);"
+   "\n",
+   "struct _SElException *MoveToPush2(struct _axiss *paxiss, int index, int check, double position_axis_Y, double position_axis_X);"
+   "\n",
+   "int OnButton(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "struct _SElException *PLUGIN_SHUTDOWN_NAME_CODE(struct _SPluginArgs *a_pPluginArgs) __declspec(dllexport);"
+   "\n",
+   "void PostDeferredDisplayPanel(void *callbackData);"
+   "\n",
+   "void PostDeferredHidePanel(void *callbackData);"
+   "\n",
+   "struct _SElException *PowerSetPower(struct _SObjList *pModules, const char *xml_file, const char *channel, double voltage, double current);"
+   "\n",
+   "struct _SElException *QueryParameterInt32(struct _STestParam *ppar, int step, const char *name, int *pValue);"
+   "\n",
+   "struct _SElException *QueryParameterReal64(struct _STestParam *ppar, int step, const char *name, double *pValue);"
+   "\n",
+   "struct _SElException *QueryParameterString(struct _STestParam *ppar, int step, const char *name, char buffer[], int bufferSize);"
+   "\n",
+   "struct _SElException *QueryParameterUInt32(struct _STestParam *ppar, int step, const char *name, unsigned int *pValue);"
+   "\n",
+   "struct _SElException *ReadAnalog(char *Channel, double *Value);"
+   "\n",
+   "struct _SElException *ReadAnalog2(char *Channel, double *Value);"
+   "\n",
+   "struct _SElException *ReadAnalogWithScale(char *Used_Channel, char *Channel, struct _SCalibration *pScaleInfo, double *Value);"
+   "\n",
+   "struct _SElException *ReadAnalogWithScale2(char *Used_Channel, char *Channel, struct _SCalibration *pScaleInfo, double *Value);"
+   "\n",
+   "void RealTimeWaiting50(double time_ms);"
+   "\n",
+   "void RealTimeWaiting60(double time_ms);"
+   "\n",
+   "void RunDllUI() __declspec(dllexport);"
+   "\n",
+   "void SaveGraphPNG(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+   "\n",
+   "void SaveGraphPNG2(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+   "\n",
+   "void SaveXmlResultFile(struct _STestParam *pTestParam, int failed);"
+   "\n",
+   "struct _SElException *SetPanelStationStatus(int station, int status) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *SetPanelWarning(int control, int status) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *SetParameterInt32(struct _STestParam *ppar, int step, const char *name, int value);"
+   "\n",
+   "struct _SElException *SetParameterReal64(struct _STestParam *ppar, int step, const char *name, double value);"
+   "\n",
+   "struct _SElException *SetParameterString(struct _STestParam *ppar, int step, const char *name, const char *buffer);"
+   "\n",
+   "struct _SElException *SetParameterUInt32(struct _STestParam *ppar, int step, const char *name, unsigned int value);"
+   "\n",
+   "struct _SElException *SetSubTestDuration(struct _STestParam *ppar, int step, int index, double duration);"
+   "\n",
+   "struct _SElException *SetTestDuration(struct _STestParam *ppar, int step, double duration);"
+   "\n",
+   "struct _SElException *SetTestPanelDescription(int control, const char *description) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *SetTestPanelMode(int mode) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *SetTestPanelReferences(char *RefValeo, char *RefCustomer) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *SetTestResult(struct _STestParam *ppar, int step, int index, struct _SElException *pException);"
+   "\n",
+   "struct _SElException *SetTestSequenceDuration(struct _STestParam *ppar, int mode, double duration);"
+   "\n",
+   "struct _SElException *SetTestSequenceResult(struct _STestParam *ppar, int mode, struct _SElException *pException);"
+   "\n",
+   "struct _SElException *SetTestSequenceTime(struct _STestParam *ppar, double duration);"
+   "\n",
+   "struct _SElException *SetTestSequenceValue(struct _STestParam *ppar, int mode, const char *name, const char *value);"
+   "\n",
+   "struct _SElException *SetTestUsed(struct _STestParam *ppar, int step);"
+   "\n",
+   "struct _SElException *SetTestValue(struct _STestParam *ppar, int step, const char *name, const char *value);"
+   "\n",
+   "struct _SElException *ThreadStart(unsigned long (*pThreadFnc)(void *) __attribute__((stdcall)), void *pData, HANDLE *hThread, HANDLE *hStopEvent);"
+   "\n",
+   "struct _SElException *ThreadStatus(HANDLE hThread, unsigned int timeout, int *pStatus);"
+   "\n",
+   "struct _SElException *ThreadStop(HANDLE *hThread, HANDLE *hStopEvent);"
+   "\n",
+   "int compare(const void *a, const void *b);"
+   "\n",
+   "void elexception_delete(struct _SElException **pException);"
+   "\n",
+   "void elexception_log_set(void (*fn_log)(struct _SElException *));"
+   "\n",
+   "struct _SElException *elexception_new(int errorCode, const char *messsage, const char *file, long line);"
+   "\n",
+   "struct _SElException *elstring_delete(struct _SELString **pString);"
+   "\n",
+   "struct _SElException *elstring_new(const char *pStr, struct _SELString **pString);"
+   "\n",
+   "void excdisplay(struct _SElException *pException);"
+   "\n",
+   "void excdispstr(struct _SElException *pException, char *str, int str_size);"
+   "\n",
+   "double getMaxDoubleArray(double *Array);"
+   "\n",
+   "double getMaxDoubleArray2(double *Array);"
+   "\n",
+   "double getMinDoubleArray(double *Array);"
+   "\n",
+   "double getMinDoubleArray2(double *Array);"
+   "\n",
+   "double parGetFSchwell();"
+   "\n",
+   "double parGetFSchwell2();"
+   "\n",
+   "struct _SElException *pluginGetAttribute(unsigned int attrID, unsigned int size, void *value) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *pluginGetInfo(struct _SPluginInfo **a_pInfo) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *pluginInitialize(struct _SPluginArgs *a_pPluginArgs) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *pluginLeave(struct _SPluginArgs *a_pPluginArgs, const char *uuid) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *pluginRun(struct _SPluginArgs *a_pPluginArgs, const char *uuid) __declspec(dllexport);"
+   "\n",
+   "struct _SElException *test_delete(struct _STest **pTest);"
+   "\n",
+   "struct _SElException *test_new(struct _STest **pTest);"
+   "\n",
+   "struct _SElException *testseq_delete(struct _STestSequence **pTestSeq);"
+   "\n",
+   "struct _SElException *testseq_new(struct _STestSequence **pTestSequence);"
+   "\n",
+   "\0"
+}

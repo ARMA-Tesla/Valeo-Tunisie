@@ -1,0 +1,195 @@
+#include <time.h> 
+#include <test/eltest.h>
+#include <sdk/mmsystem.h>
+#include <test/test_helper_functions.h>
+#include <toolbox.h>
+#include "b2yy_mcp2_utils.h" 
+
+extern SObjListPtr 		gs_Modules;
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "ElSleep"
+void ElSleep(DWORD time)
+{
+	timeBeginPeriod(1);
+	Sleep( (DWORD)time);
+	timeEndPeriod(1);
+}
+
+/*----------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "ReadBlowerPosition"
+SElExceptionPtr	ReadBlowerPosition( 
+	void*			pTID,
+	EBlowerPosition	position,
+	double*			voltage,
+	double*			current
+)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;	
+	
+	TEST_USE(SW5);
+	TEST_USE(DMM);
+	//TEST_USE(PSW1);
+	TEST_USE(POWER);
+	TEST_USE(SENSORS);
+
+	//INITIALIZE(PSW1);
+	INITIALIZE(SW5);
+	INITIALIZE(DMM);
+	INITIALIZE(POWER);
+
+	checkErr(IviDmm_ConfigureMeasurement(vi_DMM, IVIDMM_VAL_DC_VOLTS, 200.0e-3, 0.001));
+
+	IF_NOT_CONNECT(BLOWER(position));
+//		checkErr( IviDCPwr_ConfigureOutputEnabled(vi_POWER, "CHANNEL1", VI_FALSE));
+//		ElSleep(40);
+		DISCONNECT(BLOWERS);
+		CONNECT(BLOWER(position));
+//		checkErr( IviDCPwr_ConfigureOutputEnabled(vi_POWER, "CHANNEL1", VI_TRUE));
+	END_IF();
+
+	IF_NOT_CONNECT(BLOWER_DMM(position));
+		DISCONNECT(BLOWERS_DMM);
+		CONNECT(BLOWER_DMM(position));
+	END_IF();
+	
+	ElSleep(100);
+	checkErr( IviDCPwr_Measure(vi_POWER, "CHANNEL1", IVIDCPWR_VAL_MEASURE_CURRENT, current));
+	if (*current < 2.0e-3) *current = 0.0;
+
+	/* voltage meas */
+	if ( voltage )
+	{
+		checkErr( IviDmm_Read (vi_DMM, 2000, voltage));
+		if(IsNotANumber(*voltage)) *voltage = 13.5;
+	}
+
+Error:
+	IVI_CHECK_ERR(error);
+	EXCRETHROW(pexception);
+}
+
+/*----------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "WaitForBlowerPosition"
+SElExceptionPtr	WaitForBlowerPosition( 
+	void* pTID,
+	STesterPtr ptester,
+	EBlowerPosition	position
+)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+	bool_t			is_set = FALSE;
+	double			current;
+	uint32_t		timeout;
+	uint32_t		state_nok;
+	TIMEOUT_INIT();
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+
+	while(!is_set)
+	{
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		TIMEOUT_CHECK(timeout);
+
+		switch(position)
+		{
+			case POSITION_0:
+			case POSITION_1:
+			case POSITION_2:
+			case POSITION_3:
+				EXCCHECK( ReadBlowerPosition(pTID, position+1, NULL, &current));
+				if(current<=0.2) is_set = TRUE;
+				break;
+			case POSITION_4:
+				EXCCHECK( ReadBlowerPosition(pTID, POSITION_4, NULL, &current));
+				if(current>0.2) is_set = TRUE;
+				break;
+			default:
+				break;
+		}
+	};
+
+Error:
+	IVI_CHECK_ERR(error);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	EXCRETHROW(pexception);
+}
+
+/*----------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "WaitForBlowerState"
+SElExceptionPtr	WaitForBlowerState( 
+	void* pTID,
+	STesterPtr ptester,
+	EBlowerState state
+)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+	bool_t			is_set = FALSE;
+	double			voltage;
+	uint32_t		timeout;
+	uint32_t		state_nok;
+	TIMEOUT_INIT();
+
+	TEST_USE(SW5);
+	TEST_USE(DMM);
+	//TEST_USE(PSW1);
+	TEST_USE(SENSORS);
+
+	//INITIALIZE(PSW1);
+	INITIALIZE(SW5);
+	INITIALIZE(DMM);
+
+	checkErr(IviDmm_ConfigureMeasurement(vi_DMM, IVIDMM_VAL_DC_VOLTS, 25.0, 0.001));
+
+	PARAM_UINT32_OPTIONAL("Timeout", &timeout, TIMEOUT_DEFAULT);
+
+	DISCONNECT(BLOWERS);
+
+	IF_NOT_CONNECT(BLOWER_DMM(POSITION_1));
+		DISCONNECT(BLOWERS_DMM);
+		CONNECT(BLOWER_DMM(POSITION_1));
+	END_IF();
+
+	EXCCHECK( ptester->SetSensor(ptester, "INDICATOR_NOK", 1));
+
+	while(!is_set)
+	{
+		EXCCHECK( ptester->GetSensor(ptester, "BUTTON_NOK", &state_nok));
+		if(state_nok)
+			EXCTHROW(TEST_ERROR_BUTTON_NOK, "Button NOK pressed!");
+
+		TIMEOUT_CHECK(timeout);
+
+		ElSleep(80);
+		checkErr( IviDmm_Read (vi_DMM, 2000, &voltage));
+
+		switch(state)
+		{
+			case BLOWER_RELEASE:
+				if(voltage>12.0) is_set = TRUE;
+				break;
+			case BLOWER_ACTIVE:
+				if(voltage<1.0) is_set = TRUE;
+				break;
+			default:
+				break;
+		}
+	};
+
+Error:
+	IVI_CHECK_ERR(error);
+	ptester->SetSensor(ptester, "INDICATOR_NOK", 0);
+	EXCRETHROW(pexception);
+}

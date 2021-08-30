@@ -1,0 +1,240 @@
+[NumeroJour]
+Class="Function"
+Prototype="int NumeroJour(int mois, int jours, int annee);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:360:1"
+
+[Ajustement_Gain_Offset_30]
+Class="Function"
+Prototype="struct _SElException *Ajustement_Gain_Offset_30(char *Function, double *dmF1, double *dmF2, double *dmS3);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:390:1"
+
+[LogAxisError]
+Class="Function"
+Prototype="void LogAxisError(int ErrorCode, float ForceValue, int channel_index);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:567:1"
+
+[Ajustement_Gain_Offset_40]
+Class="Function"
+Prototype="struct _SElException *Ajustement_Gain_Offset_40(char *Function, double *dmF1, double *dmF2, double *dmS3);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:633:1"
+
+[GetNewSerial]
+Class="Function"
+Prototype="struct _SElException *GetNewSerial(struct _SDBS *pdbs, int *counter);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:792:1"
+
+[Write_Traca_MMS_NOK]
+Class="Function"
+Prototype="int Write_Traca_MMS_NOK(int Station, struct _STestParam *pTestParam);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:814:1"
+
+[StopThreads]
+Class="Function"
+Prototype="void StopThreads(int Station);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:873:1"
+
+[Get_Variant_Code]
+Class="Function"
+Prototype="int Get_Variant_Code(char variant[3]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:880:1"
+
+[CalcChecksumV1]
+Class="Function"
+Prototype="void CalcChecksumV1(unsigned char *Buffer, int *Checksum);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:903:1"
+
+[ElSleep]
+Class="Function"
+Prototype="void ElSleep(unsigned long time);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:920:1"
+
+[Timer_Angle_TIPP_WIPE]
+Class="Function"
+Prototype="int Timer_Angle_TIPP_WIPE(int reserved, int theTimerId, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:930:1"
+
+[Timer_Angle_SCROLL_WHEEL]
+Class="Function"
+Prototype="int Timer_Angle_SCROLL_WHEEL(int reserved, int theTimerId, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:953:1"
+
+[MoveAxis2]
+Class="Function"
+Prototype="struct _SElException *MoveAxis2(struct _axis *paxis, int axis, double position, double speed);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:977:1"
+
+[MoveAxis]
+Class="Function"
+Prototype="struct _SElException *MoveAxis(struct _axis *paxis, int axis, double position);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:993:1"
+
+[CheckAxis]
+Class="Function"
+Prototype="struct _SElException *CheckAxis(struct _axis *paxis, int axis, struct _STester *ptester, double position, const char *PEND_AXIS, double timeout);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1026:1"
+
+[MoveToPush]
+Class="Function"
+Prototype="struct _SElException *MoveToPush(struct _axis *paxis, struct _STester *ptester, int check, double position_axis_Z, double position_axis_Y, double position_axis_X, const char *PEND_AXIS_Z, const char *PEND_AXIS_Y, const char *PEND_AXIS_X);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1074:1"
+
+[ReadAnalog]
+Class="Function"
+Prototype="struct _SElException *ReadAnalog(char *Channel, double *Value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1100:1"
+
+[ReadAnalogWithScale]
+Class="Function"
+Prototype="struct _SElException *ReadAnalogWithScale(char *Channel, struct _SCalibration *pScaleInfo, double *Value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1115:1"
+
+[LineaTable1D]
+Class="Function"
+Prototype="struct _SElException *LineaTable1D(double *InputTable, struct _SCalibration *pScaleInfo, int size, double *OutputTable);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1148:1"
+
+[Thread_Aquisition_Force]
+Class="Function"
+Prototype="unsigned long Thread_Aquisition_Force(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1173:1"
+
+[Thread_Aquisition_Torque_TIPP_WIPE]
+Class="Function"
+Prototype="unsigned long Thread_Aquisition_Torque_TIPP_WIPE(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1432:1"
+
+[Thread_Aquisition_Torque_SCROLL_WHEEL]
+Class="Function"
+Prototype="unsigned long Thread_Aquisition_Torque_SCROLL_WHEEL(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:1818:1"
+
+[Thread_Lin_Read]
+Class="Function"
+Prototype="unsigned long Thread_Lin_Read(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:2034:1"
+
+[Thread_Lin_Write]
+Class="Function"
+Prototype="unsigned long Thread_Lin_Write(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:2673:1"
+
+[Get_push_value]
+Class="Function"
+Prototype="int Get_push_value(char *push_name, int station);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3236:1"
+
+[Get_ADC_push_value]
+Class="Function"
+Prototype="double Get_ADC_push_value(char *push_name, int station);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3244:1"
+
+[Read_ADC]
+Class="Function"
+Prototype="struct _SElException *Read_ADC(struct _SCANList *pcan, int station);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3251:1"
+
+[Get_push_value_from_name]
+Class="Function"
+Prototype="int Get_push_value_from_name(unsigned char data[8], char *push_name);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3352:1"
+
+[Get_ADC_value]
+Class="Function"
+Prototype="double Get_ADC_value(unsigned char data[8], char *push_name);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3558:1"
+
+[getMaxDoubleArray]
+Class="Function"
+Prototype="double getMaxDoubleArray(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3608:1"
+
+[getMinDoubleArray]
+Class="Function"
+Prototype="double getMinDoubleArray(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3622:1"
+
+[getMaxDoubleArray2]
+Class="Function"
+Prototype="double getMaxDoubleArray2(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3636:1"
+
+[getMinDoubleArray2]
+Class="Function"
+Prototype="double getMinDoubleArray2(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3650:1"
+
+[parGetFSchwell]
+Class="Function"
+Prototype="double parGetFSchwell();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3664:1"
+
+[SaveGraphPNG]
+Class="Function"
+Prototype="void SaveGraphPNG(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3669:1"
+
+[MathFunction30]
+Class="Function"
+Prototype="void MathFunction30(double sdWaveGes[3][12000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3681:1"
+
+[AnalysisFunction]
+Class="Function"
+Prototype="void AnalysisFunction(double sdWaveGes[3][12000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:3898:1"
+
+[Moyenne_Glissante_Courbe_30]
+Class="Function"
+Prototype="void Moyenne_Glissante_Courbe_30(double sdWaveGes[12000], int length);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4059:1"
+
+[MathFunction40]
+Class="Function"
+Prototype="void MathFunction40(double sdWaveGes[3][12000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4087:1"
+
+[Moyenne_Glissante_Courbe_40]
+Class="Function"
+Prototype="void Moyenne_Glissante_Courbe_40(double sdWaveGes[12000], int length);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4314:1"
+
+[MathFunction2]
+Class="Function"
+Prototype="void MathFunction2(double sdWaveGes[3][12000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF3V, double *_dmS3V, double *_dmF4V, double *_dmS4V, double *_dmF5V, double *_dmS5V);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4342:1"
+
+[Filter_Table]
+Class="Function"
+Prototype="void Filter_Table(double *data, int size);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4585:1"
+
+[Thread_Rodage_Wheel_Right]
+Class="Function"
+Prototype="unsigned long Thread_Rodage_Wheel_Right(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4614:1"
+
+[Thread_Rodage_Wheel_Left]
+Class="Function"
+Prototype="unsigned long Thread_Rodage_Wheel_Left(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4706:1"
+
+[Thread_Reset_Sensor]
+Class="Function"
+Prototype="unsigned long Thread_Reset_Sensor(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4783:1"
+
+[CheckDirectory]
+Class="Function"
+Prototype="struct _SElException *CheckDirectory(const char *directory);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4809:1"
+
+[Thread_Phase_Detection_Left]
+Class="Function"
+Prototype="unsigned long Thread_Phase_Detection_Left(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4829:1"
+
+[Thread_Phase_Detection_Right]
+Class="Function"
+Prototype="unsigned long Thread_Phase_Detection_Right(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\sws_mfl\sws_mfl_utils.c:4883:1"
+

@@ -1,0 +1,34 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/gui/login/lang
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2007-05-17T15:37:12.662014Z
+462
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+cs
+dir
+
+fr
+dir
+

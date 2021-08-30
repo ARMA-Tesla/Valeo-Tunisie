@@ -1,0 +1,185 @@
+msgid "IMAQ Panel"
+msgstr "IMAQ Panel"
+
+msgid "Plug-in info"
+msgstr "Plug-in info"
+
+msgid "Version:"
+msgstr "Verze:"
+
+msgid "Build Date:"
+msgstr "Vytvoøeno:"
+
+msgid "Plug-in Vendor:"
+msgstr "Firma:"
+
+msgid "Changes in Imaq configuration appear after restart the main application!"
+msgstr "Zmìny v konfiguraci se projeví až po restartu hlavní aplikace!"
+
+msgid "Vision Config"
+msgstr "Vision konfigurace"
+
+msgid "Camera"
+msgstr "Kamera"
+
+msgid "Image"
+msgstr "Obrázek"
+
+msgid "Config"
+msgstr "Konfigurace"
+
+msgid "Task"
+msgstr "Úloha"
+
+msgid "Camera Config"
+msgstr "Konfigurace kamery"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "Shutter Speed"
+msgstr "Rychlost závìrky"
+
+msgid "Gain"
+msgstr "Zesílení"
+
+msgid "Image Avarage"
+msgstr "Prùmìrování"
+
+msgid "Frame Rate"
+msgstr "Snímkování"
+
+msgid "Configure Task"
+msgstr "Nastavení úlohy"
+
+msgid "Step Type"
+msgstr "Druh kroku"
+
+msgid "Task Name:"
+msgstr "Jméno úlohy:"
+
+msgid "Task/Steps"
+msgstr "Úloha/Kroky"
+
+msgid "oreginal image"
+msgstr "pùvodní obrázek"
+
+msgid "Pattern Matching"
+msgstr "Pattern Matching"
+
+msgid "Step Name:"
+msgstr "Jméno kroku:"
+
+msgid "Pattern"
+msgstr "Vzor"
+
+msgid "Search Conditions"
+msgstr "Podmínky vyhledávání"
+
+msgid "Search Region"
+msgstr "Oblast hledání"
+
+msgid "Number of matches"
+msgstr "Poèet hledaných vzorù"
+
+msgid "Match Score"
+msgstr "Skóre hledání"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "Mode"
+msgstr "Mód"
+
+msgid "Result"
+msgstr "Výsledek"
+
+msgid "Preview"
+msgstr "Náhled"
+
+msgid "Golden Pattern Matching"
+msgstr "Golden Pattern Matching"
+
+msgid "Bright Level"
+msgstr "Svìtlá úroveò"
+
+msgid "Dark Level"
+msgstr "Tmavá úroveò"
+
+msgid "Histogram"
+msgstr "Histogram"
+
+msgid "Histogram Region"
+msgstr "Region histogramu"
+
+msgid "Math Operations"
+msgstr "Matematické operace"
+
+msgid "Source Image"
+msgstr "Zdrojový obrázek"
+
+msgid "Constant"
+msgstr "Konstanta"
+
+msgid "Resample"
+msgstr "Pøevzorkování"
+
+msgid "Images Buffer"
+msgstr "Zásobník obrázkù"
+
+msgid "Interpolation"
+msgstr "Interpolace"
+
+msgid "Template Path"
+msgstr "Cesta ke vzorùm"
+
+msgid "New Buffer"
+msgstr "Nový obrázek do zásobníku"
+
+msgid "Buffer"
+msgstr "Zásobník"
+
+msgid "Buffer Name"
+msgstr "Jméno záznamu"
+
+msgid "Snap or Load Image"
+msgstr "Sejmi nebo otevøi obrázek"
+
+msgid "Before you configure any task, you should load or snap an image"
+msgstr "Pøed nastavení úloh sejmi nebo otevøi obrázek"
+
+msgid "You must specify buffer name!"
+msgstr "Urèi jméno zasobníku!"
+
+msgid "Name \"image\" or names with @ character on begin are reserved for internal use"
+msgstr "Jméno \"image\" nebo jméno s @ znakem na zaèátku jsou rezervována pro vnitøní úèely"
+
+msgid "No valid template path defined"
+msgstr "Nesprávnì definovaná cesta ke vzoru"
+
+msgid "Region is not defined"
+msgstr "Oblast nebyla definovaná"
+
+msgid "Unknown Math Operation!"
+msgstr "Nesprávná matematická operace!"
+
+msgid "Operation has not been selected. Step has not been created."
+msgstr "Nebyla vybrána matematická operace. Krok nebyl vytvoøen."
+
+msgid "The specified image name \"%s\" has not befound."
+msgstr "Zadaný obrázek \"%s\" nebyl nalezen"
+
+msgid "Configuration is empty!"
+msgstr "Prázdná konfigurace!"
+
+msgid "Buffer with name \"%s\" already exist. Do you want replace it?"
+msgstr "Záznam s tímto jménem \"%s\" existuje. Pøepsat stávajíci?"
+
+msgid "Sharpen Settings"
+msgstr "Nastavení ostøení"
+
+msgid "Mean Value"
+msgstr "Støední hodnota"
+
+msgid "Brightness"
+msgstr "Jas"

@@ -1,0 +1,39 @@
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:427:2: warning: variable 'sname' is used uninitialized whenever 'if' condition is true [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:7: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:533:17: note: uninitialized use occurs here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:427:2: note: remove the 'if' if its condition is always false
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:2: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:419:15: note: initialize the variable 'sname' to silence this warning
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:428:2: warning: variable 'sedit' is used uninitialized whenever 'if' condition is true [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:7: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:534:17: note: uninitialized use occurs here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:428:2: note: remove the 'if' if its condition is always false
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:2: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:427:2: warning: variable 'sedit' is used uninitialized whenever 'if' condition is true [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:7: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:534:17: note: uninitialized use occurs here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:427:2: note: remove the 'if' if its condition is always false
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:140:3: note: expanded from macro 'EXCCHECKCOM'
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:91:2: note: expanded from macro 'EXCTHROW'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:420:15: note: initialize the variable 'sedit' to silence this warning
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:627:9: warning: variable 'ProductId[j]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:591:2: note: variable 'ProductId' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:794:51: warning: variable 'products_id[i]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:86:21: note: expanded from macro 'EXCCHECK'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:767:2: note: variable 'products_id' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:852:50: warning: variable 'pvalue[i]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:824:2: note: variable 'pvalue' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:850:51: warning: variable 'products_id[i]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\shared\exception/exception.h:86:21: note: expanded from macro 'EXCCHECK'
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:821:2: note: variable 'products_id' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:917:7: warning: variable 'products_id[j]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:887:2: note: variable 'products_id' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:973:18: warning: variable 'products_id[i]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:944:2: note: variable 'products_id' is declared here
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:1015:25: warning: variable 'tree[i]' may be uninitialized when used here [-Wuninitialized]
+c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_test.c:1000:2: note: variable 'tree' is declared here

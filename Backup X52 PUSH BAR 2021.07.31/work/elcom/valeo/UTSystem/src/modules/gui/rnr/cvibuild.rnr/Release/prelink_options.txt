@@ -1,0 +1,8 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\rnr_plugin.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\rnr.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\language.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\rnr\cvibuild.rnr\Release\rnr.obj.cvidefprots
+-dllName rnr.dll

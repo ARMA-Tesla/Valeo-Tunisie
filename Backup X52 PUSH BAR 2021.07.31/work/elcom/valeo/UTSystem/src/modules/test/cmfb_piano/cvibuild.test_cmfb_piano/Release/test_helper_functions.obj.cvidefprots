@@ -1,0 +1,110 @@
+[PowerSetPower]
+Class="Function"
+Prototype="struct _SElException *PowerSetPower(struct _SObjList *pModules, const char *xml_file, const char *channel, double voltage, double current);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:290:1"
+
+[MeasGapStation50]
+Class="Function"
+Prototype="struct _SElException *MeasGapStation50(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:319:1"
+
+[MeasGapStation60]
+Class="Function"
+Prototype="struct _SElException *MeasGapStation60(struct _SObjList *pModules, double *out0, double *out1, double *out2, double *out3);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:378:1"
+
+[Camera_RegisterTCPServer]
+Class="Function"
+Prototype="struct _SElException *Camera_RegisterTCPServer(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:437:1"
+
+[Camera_login]
+Class="Function"
+Prototype="struct _SElException *Camera_login(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:457:1"
+
+[Camera_disconnect]
+Class="Function"
+Prototype="struct _SElException *Camera_disconnect(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:477:1"
+
+[Camera_Trigger]
+Class="Function"
+Prototype="struct _SElException *Camera_Trigger(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:496:1"
+
+[Camera_Read]
+Class="Function"
+Prototype="struct _SElException *Camera_Read(struct _SObjList *pModules, int IndexCamera, char data[128]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:516:1"
+
+[Camera_Online]
+Class="Function"
+Prototype="struct _SElException *Camera_Online(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:537:1"
+
+[Camera_Offline]
+Class="Function"
+Prototype="struct _SElException *Camera_Offline(struct _SObjList *pModules, int IndexCamera);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:557:1"
+
+[Camera_Set_Job]
+Class="Function"
+Prototype="struct _SElException *Camera_Set_Job(struct _SObjList *pModules, int IndexCamera, char *Job);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:577:1"
+
+[Camera_Set_Step]
+Class="Function"
+Prototype="struct _SElException *Camera_Set_Step(struct _SObjList *pModules, int IndexCamera, int Step);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:598:1"
+
+[getMaxDoubleArray]
+Class="Function"
+Prototype="double getMaxDoubleArray(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:616:1"
+
+[getMinDoubleArray]
+Class="Function"
+Prototype="double getMinDoubleArray(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:630:1"
+
+[parGetFSchwell]
+Class="Function"
+Prototype="double parGetFSchwell();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:644:1"
+
+[SaveGraphPNG]
+Class="Function"
+Prototype="void SaveGraphPNG(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:648:1"
+
+[MathFunction]
+Class="Function"
+Prototype="void MathFunction(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:659:1"
+
+[getMaxDoubleArray2]
+Class="Function"
+Prototype="double getMaxDoubleArray2(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:885:1"
+
+[getMinDoubleArray2]
+Class="Function"
+Prototype="double getMinDoubleArray2(double *Array);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:899:1"
+
+[parGetFSchwell2]
+Class="Function"
+Prototype="double parGetFSchwell2();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:913:1"
+
+[SaveGraphPNG2]
+Class="Function"
+Prototype="void SaveGraphPNG2(int PanelHandle, int ControleHandle, char *PathNamePNG);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:917:1"
+
+[MathFunction2]
+Class="Function"
+Prototype="void MathFunction2(double sdWaveGes[5][10000], int length, double *_dmF1V, double *_dmS1V, double *_dmF2V, double *_dmS2V, double *_dmF_END, double *_dmS_END, double *_dmF1R, double *_dmS1R, double *_dmF2R, double *_dmS2R);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\test\test_helper_functions.c:928:1"
+

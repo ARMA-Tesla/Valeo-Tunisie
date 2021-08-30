@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="windows-1250" ?>
+<configuration>
+	<modules>
+		<module id="{373E4944-7743-11DC-9F61-B3D156D89593}">
+			<name>Calibration</name>
+			<channel>
+				<name>Channel1H</name>
+				<scale type="linear">
+					<name>current200mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.020172</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.201000</value2>
+					</calibrated>
+				</scale>
+				<scale type="linear">
+					<name>current2A</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.199397</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>1.994300</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel1L</name>
+				<scale type="linear">
+					<name>current2mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.197702</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.001978</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel2H</name>
+				<scale type="linear">
+					<name>current200mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.020210</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.201000</value2>
+					</calibrated>
+				</scale>
+				<scale type="linear">
+					<name>current2A</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.199333</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>1.994200</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel2L</name>
+				<scale type="linear">
+					<name>current2mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.198119</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.001978</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel3H</name>
+				<scale type="linear">
+					<name>current200mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.020177</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.201000</value2>
+					</calibrated>
+				</scale>
+				<scale type="linear">
+					<name>current2A</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.199415</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>1.994300</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel3L</name>
+				<scale type="linear">
+					<name>current2mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.197774</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.001978</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel4H</name>
+				<scale type="linear">
+					<name>current200mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.020195</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.201000</value2>
+					</calibrated>
+				</scale>
+				<scale type="linear">
+					<name>current2A</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.199689</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>1.994300</value2>
+					</calibrated>
+				</scale>
+			</channel>
+			<channel>
+				<name>Channel4L</name>
+				<scale type="linear">
+					<name>current2mA</name>
+					<uncalibrated>
+						<value1>0.000000</value1>
+						<value2>0.197571</value2>
+					</uncalibrated>
+					<calibrated>
+						<value1>0.000000</value1>
+						<value2>0.001978</value2>
+					</calibrated>
+				</scale>
+			</channel>
+		</module>
+	</modules>
+</configuration>

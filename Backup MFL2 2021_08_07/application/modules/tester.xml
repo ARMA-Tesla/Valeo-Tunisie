@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<configuration>
+    <modules>
+        <module id="{F459741B-B526-4fb9-B65C-A4C983105321}">
+            <name>Tester Module</name>
+        <Sensors>
+		<Sensor name="INFRARED_BARRIER" type="DI" description="Infrared Barrier of test bench">PLC_DI_00</Sensor>
+		<Sensor name="BUTTON_START" type="DI" description="Button Start">PLC_DI_77</Sensor>
+		<Sensor name="BUTTON_TOTAL_STOP" type="DI" description="Button Total Stop">PLC_DI_106</Sensor>
+		<Sensor name="PRESSURE" type="DI" description="Sensor Pressure OK">PLC_DI_75</Sensor>
+		<Sensor name="BUTTON_OK" type="DI" description="Button OK">PLC_DI_73</Sensor>
+		<Sensor name="BUTTON_NOK" type="DI" description="Button NOK">PLC_DI_74</Sensor>
+		<Sensor name="BUTTON_MENU" type="DI" description="Button NOK">PLC_DI_70</Sensor>
+		<Sensor name="SELECTEUR_ABRIS" type="DI" description="Button open door">PLC_DI_76</Sensor>
+		<Sensor name="MICRO_CAM" type="DI" description="Micro Cam of turntable">PLC_DI_71</Sensor>
+		
+		<Sensor name="INDICATOR_OK" type="DO" description="Indicator OK">PLC_DO_00</Sensor>
+		<Sensor name="INDICATOR_NOK" type="DO" description="Indicator NOK">PLC_DO_01</Sensor>
+		<Sensor name="START_ROTATION" type="DO" description="Start motor turntable rotation">PLC_DO_02</Sensor>
+		<Sensor name="FORCAGE_ROTATION" type="DO" description="Start motor turntable rotation">PLC_DO_03</Sensor>
+		<Sensor name="VEROUILLAGE_ABIS_GAUCHE" type="DO" description="commande fermeture porte gauche">PLC_DO_17</Sensor>
+		<Sensor name="VEROUILLAGE_ABIS_ARRIERE" type="DO" description="commande fermeture porte arriere">PLC_DO_20</Sensor>
+		<Sensor name="VEROUILLAGE_ABIS_AVANT" type="DO" description="commande fermeture porte avant">PLC_DO_21</Sensor>
+		 <Sensor name="DISACTIVATE_Z_30_RIGHT" type="DO" description="commande fermeture porte gauche">PLC_DO_30</Sensor> 
+		 <Sensor name="DISACTIVATE_Z_30_LEFT" type="DO" description="commande fermeture porte gauche">PLC_DO_31</Sensor> 
+		 <Sensor name="DISACTIVATE_Z_40_RIGHT" type="DO" description="commande fermeture porte gauche">PLC_DO_32</Sensor> 
+		 <Sensor name="DISACTIVATE_Z_40_LEFT" type="DO" description="commande fermeture porte gauche">PLC_DO_33</Sensor> 
+        </Sensors>
+		
+        <Station1>
+		<Sensor name="OUTPUT_LASER_LEFT" type="DI" description="Output High Sensor laser Left">PLC_DI_06</Sensor>
+		<Sensor name="OUTPUT_LASER_RIGHT" type="DI" description="Output Low Sensor laser Right">PLC_DI_05</Sensor>
+		<Sensor name="IS_PANEL_LOCKED_STATION_10" type="DI" description="Sensor cylinder panel lock station 10">PLC_DI_03</Sensor>
+		<Sensor name="IS_PANEL_UNLOCKED_STATION_10" type="DI" description="Sensor cylinder panel unlock station 10">PLC_DI_02</Sensor>
+		<Sensor name="SENSOR_PANEL_LOCKED_STATION_10" type="DI" description="Sensor confirmation panel unlock station 10">PLC_DI_04</Sensor>
+		<Sensor name="SENSOR_PALLET_1_STATION_10" type="DI" description="Sensor detection PALLET 1">PLC_DI_61</Sensor>
+
+		<Sensor name="CYLINDER_LOCK_STATION_10" type="DO" description="Electrovanne Lock panel station 10">CPV_01</Sensor>	
+		<Sensor name="CYLINDER_UNLOCK_STATION_10" type="DO" description="Electrovanne Unlock panel station 10">CPV_00</Sensor>	
+		</Station1>
+		
+		<Station2>
+		<Sensor name="IS_CYLINDER_RODAGE_UP_STATION_20" type="DI" description="Sensor cylinder rodage up station 20">PLC_DI_10</Sensor>
+		<Sensor name="IS_CYLINDER_RODAGE_DOWN_STATION_20" type="DI" description="Sensor cylinder rodage down station 20">PLC_DI_07</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_1" type="DI" description="Sensor cylinder push left 1">PLC_DI_11</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_2" type="DI" description="Sensor cylinder push left 2">PLC_DI_12</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_3" type="DI" description="Sensor cylinder push left 3">PLC_DI_13</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_4" type="DI" description="Sensor cylinder push left 4">PLC_DI_14</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_5" type="DI" description="Sensor cylinder push left 5">PLC_DI_15</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_6" type="DI" description="Sensor cylinder push left 6">PLC_DI_16</Sensor>
+		<Sensor name="SENSOR_PUSH_LEFT_7" type="DI" description="Sensor cylinder push left 7">PLC_DI_17</Sensor>
+
+		<Sensor name="RODAGE_UP_STATION_20" type="DO" description="Electrovanne cylinder rodage down">CPV_02</Sensor>
+		<Sensor name="RODAGE_DOWN_STATION_20" type="DO" description="Electrovanne cylinder rodage up">CPV_03</Sensor>
+		<Sensor name="BRAKE_RODAGE_STATION_20" type="DO" description="Electrovanne brake cylinder rodage up">CPV_76</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_1" type="DO" description="">CPV_37</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_1" type="DO" description="">CPV_36</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_2" type="DO" description="">CPV_41</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_2" type="DO" description="">CPV_40</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_3" type="DO" description="">CPV_25</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_3" type="DO" description="">CPV_24</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_4" type="DO" description="">CPV_27</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_4" type="DO" description="">CPV_26</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_5" type="DO" description="">CPV_31</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_5" type="DO" description="">CPV_30</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_6" type="DO" description="">CPV_33</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_6" type="DO" description="">CPV_32</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_LEFT_7" type="DO" description="">CPV_35</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_LEFT_7" type="DO" description="">CPV_34</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_1" type="DO" description="">CPV_07</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_1" type="DO" description="">CPV_06</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_2" type="DO" description="">CPV_13</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_2" type="DO" description="">CPV_12</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_3" type="DO" description="">CPV_05</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_3" type="DO" description="">CPV_04</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_4" type="DO" description="">CPV_15</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_4" type="DO" description="">CPV_14</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_5" type="DO" description="">CPV_11</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_5" type="DO" description="">CPV_10</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_6" type="DO" description="">CPV_23</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_6" type="DO" description="">CPV_22</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_7" type="DO" description="">CPV_21</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_7" type="DO" description="">CPV_20</Sensor>
+		<Sensor name="RODAGE_UP_PUSH_RIGHT_8" type="DO" description="">CPV_17</Sensor>
+		<Sensor name="RODAGE_DOWN_PUSH_RIGHT_8" type="DO" description="">CPV_16</Sensor>
+		</Station2>
+		
+		<Station3>		
+		<Sensor name="IS_PANEL_PLUGGED_STATION_30" type="DI" description="Sensor cylinder plug test front station 30">PLC_DI_47</Sensor>
+		<Sensor name="IS_PANEL_UNPLUGGED_STATION_30" type="DI" description="Sensor cylinder plug test rear station 30">PLC_DI_50</Sensor>
+		<Sensor name="PEND_X_RIGHT_STATION_30" type="DI" description="axis X in Position Right station 30">PLC_DI_100</Sensor>
+		<Sensor name="PEND_Y_RIGHT_STATION_30" type="DI" description="axis Y in Position Right station 30">PLC_DI_101</Sensor>
+		<Sensor name="PEND_Z_RIGHT_STATION_30" type="DI" description="axis Z in Position Right station 30">PLC_DI_102</Sensor>
+		<Sensor name="PEND_X_LEFT_STATION_30" type="DI" description="axis X in Position Left station 30">PLC_DI_103</Sensor>
+		<Sensor name="PEND_Y_LEFT_STATION_30" type="DI" description="axis Y in Position Left station 30">PLC_DI_104</Sensor>
+		<Sensor name="PEND_Z_LEFT_STATION_30" type="DI" description="axis Z in Position Left station 30">PLC_DI_105</Sensor>
+		<Sensor name="HEND_X_RIGHT_STATION_30" type="DI" description="axis X in Home Right station 30">PLC_DI_130</Sensor>
+		<Sensor name="HEND_Y_RIGHT_STATION_30" type="DI" description="axis Y in Home Right station 30">PLC_DI_131</Sensor>
+		<Sensor name="HEND_Z_RIGHT_STATION_30" type="DI" description="axis Z in Home Right station 30">PLC_DI_132</Sensor>
+		<Sensor name="HEND_X_LEFT_STATION_30" type="DI" description="axis X in Home Left station 30">PLC_DI_133</Sensor>
+		<Sensor name="HEND_Y_LEFT_STATION_30" type="DI" description="axis Y in Home Left station 30">PLC_DI_134</Sensor>
+		<Sensor name="HEND_Z_LEFT_STATION_30" type="DI" description="axis Z in Home Left station 30">PLC_DI_135</Sensor>
+		<Sensor name="SENSOR_Z_HOME_STATION_30_RIGHT" type="DI" description="axis Z in Home Left station 30">PLC_DI_43</Sensor>
+		<Sensor name="SENSOR_Z_HOME_STATION_30_LEFT" type="DI" description="axis Z in Home Left station 30">PLC_DI_44</Sensor>
+		
+		<Sensor name="CYLINDER_PLUG_STATION_30" type="DO" description="Electrovanne Plug Test station 30">CPV_42</Sensor>
+		<Sensor name="CYLINDER_UNPLUG_STATION_30" type="DO" description="Electrovanne Plug Test station 30">CPV_43</Sensor>
+		</Station3>
+		
+		<Station4>	
+		<Sensor name="IS_PANEL_PLUGGED_STATION_40" type="DI" description="Sensor cylinder plug test front station 40">PLC_DI_51</Sensor>
+		<Sensor name="IS_PANEL_UNPLUGGED_STATION_40" type="DI" description="Sensor cylinder plug test rear station 40">PLC_DI_52</Sensor>
+		<Sensor name="PEND_X_RIGHT_STATION_40" type="DI" description="axis X in Position Right station 30">PLC_DI_110</Sensor>
+		<Sensor name="PEND_Y_RIGHT_STATION_40" type="DI" description="axis Y in Position Right station 30">PLC_DI_111</Sensor>
+		<Sensor name="PEND_Z_RIGHT_STATION_40" type="DI" description="axis Z in Position Right station 30">PLC_DI_112</Sensor>
+		<Sensor name="PEND_X_LEFT_STATION_40" type="DI" description="axis X in Position Left station 30">PLC_DI_113</Sensor>
+		<Sensor name="PEND_Y_LEFT_STATION_40" type="DI" description="axis Y in Position Left station 30">PLC_DI_114</Sensor>
+		<Sensor name="PEND_Z_LEFT_STATION_40" type="DI" description="axis Z in Position Left station 30">PLC_DI_115</Sensor>
+		<Sensor name="HEND_X_RIGHT_STATION_40" type="DI" description="axis X in Home Right station 30">PLC_DI_140</Sensor>
+		<Sensor name="HEND_Y_RIGHT_STATION_40" type="DI" description="axis Y in Home Right station 30">PLC_DI_141</Sensor>
+		<Sensor name="HEND_Z_RIGHT_STATION_40" type="DI" description="axis Z in Home Right station 30">PLC_DI_142</Sensor>
+		<Sensor name="HEND_X_LEFT_STATION_40" type="DI" description="axis X in Home Left station 30">PLC_DI_143</Sensor>
+		<Sensor name="HEND_Y_LEFT_STATION_40" type="DI" description="axis Y in Home Left station 30">PLC_DI_144</Sensor>
+		<Sensor name="HEND_Z_LEFT_STATION_40" type="DI" description="axis Z in Home Left station 30">PLC_DI_145</Sensor>
+		<Sensor name="SENSOR_Z_HOME_STATION_40_RIGHT" type="DI" description="axis Z in Home Left station 30">PLC_DI_45</Sensor>
+		<Sensor name="SENSOR_Z_HOME_STATION_40_LEFT" type="DI" description="axis Z in Home Left station 30">PLC_DI_46</Sensor>
+		
+		<Sensor name="CYLINDER_PLUG_STATION_40" type="DO" description="Electrovanne Plug Test station 40">CPV_44</Sensor>
+		<Sensor name="CYLINDER_UNPLUG_STATION_40" type="DO" description="Electrovanne Plug Test station 40">CPV_45</Sensor>
+		</Station4>
+		
+		<Station5>
+		<Sensor name="IS_CYLINDER_RODAGE_LEFT_UP_STATION_50" type="DI" description="Sensor cylinder rodage left up station 50">PLC_DI_122</Sensor>
+		<Sensor name="IS_CYLINDER_RODAGE_LEFT_DOWN_STATION_50" type="DI" description="Sensor cylinder rodage left down station 50">PLC_DI_123</Sensor>
+		<Sensor name="IS_CYLINDER_RODAGE_RIGHT_UP_STATION_50" type="DI" description="Sensor cylinder rodage right up station 50">PLC_DI_120</Sensor>
+		<Sensor name="IS_CYLINDER_RODAGE_RIGHT_DOWN_STATION_50" type="DI" description="Sensor cylinder rodage right down station 50">PLC_DI_121</Sensor>
+		
+		<Sensor name="RODAGE_UP_LEFT_STATION_50" type="DO" description="Electrovanne rodage up left station 50">CPV_51</Sensor>	
+		<Sensor name="RODAGE_DOWN_LEFT_STATION_50" type="DO" description="Electrovanne rodage down left station 50">CPV_50</Sensor>	
+		<Sensor name="RODAGE_UP_RIGHT_STATION_50" type="DO" description="Electrovanne rodage up right station 50">CPV_47</Sensor>
+		<Sensor name="RODAGE_DOWN_RIGHT_STATION_50" type="DO" description="Electrovanne rodage down right station 50">CPV_46</Sensor>
+		</Station5>
+		
+		<Station6>			
+		<Sensor name="IS_PANEL_PLUGGED_STATION_60" type="DI" description="Sensor cylinder plug test down station 60">PLC_DI_63</Sensor>
+		<Sensor name="IS_PANEL_UNPLUGGED_STATION_60" type="DI" description="Sensor cylinder plug test up station 60">PLC_DI_64</Sensor>
+		<Sensor name="IS_CYLINDER_TEST_LEFT_UP_STATION_60" type="DI" description="Sensor cylinder test left up station 60">PLC_DI_127</Sensor>
+		<Sensor name="IS_CYLINDER_TEST_LEFT_DOWN_STATION_60" type="DI" description="Sensor cylinder test left down station 60">PLC_DI_126</Sensor>
+		<Sensor name="IS_CYLINDER_TEST_RIGHT_UP_STATION_60" type="DI" description="Sensor cylinder test right up station 60">PLC_DI_124</Sensor>
+		<Sensor name="IS_CYLINDER_TEST_RIGHT_DOWN_STATION_60" type="DI" description="Sensor cylinder test right down station 60">PLC_DI_125</Sensor>
+
+		<Sensor name="CYLINDER_PLUG_STATION_60" type="DO" description="Electrovanne Plug Test station 6">CPV_56</Sensor>
+		<Sensor name="CYLINDER_UNPLUG_STATION_60" type="DO" description="Electrovanne Plug Test station 6">CPV_57</Sensor>	
+		<Sensor name="TEST_UP_LEFT_STATION_60" type="DO" description="Electrovanne test up left station 60">CPV_55</Sensor>	
+		<Sensor name="TEST_DOWN_LEFT_STATION_60" type="DO" description="Electrovanne test down left station 60">CPV_54</Sensor>	
+		<Sensor name="TEST_UP_RIGHT_STATION_60" type="DO" description="Electrovanne test up right station 60">CPV_53</Sensor>
+		<Sensor name="TEST_DOWN_RIGHT_STATION_60" type="DO" description="Electrovanne test down right station 60">CPV_52</Sensor>
+		</Station6>
+		
+		<Station7>	
+		<Sensor name="IS_PANEL_PLUGGED_STATION_70" type="DI" description="Sensor cylinder plug vision down station 70">PLC_DI_65</Sensor>
+		<Sensor name="IS_PANEL_UNPLUGGED_STATION_70" type="DI" description="Sensor cylinder unplug vision up station70">PLC_DI_67</Sensor>
+		
+		<Sensor name="CYLINDER_PLUG_STATION_70" type="DO" description="Electrovanne Plug Test station 70">CPV_60</Sensor>
+		<Sensor name="CYLINDER_UNPLUG_STATION_70" type="DO" description="Electrovanne Plug Test station 70">CPV_61</Sensor>
+		<Sensor name="LIGHT" type="DO" description="Day light">PLC_DO_23</Sensor>
+		</Station7>
+		
+		<Station8>
+		<Sensor name="SENSOR_BLOCK_LEFT_STATION_80" type="DI" description="Sensor cylinder panel lock station 80">PLC_DI_86</Sensor>
+		<Sensor name="SENSOR_UNBLOCK_LEFT_STATION_80" type="DI" description="sensor Hand Unblock station 80">PLC_DI_87</Sensor>
+		<Sensor name="SENSOR_BLOCK_RIGHT_STATION_80" type="DI" description="Sensor cylinder panel lock station 80">PLC_DI_84</Sensor>
+		<Sensor name="SENSOR_UNBLOCK_RIGHT_STATION_80" type="DI" description="sensor Hand Unblock station 80">PLC_DI_85</Sensor>
+		<Sensor name="SENSOR_CYLINDER_Z_UP_STATION_80" type="DI" description="sensor cylinder z up station 80">PLC_DI_82</Sensor>
+		<Sensor name="SENSOR_CYLINDER_Z_DOWN_STATION_80" type="DI" description="sensor cylinder z down station 80">PLC_DI_83</Sensor>
+		<Sensor name="SENSOR_CYLINDER_X_REAR_STATION_80" type="DI" description="sensor cylinder x rear station 80">PLC_DI_81</Sensor>
+		<Sensor name="SENSOR_CYLINDER_X_FRONT_STATION_80" type="DI" description="sensor cylinder x front station 80">PLC_DI_80</Sensor>
+		<Sensor name="SENSOR_RED_BOX_FULL" type="DI" description="sensor presence panel in red box">PLC_DI_97</Sensor>
+		<Sensor name="IS_BARCODE_FRONT_STATION_80" type="DI" description="sensor cylinder barcode front">PLC_DI_91</Sensor>
+		<Sensor name="IS_BARCODE_REAR_STATION_80" type="DI" description="sensor cylinder barcode rear">PLC_DI_90</Sensor>
+		<Sensor name="IS_PANEL_LOCKED_STATION_80" type="DI" description="Sensor cylinder panel lock station 80">PLC_DI_93</Sensor>
+		<Sensor name="IS_PANEL_UNLOCKED_STATION_80" type="DI" description="Sensor cylinder panel unlock station 80">PLC_DI_92</Sensor>
+		<Sensor name="SENSOR_PRESENCE_PALETT_STATION_80" type="DI" description="Sensor presence palett station 80">PLC_DI_94</Sensor>
+		<Sensor name="LASER_WORK" type="DI" description="laser work">PLC_DI_117</Sensor>
+		<Sensor name="LASER_ERROR" type="DI" description="laser error">PLC_DI_116</Sensor>
+		<Sensor name="SENSOR_RED_BOX_1" type="DI" description="sensor red box 1">PLC_DI_95</Sensor>
+		<Sensor name="SENSOR_RED_BOX_2" type="DI" description="sensor red box 2">PLC_DI_96</Sensor>
+		
+		<Sensor name="CYLINDER_LOCK_STATION_80" type="DO" description="Electrovanne Lock panel station 80">CPV_63</Sensor>	
+		<Sensor name="CYLINDER_UNLOCK_STATION_80" type="DO" description="Electrovanne Unlock panel station 80">CPV_62</Sensor>	
+		<Sensor name="CYLINDER_BLOCK_LEFT_STATION_80" type="DO" description="Electrovanne Hand Block Left station 80">CPV_73</Sensor>
+		<Sensor name="CYLINDER_UNBLOCK_LEFT_STATION_80" type="DO" description="Electrovanne Hand Unblock Left station 80">CPV_72</Sensor>	
+		<Sensor name="CYLINDER_BLOCK_RIGHT_STATION_80" type="DO" description="Electrovanne Hand Block Right station 80">CPV_70</Sensor>
+		<Sensor name="CYLINDER_UNBLOCK_RIGHT_STATION_80" type="DO" description="Electrovanne Hand Unblock Right station 80">CPV_71</Sensor>	
+		<Sensor name="CYLINDER_Z_UP_STATION_80" type="DO" description="Electrovanne cylinder z up station 8">CPV_65</Sensor>
+		<Sensor name="CYLINDER_Z_DOWN_STATION_80" type="DO" description="Electrovanne cylinder z down station 8">CPV_64</Sensor>
+		<Sensor name="CYLINDER_X_FRONT_STATION_80" type="DO" description="Electrovanne cylinder x front station 8">CPV_66</Sensor>
+		<Sensor name="CYLINDER_X_REAR_STATION_80" type="DO" description="Electrovanne cylinder x rear station 8">CPV_67</Sensor>
+		<Sensor name="CYLINDER_BARCODE_FRONT" type="DO" description="Electrovanne cylinder barcode front">CPV_75</Sensor>	
+		<Sensor name="CYLINDER_BARCODE_REAR" type="DO" description="Electrovanne cylinder barcode rear">CPV_74</Sensor>	
+		<Sensor name="ASPIRATOR" type="DO" description="Aspirator fume laser">PLC_DO_23</Sensor>
+		<Sensor name="LASER KEY POSITIONE_2" type="DO" description="Aspirator fume laser">PLC_DO_24</Sensor>
+		<Sensor name="ENABLE LASER" type="DO" description="Aspirator fume laser">PLC_DO_25</Sensor>
+		<Sensor name="LASER KEY POSITIONE" type="DO" description="Aspirator fume laser">PLC_DO_26</Sensor>
+		<Sensor name="LASER KEY POSITIONE_3" type="DO" description="Aspirator fume laser">PLC_DO_27</Sensor>
+		<Sensor name="LASER KEY POSITIONE_4" type="DO" description="Aspirator fume laser">PLC_DO_22</Sensor>
+		
+		<Sensor name="START_LASER" type="DO" description="Start laser">PLC_DO_04</Sensor>
+		</Station8>
+		
+	    <Errors>
+		<Error sensor="PRESSURE" ok="1" description="Pressure error" />
+		<Error sensor="BUTTON_TOTAL_STOP" ok="1" description="Total stop pressed" />
+ 	    </Errors>
+		
+		<BarCodeReaders>
+			 	<BarCodeReader id="1">
+            		<Driver name="dataman.dll" />
+            		<Configuration>
+            			<Communication type="serial">
+            				<Port>COM20</Port>
+							<Baudrate>9600</Baudrate>
+            				<DataBits>8</DataBits>
+            				<StopBits>1</StopBits> <!-- 1.0, 1.5, 2.0 -->
+            				<Parity>None</Parity> <!-- None, Odd, Even, Mark, Space -->
+            				<Handshake>None</Handshake> <!-- None only -->
+            			</Communication>
+            			<Settings>
+            			<CommandString></CommandString>
+            			</Settings>
+            		</Configuration>
+            	</BarCodeReader>
+            	<BarCodeReader id="2">
+            		<Driver name="dataman.dll" />
+            		<Configuration>
+            			<Communication type="serial">
+            				<Port>COM21</Port>
+							<Baudrate>9600</Baudrate>
+            				<DataBits>8</DataBits>
+            				<StopBits>1</StopBits> <!-- 1.0, 1.5, 2.0 -->
+            				<Parity>None</Parity> <!-- None, Odd, Even, Mark, Space -->
+            				<Handshake>None</Handshake> <!-- None only -->
+            			</Communication>
+            			<Settings>
+            			<CommandString></CommandString>
+            			</Settings>
+            		</Configuration>
+            	</BarCodeReader>
+				<BarCodeReader id="3">
+            		<Driver name="dataman.dll" />
+            		<Configuration>
+            			<Communication type="serial">
+            				<Port>COM22</Port>
+							<Baudrate>9600</Baudrate>
+            				<DataBits>8</DataBits>
+            				<StopBits>1</StopBits> <!-- 1.0, 1.5, 2.0 -->
+            				<Parity>None</Parity> <!-- None, Odd, Even, Mark, Space -->
+            				<Handshake>None</Handshake> <!-- None only -->
+            			</Communication>
+            			<Settings>
+            			<CommandString></CommandString>
+            			</Settings>
+            		</Configuration>
+            	</BarCodeReader>
+			</BarCodeReaders>
+
+				
+
+			
+
+		</module>
+    </modules>
+</configuration>

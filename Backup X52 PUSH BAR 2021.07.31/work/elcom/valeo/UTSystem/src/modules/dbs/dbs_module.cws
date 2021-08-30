@@ -1,0 +1,558 @@
+[Workspace Header]
+Version = 1900
+Pathname = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_module.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2019"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2019"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "dbs_module.prj"
+Drag Bar Left = 250
+Window Top = 728
+Window Left = 277
+Window Bottom = 1114
+Window Right = 971
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 8
+Window Confinement Region Enabled = True
+MainColumnWidth = 233
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1900
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 0
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/program files (x86)/national instruments/cvi2019/toolslib/toolbox/msxmldom.fp"
+File Type = "Function Panel"
+Disk Date = 3635234214
+In Projects = "1,"
+
+[File 0002]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs.c"
+File Type = "CSource"
+Disk Date = 3585638218
+In Projects = "1,"
+Source Window State = "1,12,12,12,26,26,26,0,0,0,0,0,0,0,0,0,12,0,12,26,349,715,1,0,"
+Breakpoint 0001 = "479,0,enabled,"
+Window Top = 38
+Window Left = -215
+Window Z-Order = 3
+
+[File 0003]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/odbc/elodbc.c"
+File Type = "CSource"
+Disk Date = 3698736029
+In Projects = "1,"
+Source Window State = "1,625,625,625,24,24,24,0,0,0,0,241,0,0,0,0,603,0,625,24,349,715,1,28,"
+Line Tags = "238,589,"
+Window Top = 122
+Window Left = -163
+
+[File 0004]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/database/dbs_gui.c"
+File Type = "CSource"
+Disk Date = 3564756596
+In Projects = ""
+Source Window State = "1,385,385,385,16,23,23,0,0,0,0,0,0,0,0,0,337,0,362,58,284,715,1,0,"
+Breakpoint 0001 = "223,0,enabled,"
+Line Tags = "185,"
+Window Top = 122
+Window Left = 58
+
+[File 0005]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_storage.c"
+File Type = "CSource"
+Disk Date = 3706517042
+In Projects = "1,"
+Source Window State = "1,223,223,223,5,5,5,0,0,0,0,0,0,0,0,0,207,0,223,5,349,715,1,0,"
+Breakpoint 0001 = "223,0,enabled,"
+Tracepoint 0001 = "0,0,225,1,"
+Breakpoint 0002 = "895,0,enabled,"
+Breakpoint 0003 = "1435,0,enabled,"
+Window Top = 38
+Window Left = 10
+Window Z-Order = 1
+
+[File 0006]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_productlist.c"
+File Type = "CSource"
+Disk Date = 3587554370
+In Projects = "1,"
+Source Window State = "1,942,942,942,38,45,38,0,3,0,0,0,0,0,0,0,931,0,942,45,349,715,1,0,"
+Line Tags = "790,"
+Window Top = 152
+Window Left = 74
+Window Z-Order = 8
+
+[File 0007]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_export.c"
+File Type = "CSource"
+Disk Date = 3578308212
+In Projects = "1,"
+Source Window State = "1,1355,1355,1355,26,26,26,0,0,0,0,0,0,0,0,0,1337,0,1355,26,349,715,1,0,"
+Breakpoint 0001 = "1355,0,enabled,"
+Window Top = 38
+Window Left = -221
+
+[File 0008]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_masterlist.c"
+File Type = "CSource"
+Disk Date = 3699436485
+In Projects = "1,"
+Source Window State = "1,703,703,703,46,46,46,0,0,0,0,84,0,0,0,0,683,0,703,46,349,715,1,33,"
+Window Top = 205
+Window Left = 138
+Window Z-Order = 7
+
+[File 0009]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_kosu.c"
+File Type = "CSource"
+Disk Date = 3682576537
+In Projects = "1,"
+Source Window State = "1,760,760,760,0,0,0,0,0,0,0,0,0,0,0,0,720,0,760,0,245,715,1,0,"
+Window Top = 62
+Window Left = -195
+Window Z-Order = 4
+
+[File 0010]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_storage.h"
+File Type = "Include"
+Disk Date = 3608303468
+In Projects = "1,"
+Source Window State = "1,53,53,53,25,25,25,0,0,0,0,0,0,0,0,0,46,0,53,25,245,715,1,0,"
+Window Top = 38
+Window Left = -221
+Window Z-Order = 6
+
+[File 0011]
+Path = "/c/Program Files (x86)/National Instruments/CVI2019/include/ansi/time.h"
+File Type = "Include"
+Disk Date = 3636534226
+In Projects = ""
+Source Window State = "1,66,66,66,23,23,23,0,0,0,0,0,0,0,0,0,48,0,66,23,401,630,1,0,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 5
+
+[File 0012]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_module.c"
+File Type = "CSource"
+Disk Date = 3706516555
+In Projects = "1,"
+Source Window State = "1,173,173,173,12,12,12,0,0,0,0,149,0,0,0,0,159,0,173,12,336,715,1,13,"
+Window Top = 117
+Window Left = -167
+Window Z-Order = 2
+
+[File 0013]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,40,40,40,4,16,16,0,0,0,0,0,0,0,0,0,24,0,38,52,336,715,1,0,"
+Window Top = 30
+
+[File 0014]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_define.h"
+File Type = "Include"
+Disk Date = 3651673164
+In Projects = "1,"
+Source Window State = "1,15,15,15,42,42,42,0,0,0,0,0,0,0,0,0,0,0,15,42,336,715,1,0,"
+Window Top = 38
+Window Left = -221
+
+[File 0015]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_define_local.h"
+File Type = "Include"
+Disk Date = 3578492280
+In Projects = "1,"
+Source Window State = "1,8,8,8,31,31,31,0,0,0,0,0,0,0,0,0,0,0,8,31,284,715,1,0,"
+Window Top = 38
+Window Left = -221
+
+[File 0016]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_export.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,44,44,44,4,11,11,0,0,0,0,0,0,0,0,0,3,0,20,45,323,715,1,0,"
+Window Top = 32
+Window Left = 10
+
+[File 0017]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_kosu.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,109,109,109,25,25,25,0,0,0,0,0,0,0,0,0,97,0,109,25,349,715,1,0,"
+Window Top = 92
+Window Left = -179
+
+[File 0018]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_lineexport.c"
+File Type = "CSource"
+Disk Date = 3316769958
+In Projects = "1,"
+Source Window State = "1,5,5,5,10,21,21,1,0,0,0,0,0,0,0,0,0,0,18,44,336,715,1,0,"
+Window Top = 30
+Window Left = 6
+
+[File 0019]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_lineparam.c"
+File Type = "CSource"
+Disk Date = 3587554370
+In Projects = "1,"
+Source Window State = "1,367,367,367,24,28,28,0,0,0,0,0,0,0,0,0,344,0,367,28,349,715,1,0,"
+Window Top = 32
+Window Left = 10
+
+[File 0020]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_lineprocess.c"
+File Type = "CSource"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,155,0,167,26,336,715,1,0,"
+Window Top = 62
+Window Left = 26
+
+[File 0021]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_linestep.c"
+File Type = "CSource"
+Disk Date = 3316164122
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,165,0,175,26,284,715,1,0,"
+Window Top = 152
+Window Left = 74
+
+[File 0022]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_masterlist.h"
+File Type = "Include"
+Disk Date = 3585745124
+In Projects = "1,"
+Source Window State = "1,27,27,27,13,13,13,0,0,0,0,0,0,0,0,0,16,0,27,13,401,602,1,0,"
+Window Top = 157
+Window Left = 74
+
+[File 0023]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_paramlist.c"
+File Type = "CSource"
+Disk Date = 3587554370
+In Projects = "1,"
+Source Window State = "1,476,476,476,30,34,34,0,0,0,0,0,0,0,0,0,466,0,476,34,284,715,1,0,"
+Window Top = 92
+Window Left = 42
+
+[File 0024]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_paramlist.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,15,15,15,22,49,49,0,0,0,0,0,0,0,0,0,25,0,37,28,349,715,1,0,"
+Window Top = 30
+
+[File 0025]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_productlist.h"
+File Type = "Include"
+Disk Date = 3586093942
+In Projects = "1,"
+Source Window State = "1,59,59,59,22,40,22,0,3,0,0,0,0,0,0,0,48,0,59,40,219,715,1,0,"
+Window Top = 30
+
+[File 0026]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_schema.h"
+File Type = "Include"
+Disk Date = 3578491820
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,232,715,1,0,"
+Window Top = 38
+Window Left = -221
+
+[File 0027]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testerlist.c"
+File Type = "CSource"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,118,118,118,25,33,33,0,3,0,0,0,0,0,0,0,118,0,118,25,336,715,1,0,"
+Window Top = 140
+Window Left = -155
+
+[File 0028]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testerlist.h"
+File Type = "Include"
+Disk Date = 3309324540
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0029]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testlist.c"
+File Type = "CSource"
+Disk Date = 3560244036
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,284,715,1,0,"
+Window Top = 122
+Window Left = -163
+
+[File 0030]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testlist.h"
+File Type = "Include"
+Disk Date = 3309324540
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,37,26,284,715,0,0,"
+
+[File 0031]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testparamlist.c"
+File Type = "CSource"
+Disk Date = 3587554370
+In Projects = "1,"
+Source Window State = "1,407,407,407,24,28,28,0,0,0,0,0,0,0,0,0,399,0,407,28,245,715,1,0,"
+Window Top = 152
+Window Left = 74
+
+[File 0032]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_testparamlist.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,40,18,349,715,1,0,"
+
+[File 0033]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_userlist.c"
+File Type = "CSource"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "1,306,314,306,40,45,40,0,0,0,0,0,0,0,0,0,285,0,302,60,245,715,1,0,"
+Window Top = 30
+
+[File 0034]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_userlist.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0035]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+File Type = "CSource"
+Disk Date = 3309324454
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,336,715,1,0,"
+Window Top = 62
+Window Left = 26
+
+[File 0036]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+File Type = "CSource"
+Disk Date = 3309324452
+In Projects = "1,"
+Source Window State = "1,81,81,81,47,56,56,0,0,0,0,0,0,0,0,0,634,0,646,0,336,715,1,0,"
+Window Top = 182
+Window Left = 90
+
+[File 0037]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/odbc/eodbc.lib"
+File Type = "Library"
+Disk Date = 3363541480
+In Projects = "1,"
+
+[File 0038]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+File Type = "CSource"
+Disk Date = 3309324456
+In Projects = "1,"
+Source Window State = "1,257,257,257,26,36,36,0,0,0,0,0,0,0,0,0,68,0,98,0,336,715,1,0,"
+Window Top = 62
+Window Left = 26
+
+[File 0039]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.h"
+File Type = "Include"
+Disk Date = 3573738894
+In Projects = "1,"
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,336,715,1,0,"
+Window Top = 38
+Window Left = -221
+
+[File 0040]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/guid.h"
+File Type = "Include"
+Disk Date = 3634827056
+In Projects = "1,"
+Source Window State = "1,65,65,65,38,74,74,1,0,0,0,0,0,0,0,0,54,0,75,52,336,715,1,0,"
+
+[File 0041]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/interval.c"
+File Type = "CSource"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0042]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/interval.h"
+File Type = "Include"
+Disk Date = 3309324542
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0043]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/modules/module.h"
+File Type = "Include"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "1,28,28,28,8,34,34,1,0,0,0,0,0,0,0,0,16,0,26,61,336,715,1,0,"
+
+[File 0044]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/msxml/MSXML2.h"
+File Type = "Include"
+Disk Date = 3309324460
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0045]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/cvitool/msxmldom2.h"
+File Type = "Include"
+Disk Date = 3309324450
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0046]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+File Type = "CSource"
+Disk Date = 3309324458
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0047]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/objlist/objlist.c"
+File Type = "CSource"
+Disk Date = 3309324448
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0048]
+Path = "/C/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x86/odbc32.lib"
+File Type = "Library"
+Disk Date = 3459942140
+In Projects = "1,"
+
+[Tab Order]
+Tab 0001 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs.c"
+Tab 0002 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_masterlist.c"
+Tab 0003 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_productlist.c"
+Tab 0004 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_storage.c"
+Tab 0005 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_storage.h"
+Tab 0006 = "/c/Program Files (x86)/National Instruments/CVI2019/include/ansi/time.h"
+Tab 0007 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_kosu.c"
+Tab 0008 = "/c/work/elcom/valeo/UTSystem/src/modules/dbs/dbs_module.c"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = "/c/FlexiTester.OK/application.exe"
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = "/c/FlexiTester.OK/application_dbg.exe"
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = "/c/FlexiTester.OK/application_dbg.exe"
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

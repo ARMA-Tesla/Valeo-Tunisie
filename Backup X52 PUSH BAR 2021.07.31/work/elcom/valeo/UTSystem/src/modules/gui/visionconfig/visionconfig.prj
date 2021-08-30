@@ -1,0 +1,536 @@
+[Project Header]
+Version = 801
+Pathname = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig.prj"
+Project Label = "maintenance_visionconfig"
+CVI Dir = "/c/program files/national instruments/cvi80"
+IVI Standard Root Dir = "/C/Program Files/National Instruments/IVI"
+VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
+Number of Files = 38
+Target Type = "Dynamic Link Library"
+Flags = 16
+
+[File 0001]
+File Type = "CSource"
+Res Id = 1
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/eventfactory/eleventdata.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "event"
+
+[File 0002]
+File Type = "CSource"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/string/elstring.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "string"
+
+[File 0003]
+File Type = "CSource"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/exception/Exception.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0004]
+File Type = "CSource"
+Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "global.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/global.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0005]
+File Type = "Include"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "global.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/global.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0006]
+File Type = "CSource"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "hwndutil.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/hwndutil.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0007]
+File Type = "Include"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "hwndutil.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/hwndutil.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0008]
+File Type = "Include"
+Res Id = 8
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "lang_translation.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/lang_translation.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0009]
+File Type = "CSource"
+Res Id = 9
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/language/language.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "lang_support"
+
+[File 0010]
+File Type = "Include"
+Res Id = 10
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/language/language.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.h"
+Exclude = False
+Project Flags = 0
+Folder = "lang_support"
+
+[File 0011]
+File Type = "Function Panel"
+Res Id = 11
+Path Is Rel = True
+Path Rel To = "CVI"
+Path Rel Path = "toolslib/toolbox/msxmldom.fp"
+Path = "/c/program files/national instruments/cvi80/toolslib/toolbox/msxmldom.fp"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0012]
+File Type = "CSource"
+Res Id = 12
+Path Is Rel = True
+Path Rel To = "CVI"
+Path Rel Path = "toolslib/Vision/NIMachineVision.c"
+Path = "/c/program files/national instruments/cvi80/toolslib/Vision/NIMachineVision.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Not In A Folder"
+
+[File 0013]
+File Type = "CSource"
+Res Id = 13
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_cfg.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_cfg.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0014]
+File Type = "Include"
+Res Id = 14
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_cfg.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_cfg.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0015]
+File Type = "CSource"
+Res Id = 15
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_facecheck.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_facecheck.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0016]
+File Type = "Include"
+Res Id = 16
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_facecheck.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_facecheck.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0017]
+File Type = "CSource"
+Res Id = 17
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_goldenpattern.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_goldenpattern.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0018]
+File Type = "Include"
+Res Id = 18
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_goldenpattern.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_goldenpattern.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0019]
+File Type = "CSource"
+Res Id = 19
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_histogram.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_histogram.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0020]
+File Type = "Include"
+Res Id = 20
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_histogram.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_histogram.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0021]
+File Type = "CSource"
+Res Id = 21
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_imgbuff.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_imgbuff.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0022]
+File Type = "Include"
+Res Id = 22
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_imgbuff.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_imgbuff.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0023]
+File Type = "CSource"
+Res Id = 23
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_mathop.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_mathop.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0024]
+File Type = "Include"
+Res Id = 24
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_mathop.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_mathop.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0025]
+File Type = "CSource"
+Res Id = 25
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_pattern.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_pattern.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0026]
+File Type = "Include"
+Res Id = 26
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_pattern.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_pattern.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0027]
+File Type = "CSource"
+Res Id = 27
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_resample.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_resample.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0028]
+File Type = "Include"
+Res Id = 28
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_resample.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_resample.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0029]
+File Type = "CSource"
+Res Id = 29
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_task.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_task.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0030]
+File Type = "Include"
+Res Id = 30
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_task.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/panel_task.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0031]
+File Type = "CSource"
+Res Id = 31
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0032]
+File Type = "Include"
+Res Id = 32
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig.h"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0033]
+File Type = "User Interface Resource"
+Res Id = 33
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig.uir"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig.uir"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0034]
+File Type = "CSource"
+Res Id = 34
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig_fnc.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig_fnc.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0035]
+File Type = "Include"
+Res Id = 35
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig_fnc.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig_fnc.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0036]
+File Type = "Include"
+Res Id = 36
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig_plugin.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig_plugin.h"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0037]
+File Type = "CSource"
+Res Id = 37
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig_sharp.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig_sharp.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0038]
+File Type = "Include"
+Res Id = 38
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "visionconfig_sharp.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/visionconfig_sharp.h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[Folders]
+Folder 0 = "User Interface Files"
+Folder 1 = "Source Files"
+Folder 2 = "Instrument Files"
+Folder 3 = "Include Files"
+Folder 4 = "event"
+Folder 5 = "string"
+Folder 6 = "lang_support"
+
+[Compiler Options]
+Default Calling Convention = "cdecl"
+Require Prototypes = True
+Require Return Values = True
+Enable Pointer Mismatch Warning = False
+Enable Unreachable Code Warning = False
+Enable Unreferenced Identifiers Warning = False
+Enable Assignment In Conditional Warning = False
+O Option Compatible With 5.0 = False
+Uninitialized Locals Compile Warning = "Conservative"
+
+[Run Options]
+Stack Size = 100000
+Image Base Address = 268435456
+
+[Compiler Defines]
+Compiler Defines = "/DWIN32_LEAN_AND_MEAN /DPACKAGE=\\\"visionconfig\\\""
+
+[Include Paths]
+Include Path 1 Is Rel = False
+Include Path 1 = "/c/work/elcom/valeo/UTSystem/src/modules"
+Include Path 2 Is Rel = False
+Include Path 2 = "/c/Work/ELCOM/valeo/UTSystem/include"
+Include Path 3 Is Rel = False
+Include Path 3 = "/c/Work/ELCOM/Valeo/UTSystem/src/shared"
+
+[Create Executable]
+Executable File_Debug Is Rel = False
+Executable File_Debug = "/c/work/elcom/valeo/UTSystem/src/app/maintenance/visionconfig.dll"
+Executable File_Release Is Rel = False
+Executable File_Release = "/c/work/elcom/valeo/UTSystem/src/app/maintenance/visionconfig.dll"
+Icon File Is Rel = False
+Icon File = ""
+Application Title = ""
+DLL Exports = "Include File Symbols"
+Export File1 = "visionconfig_plugin.h"
+DLL Import Library Choice = "Gen Libs For All Compilers"
+Use IVI Subdirectories for Import Libraries = False
+Use VXIPNP Subdirectories for Import Libraries = False
+Use Dflt Import Lib Base Name = True
+Where to Copy DLL = "Do not copy"
+Add Type Lib To DLL = False
+Include Type Lib Help Links = False
+Type Lib FP File Is Rel = False
+Type Lib FP File = ""
+Type Lib Guid = ""
+Runtime Support = "Full Runtime Support"
+Instrument Driver Support Only = False
+Embed Project .UIRs = True
+Generate Map File = False
+
+[External Compiler Support]
+UIR Callbacks File Option = 2
+Using LoadExternalModule = False
+Create Project Symbols File = True
+UIR Callbacks Obj File Is Rel = True
+UIR Callbacks Obj File Rel To = "Project"
+UIR Callbacks Obj File Rel Path = "ecs.c"
+UIR Callbacks Obj File = "/c/work/elcom/valeo/UTSystem/src/modules/gui/visionconfig/ecs.c"
+Project Symbols H File Is Rel = False
+Project Symbols H File = ""
+Project Symbols Obj File Is Rel = False
+Project Symbols Obj File = ""
+
+[ActiveX Server Options]
+Specification File Is Rel = False
+Specification File = ""
+Source File Is Rel = False
+Source File = ""
+Include File Is Rel = False
+Include File = ""
+IDL File Is Rel = False
+IDL File = ""
+Register ActiveX Server = False
+
+[tpcSection]
+tpcEnabled = 0
+tpcOverrideEnvironment = 0
+

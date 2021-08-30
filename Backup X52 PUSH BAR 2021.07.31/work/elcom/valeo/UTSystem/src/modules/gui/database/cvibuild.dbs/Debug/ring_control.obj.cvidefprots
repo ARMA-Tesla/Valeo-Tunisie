@@ -1,0 +1,25 @@
+[RingGroupIni]
+Class="Function"
+Prototype="struct _SElException *RingGroupIni();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\ring_control.c:34:1"
+
+[RingGroupProcessSet]
+Class="Function"
+Prototype="struct _SElException *RingGroupProcessSet(int control, int value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\ring_control.c:160:1"
+
+[RingGroupStepSet]
+Class="Function"
+Prototype="struct _SElException *RingGroupStepSet(int control, int value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\ring_control.c:176:1"
+
+[RingGroupProductSet]
+Class="Function"
+Prototype="struct _SElException *RingGroupProductSet(int control, int value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\ring_control.c:192:1"
+
+[RingGroupAttribute]
+Class="Function"
+Prototype="struct _SElException *RingGroupAttribute(int mode);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\ring_control.c:267:1"
+

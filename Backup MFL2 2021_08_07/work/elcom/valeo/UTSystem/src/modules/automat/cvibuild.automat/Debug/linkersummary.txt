@@ -1,0 +1,28 @@
+automat.obj
+automat_fnc.obj
+eleventdata.obj
+elstring.obj
+eltest.obj
+Exception.obj
+export.obj
+language.obj
+multithread.obj
+testseq.obj
+cvi.lib
+cviauto.lib
+NIDAQmx.lib
+cvistart.lib
+eldaq.lib
+kernel32.lib
+MES_FTP.lib
+msxmldom.obj
+toolbox.obj
+user32.lib
+advapi32.lib
+gdi32.lib
+uuid.lib
+CVI_UP_Product_Dependencies_Private_Object
+CVI_PKG_Product_Dependencies_Private_Object
+EXE Symbol Module
+Exports Module
+Resource Module

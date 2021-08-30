@@ -1,0 +1,40 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/gui/messaging/lang/cs/LC_MESSAGES
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2008-09-10T21:46:09.924509Z
+2226
+rykalaz
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+messaging.pot
+file
+
+
+
+
+2008-11-12T09:48:26.046875Z
+b42a1a3088157f5deba3254c641cbc86
+2008-09-10T21:46:09.924509Z
+2226
+rykalaz
+

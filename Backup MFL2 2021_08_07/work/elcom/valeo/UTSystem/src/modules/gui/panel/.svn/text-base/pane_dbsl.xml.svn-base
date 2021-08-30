@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<configuration>
+	<plugins>
+		<plugin id="{32A783CF-D82C-4734-9112-2F61E92FC17B}">
+			<name>Panel Plugin</name>
+			<shortcut>
+			 <item position="1" default="1">
+					<name>Login/out</name>
+					<event id="EVNT_PLUGIN_LEAVE"/>
+					<event id="EVNT_PLUGIN_RUN" data="{AE2FAC8A-ABAC-4b1c-AA84-669809AB76EB}"/>
+					<event id="EVNT_GUI_PANEL" data="panel;1"/>
+				</item>
+				<item position="2" default="2">
+					<name>Database</name>
+					<rights id="RIGHTS_MAINTENANCE"/>
+					<event id="EVNT_PLUGIN_RUN" data="{4FDAB846-56F7-405d-BF13-EEB8EF8D96FA}"/>
+					<event id="EVNT_PLUGIN_RUN" data="{0CBEF382-AEDE-40a3-92EF-2B24D432A4CD}"/>
+					<event id="EVNT_GUI_PANEL" data="database;2"/>
+				</item>
+				<item position="8" default="8">
+					<name>Quit</name>
+					<event id="EVNT_PLUGIN_LEAVE"/>
+					<event id="EVNT_GUI_QUIT"/>
+				</item>
+			</shortcut>
+			<panel>
+				<item position="1">
+					<name>Login/out</name>
+					<event id="EVNT_PLUGIN_RUN" data="{AE2FAC8A-ABAC-4b1c-AA84-669809AB76EB}"/>
+					<event id="EVNT_GUI_PANEL" data="panel;1"/>
+				</item>
+				<item position="2">
+					<name>Database</name>
+					<rights id="RIGHTS_MAINTENANCE"/>
+					<event id="EVNT_PLUGIN_RUN" data="{4FDAB846-56F7-405d-BF13-EEB8EF8D96FA}"/>
+					<event id="EVNT_PLUGIN_RUN" data="{0CBEF382-AEDE-40a3-92EF-2B24D432A4CD}"/>
+					<event id="EVNT_GUI_PANEL" data="database;2"/>
+				</item>
+				<item position="8">
+					<name>Quit</name>
+					<event id="EVNT_GUI_QUIT"/>
+				</item>
+			</panel>
+			<database>
+				<item position="1">
+					<name>Login/out</name>
+					<event id="EVNT_PLUGIN_LEAVE"/>
+					<event id="EVNT_PLUGIN_RUN" data="{AE2FAC8A-ABAC-4b1c-AA84-669809AB76EB}"/>
+					<event id="EVNT_GUI_PANEL" data="panel;1"/>
+				</item>
+				<item position="2">
+					<name>Products</name>
+					<save_position/>
+					<event id="EVNT_GUI_DATABASE_PRODUCT"/>
+				</item>
+				<item position="3">
+					<name>Users</name>
+					<save_position/>
+					<event id="EVNT_GUI_DATABASE_USER"/>
+				</item>
+				<item position="4">
+					<name>History</name>
+					<save_position/>
+					<event id="EVNT_GUI_DATABASE_HISTORY"/>
+				</item>
+				<item position="5">
+					<name>Info</name>
+					<save_position/>
+					<event id="EVNT_GUI_DATABASE_INFO"/>
+				</item>
+			</database>
+		</plugin>
+	</plugins>
+</configuration>

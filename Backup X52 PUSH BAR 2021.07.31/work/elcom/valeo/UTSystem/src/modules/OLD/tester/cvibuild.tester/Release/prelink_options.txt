@@ -1,0 +1,13 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\eltypes.h.hdefs
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\module.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\tester.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\eleventdata.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\elstring.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\multithread.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\tester.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\tester_module.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\tester\cvibuild.tester\Release\bklib2.obj.cvidefprots
+-dllName tester.dll

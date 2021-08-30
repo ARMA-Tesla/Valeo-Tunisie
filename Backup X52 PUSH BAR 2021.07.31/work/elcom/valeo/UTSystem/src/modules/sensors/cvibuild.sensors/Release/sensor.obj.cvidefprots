@@ -1,0 +1,25 @@
+[diosenosrs_new]
+Class="Function"
+Prototype="struct _SElException *diosenosrs_new(struct _SDIOSensors **pSensors);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\sensors\sensor.c:334:1"
+
+[diosenosrs_delete]
+Class="Function"
+Prototype="struct _SElException *diosenosrs_delete(struct _SDIOSensors **pSensors);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\sensors\sensor.c:369:1"
+
+[CompareTasks]
+Class="Function"
+Prototype="int CompareTasks(const void *element1, const void *element2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\sensors\sensor.c:974:1"
+
+[CompareLogicalNames]
+Class="Function"
+Prototype="int CompareLogicalNames(const void *element1, const void *element2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\sensors\sensor.c:984:1"
+
+[EventThreadFunc]
+Class="Function"
+Prototype="int EventThreadFunc(void *pArguments);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\sensors\sensor.c:1489:2"
+

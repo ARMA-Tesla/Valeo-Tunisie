@@ -1,0 +1,288 @@
+[Project Header]
+Version = 801
+Pathname = "/c/work/elcom/valeo/UTSystem/src/modules/jig/class/jig_class.prj"
+Project Label = "module_jig"
+CVI Dir = "/c/program files/national instruments/cvi80"
+IVI Standard Root Dir = "/C/Program Files/National Instruments/IVI"
+VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
+Number of Files = 15
+Target Type = "Dynamic Link Library"
+Flags = 16
+
+[File 0001]
+File Type = "CSource"
+Res Id = 1
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/eventfactory/eleventdata.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0002]
+File Type = "Include"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/eventfactory/eleventdata.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0003]
+File Type = "CSource"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/string/elstring.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0004]
+File Type = "CSource"
+Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/exception/Exception.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0005]
+File Type = "Include"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/exception/Exception.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0006]
+File Type = "CSource"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "jig_class.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/jig/class/jig_class.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0007]
+File Type = "Include"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "jig_class.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/jig/class/jig_class.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0008]
+File Type = "CSource"
+Res Id = 8
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "jig_class_module.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/jig/class/jig_class_module.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0009]
+File Type = "Include"
+Res Id = 9
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/language/lang_support.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/lang_support.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0010]
+File Type = "CSource"
+Res Id = 10
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/language/language.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0011]
+File Type = "Include"
+Res Id = 11
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/language/language.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0012]
+File Type = "Include"
+Res Id = 12
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/modules/module.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/modules/module.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0013]
+File Type = "Function Panel"
+Res Id = 13
+Path Is Rel = True
+Path Rel To = "CVI"
+Path Rel Path = "toolslib/toolbox/msxmldom.fp"
+Path = "/c/program files/national instruments/cvi80/toolslib/toolbox/msxmldom.fp"
+Exclude = False
+Project Flags = 0
+Folder = "Instrument Files"
+
+[File 0014]
+File Type = "CSource"
+Res Id = 14
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/multithread/multithread.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "multithread"
+
+[File 0015]
+File Type = "Include"
+Res Id = 15
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../shared/multithread/multithread.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.h"
+Exclude = False
+Project Flags = 0
+Folder = "multithread"
+
+[Folders]
+User Interface Files Folder Not Added Yet = True
+Folder 0 = "Source Files"
+Folder 1 = "Include Files"
+Folder 2 = "Instrument Files"
+Folder 3 = "multithread"
+
+[Compiler Options]
+Default Calling Convention = "cdecl"
+Require Prototypes = True
+Require Return Values = True
+Enable Pointer Mismatch Warning = False
+Enable Unreachable Code Warning = False
+Enable Unreferenced Identifiers Warning = False
+Enable Assignment In Conditional Warning = False
+O Option Compatible With 5.0 = False
+Uninitialized Locals Compile Warning = "Conservative"
+
+[Run Options]
+Stack Size = 250000
+Image Base Address = 268435456
+
+[Compiler Defines]
+Compiler Defines = "/DWIN32_LEAN_AND_MEAN /D_USE_VISION8_ /DPACKAGE=\\\"VisionConfig\\\""
+
+[Include Paths]
+Include Path 1 Is Rel = False
+Include Path 1 = "/c/Work/ELCOM/Valeo/UTSystem/include"
+Include Path 2 Is Rel = False
+Include Path 2 = "/c/Work/ELCOM/Valeo/UTSystem/src/shared"
+Include Path 3 Is Rel = False
+Include Path 3 = "/c/Work/ELCOM/Valeo/UTSystem/src/modules"
+
+[Create Executable]
+Executable File_Debug Is Rel = False
+Executable File_Debug = "/c/work/elcom/valeo/UTSystem/src/app/modules/jigClass.dll"
+Executable File_Release Is Rel = False
+Executable File_Release = "/c/work/elcom/valeo/UTSystem/src/app/modules/jigClass.dll"
+Icon File Is Rel = False
+Icon File = ""
+Application Title = ""
+Numeric File Version = "1,0,0,0"
+Numeric Prod Version = "1,0,0,0"
+Comments = ""
+Company Name = "ELCOM, a.s."
+File Description = "JIG class Module"
+File Version = "1.0"
+Internal Name = "JIG class Module Debug"
+Legal Copyright = "Copyright © ELCOM, a.s., 2007"
+Legal Trademarks = ""
+Private Build = ""
+Product Name = "ELCOM, a.s. JIG class Module"
+Product Version = "1.0"
+Special Build = ""
+DLL Exports = "Include File Symbols"
+Export File1 = "module.h"
+DLL Import Library Choice = "Gen Lib For Current Mode"
+Use IVI Subdirectories for Import Libraries = False
+Use VXIPNP Subdirectories for Import Libraries = False
+Use Dflt Import Lib Base Name = True
+Where to Copy DLL = "Do not copy"
+Add Type Lib To DLL = False
+Include Type Lib Help Links = False
+Type Lib FP File Is Rel = False
+Type Lib FP File = ""
+Type Lib Guid = ""
+Runtime Support = "Full Runtime Support"
+Instrument Driver Support Only = False
+Embed Project .UIRs = True
+Generate Map File = False
+
+[External Compiler Support]
+UIR Callbacks File Option = 2
+Using LoadExternalModule = False
+Create Project Symbols File = True
+UIR Callbacks Obj File Is Rel = False
+UIR Callbacks Obj File = "jigTest.c"
+Project Symbols H File Is Rel = False
+Project Symbols H File = ""
+Project Symbols Obj File Is Rel = False
+Project Symbols Obj File = ""
+
+[ActiveX Server Options]
+Specification File Is Rel = False
+Specification File = ""
+Source File Is Rel = False
+Source File = ""
+Include File Is Rel = False
+Include File = ""
+IDL File Is Rel = False
+IDL File = ""
+Register ActiveX Server = False
+
+[Debug Post-build Actions]
+Build Action1 Line0001 = "xcopy /y %CVIPROJDIR%\\JigConfig.xml  C:\\Work\\ELCOM\\Valeo\\UTSystem\\src\\app"
+Build Action1 Line0002 = "\\modules\\"
+
+[Release Post-build Actions]
+Build Action1 Line0001 = "xcopy /y %CVIPROJDIR%\\JigConfig.xml  C:\\Work\\ELCOM\\Valeo\\UTSystem\\src\\app"
+Build Action1 Line0002 = "\\modules\\"
+
+[tpcSection]
+tpcEnabled = 0
+tpcOverrideEnvironment = 0
+

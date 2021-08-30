@@ -1,0 +1,10 @@
+[hwcounter_new]
+Class="Function"
+Prototype="struct _SElException *hwcounter_new(struct _SHWCounter **pCounter);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\counter\counter.c:63:1"
+
+[hwcounter_delete]
+Class="Function"
+Prototype="struct _SElException *hwcounter_delete(struct _SHWCounter **pCounter);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\counter\counter.c:84:1"
+

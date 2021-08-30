@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FSA_INT_FlatFileManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:/Inetpub/wwwroot/SchemaRepository/XMLSchemas/FlexNet/FSA_INT_FlatFileManager.xsd" Version="1.0">
+	<FIInvocationSynchronousEvent NodeType="FIInvocation">
+		<StandardOperation>
+			<OperationResolutionMethod>ByOperationCode</OperationResolutionMethod>
+			<OperationCode>SVC_MES_MI_BadPartsDeclaration</OperationCode>
+		</StandardOperation>
+		<Parameters>
+			<Inputs>
+				<InputName>sWorkCenter</InputName>
+				<InputValue>P_MFLSE2</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>Equipement</InputName>
+				<InputValue>P_MFLSE2 TESTEUR</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>ProductNo</InputName>
+				<InputValue>E310764SE</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>SerialNo</InputName>
+				<InputValue>2234</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>Quantity</InputName>
+				<InputValue>1</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>ReasonCodeName</InputName>
+				<InputValue>F1-RIGHT : M_R</InputValue>
+			</Inputs>
+			<Inputs>
+				<InputName>EventDateTime</InputName>
+				<InputValue>7/1/2021 1:34 AM</InputValue>
+			</Inputs>
+		</Parameters>
+	</FIInvocationSynchronousEvent>
+</FSA_INT_FlatFileManager>

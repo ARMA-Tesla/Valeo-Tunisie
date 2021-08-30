@@ -1,0 +1,50 @@
+[_AlarmReset]
+callConv = 102
+name = AlarmReset
+paramSize = 8
+
+[_ControllerStatus]
+callConv = 102
+name = ControllerStatus
+paramSize = 12
+
+[_CurrentPosition]
+callConv = 102
+name = CurrentPosition
+paramSize = 12
+
+[_EnableMotor]
+callConv = 102
+name = EnableMotor
+paramSize = 8
+
+[_HomeReturn]
+callConv = 102
+name = HomeReturn
+paramSize = 8
+
+[_Initialize]
+callConv = 102
+name = Initialize
+paramSize = 4
+
+[_MoveMotorPosition]
+callConv = 102
+name = MoveMotorPosition
+paramSize = 24
+
+[_PresentAlarm]
+callConv = 102
+name = PresentAlarm
+paramSize = 12
+
+[_ReadAngle]
+callConv = 102
+name = ReadAngle
+paramSize = 12
+
+[_RequestAngle]
+callConv = 102
+name = RequestAngle
+paramSize = 8
+

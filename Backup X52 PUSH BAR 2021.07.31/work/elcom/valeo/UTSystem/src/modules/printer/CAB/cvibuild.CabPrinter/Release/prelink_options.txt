@@ -1,0 +1,7 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\CabPrinter.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\CabPrinter.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\CabPrinter.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Release\Exception.obj.cvidefprots
+-dllName CabPrinter.dll

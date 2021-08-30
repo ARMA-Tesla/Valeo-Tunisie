@@ -1,0 +1,8 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\CabPrinter.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\CabPrinter.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\CabPrinter.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\printer\CAB\cvibuild.CabPrinter\Debug\Exception.obj.cvidefprots
+-dllName CabPrinter.dll
+-addNITypeInfo 
