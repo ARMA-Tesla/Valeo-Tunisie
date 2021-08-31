@@ -1,0 +1,20 @@
+[testseq_new]
+Class="Function"
+Prototype="struct _SElException *testseq_new(struct _STestSequence **pTestSequence);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\test\testseq.c:105:1"
+
+[testseq_delete]
+Class="Function"
+Prototype="struct _SElException *testseq_delete(struct _STestSequence **pTestSeq);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\test\testseq.c:147:1"
+
+[compare]
+Class="Function"
+Prototype="int compare(const void *a, const void *b);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\test\testseq.c:526:1"
+
+[SaveXmlResultFile]
+Class="Function"
+Prototype="void SaveXmlResultFile(struct _STestParam *pTestParam, int failed);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\test\testseq.c:1319:1"
+

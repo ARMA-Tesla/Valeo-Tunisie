@@ -1,0 +1,35 @@
+[OnOpenXmlFile]
+Class="Function"
+Prototype="int OnOpenXmlFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:92:1"
+
+[OnExportXmlFile]
+Class="Function"
+Prototype="int OnExportXmlFile(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:124:1"
+
+[BkTreeProcessNodeClick]
+Class="Function"
+Prototype="struct _SElException *BkTreeProcessNodeClick(char *keyNode);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:146:1"
+
+[BkTreeProcessPopupMenuCommand]
+Class="Function"
+Prototype="struct _SElException *BkTreeProcessPopupMenuCommand(char *keyNode, char *keyCol, long menuItem);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:189:1"
+
+[BkTreeProcessModify]
+Class="Function"
+Prototype="struct _SElException *BkTreeProcessModify(char *keyNode, char *keyCol, long modifyType);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:415:1"
+
+[TreeProcessIni]
+Class="Function"
+Prototype="struct _SElException *TreeProcessIni();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:680:1"
+
+[TreeProcessClose]
+Class="Function"
+Prototype="struct _SElException *TreeProcessClose();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\gui\database\dbs_process.c:764:1"
+

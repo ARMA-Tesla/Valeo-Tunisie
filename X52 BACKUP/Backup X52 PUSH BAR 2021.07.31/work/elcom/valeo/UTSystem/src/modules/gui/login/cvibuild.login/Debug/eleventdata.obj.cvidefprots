@@ -1,0 +1,8 @@
+[eleventdata_new]
+Class="Function"
+Prototype="struct _SElException *eleventdata_new(struct _SElEventData **pEventData);"
+
+[eleventdata_delete]
+Class="Function"
+Prototype="struct _SElException *eleventdata_delete(struct _SElEventData **pEventData);"
+

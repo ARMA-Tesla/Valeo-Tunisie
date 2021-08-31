@@ -1,0 +1,8 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\resources.out.rc
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\defauts.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\calendar.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\defauts.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\defauts\cvibuild.defauts\Debug\report.obj.cvidefprots
+-dllName defauts.dll
+-addNITypeInfo 

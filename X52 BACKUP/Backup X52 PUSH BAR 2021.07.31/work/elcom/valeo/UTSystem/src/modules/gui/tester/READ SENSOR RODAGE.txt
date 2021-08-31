@@ -1,0 +1,250 @@
+/* Read Sensor Push 1 */
+					if (EnablePush1)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_1, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_1, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_1,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_1,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 2 */
+					if (EnablePush2)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_2, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_2, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_2,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_2,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 3 */
+					if (EnablePush3)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_3, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_3, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_3,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_3,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 4 */
+					if (EnablePush4)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_4, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_4, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_4,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_4,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 5 */
+					if (EnablePush5)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_5, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_5, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_5,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_5,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 6 */
+					if (EnablePush6)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_6, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_6, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_6,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_6,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 7 */
+					if (EnablePush7)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_7, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_7, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_7,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_7,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+					/* Read Sensor Push 8 */
+					if (EnablePush8)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_8, ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_8, ATTR_FRAME_COLOR, VAL_GREEN));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_8,ATTR_FRAME_COLOR, VAL_WHITE));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_8,ATTR_FRAME_COLOR, VAL_RED));
+					}
+					}
+
+
+
+
+/* Read Sensor Push 1 */
+					if (EnablePush1)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_1, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_1, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_1,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_1,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 2 */
+					if (EnablePush2)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_2, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_2, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_2,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_2,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 3 */
+					if (EnablePush3)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_3, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_3, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_3,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_3,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 4 */
+					if (EnablePush4)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_4, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_4, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_4,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_4,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 5 */
+					if (EnablePush5)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_5, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_5, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_5,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_5,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 6 */
+					if (EnablePush6)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_6, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_6, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_6,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_6,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 7 */
+					if (EnablePush7)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_7, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_7, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_7,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_7,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					}
+					/* Read Sensor Push 8 */
+					if (EnablePush8)
+					{
+					if(pexception==NULL) 
+					{
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_8, ATTR_FRAME_COLOR, VAL_GREEN));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_8, ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					else
+					{
+						EXCDISPLAY( pexception);   
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_UP_PUSH_8,ATTR_FRAME_COLOR, VAL_RED));
+						EXCCHECKCVI( SetCtrlAttribute(panel, STATION_4_LED_DOWN_PUSH_8,ATTR_FRAME_COLOR, VAL_WHITE));
+					}
+					Delay(timeOff);//Off Time 
+					ProcessDrawEvents ();
+					ProcessSystemEvents ();
+					}
+					

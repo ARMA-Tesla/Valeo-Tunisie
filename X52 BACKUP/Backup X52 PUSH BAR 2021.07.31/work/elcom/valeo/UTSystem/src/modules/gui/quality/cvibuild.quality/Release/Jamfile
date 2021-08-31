@@ -1,0 +1,83 @@
+HDRS = 	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\modules"
+	"c:\\Work\\ELCOM\\valeo\\UTSystem\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2019\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "eleventdata.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\eventfactory" ;
+LOCATE on "elstring.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\string" ;
+LOCATE on "Exception.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception" ;
+LOCATE on "msxmldom.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\cvitool" ;
+LOCATE on "quality.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality" ;
+LOCATE on "quality.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality" ;
+LOCATE on "quality_plugin.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\eventfactory\\eleventdata.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj" = 1 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\eleventdata.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\string\\elstring.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj" = 2 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\elstring.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception\\Exception.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj" = 3 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\Exception.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\cvitool\\msxmldom.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj" = 4 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\msxmldom.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\quality.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj" = 5 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality_plugin.h.hdefs" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\quality_plugin.h" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality_plugin.h.hdefs" = 6 ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality_plugin.h.hdefs" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality_plugin.h.hdefs.out" ;
+PreLinkInputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.in.rc" ;
+PreLinkInputs += $(PrjObjects) $(InstrObjects) ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.out.rc" ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll.defs" ;
+PreLink $(PreLinkOutputs) : $(PreLinkInputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll.defs" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.out.rc" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" : $(PreLinkOutputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.out.rc" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\manifest.xml" ;
+MainFromObjects "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\link_options.txt" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\dependencies.lnk.in" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\resources.res" :  "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\quality.uir" ;
+Depends all : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\quality\\cvibuild.quality\\Release\\quality.dll" ;

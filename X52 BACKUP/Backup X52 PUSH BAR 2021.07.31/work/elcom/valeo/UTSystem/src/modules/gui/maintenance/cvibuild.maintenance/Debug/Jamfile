@@ -1,0 +1,67 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\modules"
+	"c:\\work\\elcom\\valeo\\UTSystem\\include"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\activex\\word"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\activex\\excel"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\custctrl"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\custctrl\\custsupp"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\cvirtsup"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\datasock"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\daqUtil"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\printing"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\toolbox"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\reportgen"
+	"c:\\program files\\national instruments\\cvi2015\\toolslib\\localui"
+	"c:\\program files\\national instruments\\cvi2015\\instr"
+	"C:\\Program Files\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2015\\instr"
+	"c:\\program files\\national instruments\\cvi2015\\include"
+	"C:\\Program Files\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2015\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files\\national instruments\\cvi2015\\include\\ansi"
+	"c:\\program files\\national instruments\\cvi2015\\include\\clang\\3.3"
+	"C:\\Program Files\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files\\National Instruments\\CVI2015\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2015\\bin"
+	"c:\\Program Files\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "Exception.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception" ;
+LOCATE on "maintenance.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance" ;
+LOCATE on "maintenance.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance" ;
+LOCATE on "maintenance_plugin.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception\\Exception.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj" = 1 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\Exception.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\maintenance.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj" = 2 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance_plugin.h.hdefs" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\maintenance_plugin.h" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance_plugin.h.hdefs" = 3 ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance_plugin.h.hdefs" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance_plugin.h.hdefs.out" ;
+PreLinkInputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.in.rc" ;
+PreLinkInputs += $(PrjObjects) $(InstrObjects) ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.out.rc" ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll.defs" ;
+PreLink $(PreLinkOutputs) : $(PreLinkInputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll.defs" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.out.rc" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" : $(PreLinkOutputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.out.rc" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\manifest.xml" ;
+MainFromObjects "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\link_options.txt" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\dependencies.lnk.in" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\resources.res" :  "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\maintenance.uir" ;
+Depends all : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\gui\\maintenance\\cvibuild.maintenance\\Debug\\maintenance.dll" ;

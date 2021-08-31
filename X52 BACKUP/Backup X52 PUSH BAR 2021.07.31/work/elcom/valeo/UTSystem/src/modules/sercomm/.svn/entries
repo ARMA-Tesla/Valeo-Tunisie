@@ -1,0 +1,52 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules/sercomm
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2007-10-02T11:05:38.791194Z
+1142
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+sercomm.c
+file
+
+
+
+
+2008-11-12T09:48:48.796875Z
+175dd57464d44c726567cf14198d8934
+2007-10-02T11:05:38.791194Z
+1142
+turcar
+
+sercomm.h
+file
+
+
+
+
+2008-11-12T09:48:48.812500Z
+98e6a40a2b2d58cd50c4652814fbafdf
+2007-03-15T07:07:57.432812Z
+14
+turcar
+

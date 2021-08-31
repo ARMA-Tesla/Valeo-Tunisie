@@ -1,0 +1,4 @@
+[OnFncTester]
+Class="Function"
+Prototype="int OnFncTester(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

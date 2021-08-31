@@ -1,0 +1,15 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\statistic_plugin.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\statistic.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\calendar.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\eleventdata.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\elstring.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\interval.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\iso8601.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\kosu_graph.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\statistic.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\test_graph.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\statistic\cvibuild.statistic\Release\bklib2.obj.cvidefprots
+-dllName statistic.dll

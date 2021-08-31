@@ -1,0 +1,409 @@
+[Workspace Header]
+Version = 1900
+Pathname = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2019"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2019"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "tester_gui.prj"
+Drag Bar Left = 250
+Window Top = 163
+Window Left = 513
+Window Bottom = 549
+Window Right = 1207
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 2
+Window Confinement Region Enabled = True
+MainColumnWidth = 233
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1900
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/bklib/bklib2.fp"
+File Type = "Function Panel"
+Disk Date = 3309324454
+In Projects = "1,"
+
+[File 0002]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eldaq/class/eldaq.fp"
+File Type = "Function Panel"
+Disk Date = 3579821144
+In Projects = "1,"
+
+[File 0003]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/msxml/MSXML2.fp"
+File Type = "Function Panel"
+Disk Date = 3309324460
+In Projects = "1,"
+
+[File 0004]
+Path = "/c/Program Files (x86)/National Instruments/CVI2019/toolslib/toolbox/msxmldom.fp"
+File Type = "Function Panel"
+Disk Date = 3635234214
+In Projects = "1,"
+
+[File 0005]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui.c"
+File Type = "CSource"
+Disk Date = 3706779038
+In Projects = "1,"
+Source Window State = "1,3921,3921,3921,45,55,45,0,3,0,0,0,0,0,0,0,3905,0,3921,55,349,715,1,0,"
+Breakpoint 0001 = "364,0,enabled,"
+Breakpoint 0002 = "380,0,enabled,"
+Breakpoint 0003 = "671,0,enabled,"
+Breakpoint 0004 = "4099,0,enabled,"
+Breakpoint 0005 = "4115,0,enabled,"
+Line Tags = "845,3107,"
+Window Top = 31
+Window Z-Order = 1
+
+[File 0006]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/axis/IAI/IaiAxis.c"
+File Type = "CSource"
+Disk Date = 3700805072
+In Projects = ""
+Source Window State = "1,51,51,51,4,19,19,0,0,0,0,0,0,0,0,0,15,0,27,23,349,715,1,0,"
+Breakpoint 0001 = "50,0,enabled,"
+Breakpoint 0002 = "107,0,enabled,"
+Window Top = 152
+Window Left = 74
+
+[File 0007]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eldaq/ni6229/ni6229.c"
+File Type = "CSource"
+Disk Date = 3597347112
+In Projects = ""
+Source Window State = "1,1805,1805,1805,46,80,46,0,0,0,0,0,0,0,0,0,1797,0,1811,9,349,715,1,0,"
+Breakpoint 0001 = "1791,0,enabled,"
+Breakpoint 0002 = "1862,0,enabled,"
+Breakpoint 0003 = "1894,0,enabled,"
+Line Tags = "1830,1907,"
+Window Top = 92
+Window Left = 42
+
+[File 0008]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/test/eltest.h"
+File Type = "Include"
+Disk Date = 3706174602
+In Projects = ""
+Source Window State = "1,91,91,91,24,28,24,0,3,0,0,0,0,0,0,0,79,0,91,28,401,630,1,0,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 2
+
+[File 0009]
+Path = "/c/FlexiTester.OK/plugins/automat.lib"
+File Type = "Library"
+Disk Date = 3708339027
+In Projects = "1,"
+
+[File 0010]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eventfactory/eleventdata.c"
+File Type = "CSource"
+Disk Date = 3309324454
+In Projects = "1,"
+Source Window State = "1,84,84,84,4,12,12,0,3,0,0,0,0,0,0,0,0,0,84,4,349,715,1,0,"
+Window Top = 38
+Window Left = 6
+
+[File 0011]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+File Type = "CSource"
+Disk Date = 3309324452
+In Projects = "1,"
+Source Window State = "1,96,96,96,4,12,12,0,0,0,0,0,0,0,0,0,402,0,249,53,349,715,1,0,"
+Window Top = 30
+
+[File 0012]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+File Type = "CSource"
+Disk Date = 3309324456
+In Projects = "1,"
+Source Window State = "1,195,195,195,9,19,19,0,0,0,0,0,0,0,0,0,0,0,43,54,336,715,1,0,"
+Window Top = 62
+Window Left = 26
+
+[File 0013]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/automat/export.h"
+File Type = "Include"
+Disk Date = 3666588270
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+Window Top = 40
+Window Left = 11
+
+[File 0014]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.c"
+File Type = "CSource"
+Disk Date = 3464160586
+In Projects = "1,"
+Source Window State = "1,86,86,86,16,39,39,0,0,0,0,0,0,0,0,0,91,0,98,4,336,715,1,0,"
+Window Top = 71
+Window Left = 30
+
+[File 0015]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+File Type = "CSource"
+Disk Date = 3309324458
+In Projects = "1,"
+Source Window State = "1,91,91,91,16,26,26,0,0,0,0,0,0,0,0,0,79,0,99,18,349,715,1,0,"
+Window Top = 32
+Window Left = 10
+
+[File 0016]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.h"
+File Type = "Include"
+Disk Date = 3309324458
+In Projects = "1,"
+Source Window State = "1,13,13,13,8,24,24,0,0,0,0,0,0,0,0,0,3,0,13,49,336,715,1,0,"
+
+[File 0017]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_1_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3676695071
+In Projects = "1,"
+Window Top = 89
+Window Left = 299
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0018]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_2_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3680496136
+In Projects = "1,"
+Window Top = 92
+Window Left = 34
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0019]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_3_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3672806120
+In Projects = "1,"
+Window Top = 122
+Window Left = 50
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0020]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_4_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3672913448
+In Projects = "1,"
+Window Top = 152
+Window Left = 66
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0021]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_5_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3672806464
+In Projects = "1,"
+Window Top = 201
+Window Left = 94
+Window Height = 690
+Window Width = 715
+Window Released = True
+
+[File 0022]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_6_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3675162483
+In Projects = "1,"
+Window Top = 212
+Window Left = 98
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0023]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_7_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3666172156
+In Projects = "1,"
+Window Top = 242
+Window Left = 114
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0024]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/Stations GUI/station_8_gui.u"
+Path Line0002 = "ir"
+File Type = "User Interface Resource"
+Disk Date = 3672227041
+In Projects = "1,"
+Window Top = 125
+Window Left = 333
+Window Height = 397
+Window Width = 715
+Window Released = True
+
+[File 0025]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui.h"
+File Type = "Include"
+Disk Date = 3575523180
+In Projects = "1,"
+Source Window State = "1,44,44,44,21,27,21,0,0,0,0,0,0,0,0,0,0,0,44,34,349,715,1,0,"
+Window Top = 38
+
+[File 0026]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui.uir"
+File Type = "User Interface Resource"
+Disk Date = 3577940230
+In Projects = "1,"
+Window Top = 159
+Window Left = 42
+Window Height = 219
+Window Width = 555
+Window Released = True
+
+[File 0027]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui_plugin.h"
+File Type = "Include"
+Disk Date = 3309324496
+In Projects = "1,"
+Source Window State = "1,10,10,10,0,18,18,0,0,0,0,0,0,0,0,0,0,0,18,31,336,715,1,0,"
+Window Top = 38
+
+[File 0028]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/trans_language.h"
+File Type = "Include"
+Disk Date = 3647004776
+In Projects = "1,"
+Source Window State = "1,33,33,33,6,15,15,0,0,0,0,0,0,0,0,0,0,0,41,4,349,715,1,0,"
+Window Top = 38
+
+[Tab Order]
+Tab 0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester/tester_gui.c"
+Tab 0002 = "/c/work/elcom/valeo/UTSystem/src/shared/test/eltest.h"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = False
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = "/c/FlexiTester.OK/application.exe"
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

@@ -1,0 +1,64 @@
+HDRS = 	"c:\\work\\elcom\\valeo\\UTSystem\\src\\modules"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared"
+	"c:\\work\\elcom\\valeo\\UTSystem\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2019\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "axis.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\class" ;
+LOCATE on "Exception.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception" ;
+LOCATE on "IaiAxis.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI" ;
+LOCATE on "IaiAxis.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception\\Exception.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj" = 1 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\Exception.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\IaiAxis.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj" = 2 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.obj" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.h.hdefs" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\IaiAxis.h" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.h.hdefs" = 3 ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.h.hdefs" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.h.hdefs.out" ;
+PreLinkInputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.in.rc" ;
+PreLinkInputs += $(PrjObjects) $(InstrObjects) ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.out.rc" ;
+PreLinkOutputs += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll.defs" ;
+PreLink $(PreLinkOutputs) : $(PreLinkInputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll.defs" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.out.rc" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.res" : $(PreLinkOutputs) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.res" "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.out.rc" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.res" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\manifest.xml" ;
+MainFromObjects "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\link_options.txt" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\dependencies.lnk.in" ;
+Depends "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\resources.res" ;
+Depends all : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\axis\\IAI\\cvibuild.IaiAxis\\Release\\IaiAxis.dll" ;

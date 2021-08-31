@@ -1,0 +1,9 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\module.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\sensors.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\multithread.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\sensor.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\sensors\cvibuild.sensors\Release\sensor_module.obj.cvidefprots
+-dllName sensors.dll

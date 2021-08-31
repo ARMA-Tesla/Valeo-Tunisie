@@ -1,0 +1,58 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\work\\elcom\\valeo\\UTSystem\\src\\modules"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared"
+	"c:\\work\\elcom\\valeo\\UTSystem\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2019\\include\\clang\\3.3"
+	"C:\\Program Files\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files\\IVI Foundation\\VISA\\win64\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\eldaq\\class"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Drivers\\IviDCPwr"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2019\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+LOCATE on "cmfb_piano.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano" ;
+LOCATE on "cmfb_piano.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano" ;
+LOCATE on "cmfb_piano_utils.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano" ;
+LOCATE on "cmfb_piano_utils.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano" ;
+LOCATE on "elstring.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\string" ;
+LOCATE on "eltest.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "eltest.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "Exception.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception" ;
+LOCATE on "export.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\automat" ;
+LOCATE on "multithread.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\multithread" ;
+LOCATE on "test.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test" ;
+LOCATE on "test_helper_functions.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test" ;
+LOCATE on "test_helper_functions.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test" ;
+LOCATE on "test_panel.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test" ;
+LOCATE on "test_panel.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test" ;
+LOCATE on "test_plugin.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano" ;
+LOCATE on "testseq.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "testseq.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\eldaq\\class\\eldaq.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj" = 1 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test\\cmfb_piano\\cvibuild.test_cmfb_piano\\Debug64\\eldaq.obj" ;
+Depends all : $(PrjObjects) ;

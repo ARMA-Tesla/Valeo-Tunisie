@@ -1,0 +1,85 @@
+[Cognex_Set_Value_Integer]
+Class="Function"
+Prototype="int Cognex_Set_Value_Integer(char *Colonne, int Ligne, int Value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:80:1"
+
+[Cognex_Get_Value_Integer]
+Class="Function"
+Prototype="int Cognex_Get_Value_Integer(char *Colonne, int Ligne);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:96:1"
+
+[ReadResponseTelnet]
+Class="Function"
+Prototype="int ReadResponseTelnet(int Length, char *String_To_Read);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:111:1"
+
+[ServerTCPCB]
+Class="Function"
+Prototype="int ServerTCPCB(unsigned int handle, int event, int error, void *callbackData);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:131:1"
+
+[openTCPserver]
+Class="Function"
+Prototype="struct _SElException *openTCPserver(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:199:1"
+
+[Cognex_login]
+Class="Function"
+Prototype="struct _SElException *Cognex_login(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:227:1"
+
+[Cognex_disconnect]
+Class="Function"
+Prototype="struct _SElException *Cognex_disconnect(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:259:1"
+
+[Cognex_Trigger]
+Class="Function"
+Prototype="struct _SElException *Cognex_Trigger(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:273:1"
+
+[Cognex_Read]
+Class="Function"
+Prototype="struct _SElException *Cognex_Read(struct _Camera *me, char *data) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:286:1"
+
+[Cognex_Online]
+Class="Function"
+Prototype="struct _SElException *Cognex_Online(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:348:1"
+
+[Cognex_Offline]
+Class="Function"
+Prototype="struct _SElException *Cognex_Offline(struct _Camera *me) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:361:1"
+
+[Cognex_act_job]
+Class="Function"
+Prototype="struct _SElException *Cognex_act_job(struct _Camera *me, int *actual_job) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:374:1"
+
+[Cognex_Job]
+Class="Function"
+Prototype="struct _SElException *Cognex_Job(struct _Camera *me, const char *JobID) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:409:1"
+
+[Cognex_set_param]
+Class="Function"
+Prototype="struct _SElException *Cognex_set_param(struct _Camera *me, int phase) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:426:1"
+
+[Cognex_set_number_boutton]
+Class="Function"
+Prototype="struct _SElException *Cognex_set_number_boutton(struct _Camera *me, int phase) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:441:1"
+
+[Cognex_set_parameters]
+Class="Function"
+Prototype="struct _SElException *Cognex_set_parameters(struct _Camera *me, char *Colonne, int phase) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:454:1"
+
+[Cognex_set_parameters_VS11]
+Class="Function"
+Prototype="struct _SElException *Cognex_set_parameters_VS11(struct _Camera *me, char *Colonne, int phase);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\Camera\cognex\Cognex.c:468:1"
+

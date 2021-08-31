@@ -1,0 +1,305 @@
+[eldaq_init]
+Class="Function"
+Prototype="long eldaq_init(char *logicalName, unsigned short idQuery, unsigned short resetDevice, unsigned long *newSession);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:645:1"
+
+[eldaq_InitWithOptions]
+Class="Function"
+Prototype="long eldaq_InitWithOptions(char *logicalName, unsigned short idQuery, unsigned short resetDevice, const char *optionString, unsigned long *newSession);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:673:1"
+
+[eldaq_close]
+Class="Function"
+Prototype="long eldaq_close(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:702:1"
+
+[eldaq_reset]
+Class="Function"
+Prototype="long eldaq_reset(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:724:1"
+
+[eldaq_self_test]
+Class="Function"
+Prototype="long eldaq_self_test(unsigned long vi, short *testResult, char testMessage[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:747:1"
+
+[eldaq_error_query]
+Class="Function"
+Prototype="long eldaq_error_query(unsigned long vi, long *errorCode, char errorMessage[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:774:1"
+
+[eldaq_error_message]
+Class="Function"
+Prototype="long eldaq_error_message(unsigned long vi, long statusCode, char message[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:800:1"
+
+[eldaq_revision_query]
+Class="Function"
+Prototype="long eldaq_revision_query(unsigned long vi, char driverRev[], char instrRev[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:834:1"
+
+[eldaq_InvalidateAllAttributes]
+Class="Function"
+Prototype="long eldaq_InvalidateAllAttributes(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:860:1"
+
+[eldaq_ResetWithDefaults]
+Class="Function"
+Prototype="long eldaq_ResetWithDefaults(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:884:1"
+
+[eldaq_Disable]
+Class="Function"
+Prototype="long eldaq_Disable(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:907:1"
+
+[eldaq_GetAttributeViInt32]
+Class="Function"
+Prototype="long eldaq_GetAttributeViInt32(unsigned long vi, const char *channelName, unsigned long attributeId, long *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:930:1"
+
+[eldaq_GetAttributeViReal64]
+Class="Function"
+Prototype="long eldaq_GetAttributeViReal64(unsigned long vi, const char *channelName, unsigned long attributeId, double *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:958:1"
+
+[eldaq_GetAttributeViString]
+Class="Function"
+Prototype="long eldaq_GetAttributeViString(unsigned long vi, const char *channelName, unsigned long attributeId, long bufSize, char value[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:987:1"
+
+[eldaq_GetAttributeViBoolean]
+Class="Function"
+Prototype="long eldaq_GetAttributeViBoolean(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned short *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1020:1"
+
+[eldaq_GetAttributeViSession]
+Class="Function"
+Prototype="long eldaq_GetAttributeViSession(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned long *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1048:1"
+
+[eldaq_SetAttributeViInt32]
+Class="Function"
+Prototype="long eldaq_SetAttributeViInt32(unsigned long vi, const char *channelName, unsigned long attributeId, long value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1082:1"
+
+[eldaq_SetAttributeViReal64]
+Class="Function"
+Prototype="long eldaq_SetAttributeViReal64(unsigned long vi, const char *channelName, unsigned long attributeId, double value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1110:1"
+
+[eldaq_SetAttributeViString]
+Class="Function"
+Prototype="long eldaq_SetAttributeViString(unsigned long vi, const char *channelName, unsigned long attributeId, const char *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1138:1"
+
+[eldaq_SetAttributeViBoolean]
+Class="Function"
+Prototype="long eldaq_SetAttributeViBoolean(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned short value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1166:1"
+
+[eldaq_SetAttributeViSession]
+Class="Function"
+Prototype="long eldaq_SetAttributeViSession(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned long value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1194:1"
+
+[eldaq_CheckAttributeViInt32]
+Class="Function"
+Prototype="long eldaq_CheckAttributeViInt32(unsigned long vi, const char *channelName, unsigned long attributeId, long value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1226:1"
+
+[eldaq_CheckAttributeViReal64]
+Class="Function"
+Prototype="long eldaq_CheckAttributeViReal64(unsigned long vi, const char *channelName, unsigned long attributeId, double value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1254:1"
+
+[eldaq_CheckAttributeViString]
+Class="Function"
+Prototype="long eldaq_CheckAttributeViString(unsigned long vi, const char *channelName, unsigned long attributeId, const char *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1282:1"
+
+[eldaq_CheckAttributeViBoolean]
+Class="Function"
+Prototype="long eldaq_CheckAttributeViBoolean(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned short value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1306:1"
+
+[eldaq_CheckAttributeViSession]
+Class="Function"
+Prototype="long eldaq_CheckAttributeViSession(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned long value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1330:1"
+
+[eldaq_LockSession]
+Class="Function"
+Prototype="long eldaq_LockSession(unsigned long vi, unsigned short *callerHasLock);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1359:1"
+
+[eldaq_UnlockSession]
+Class="Function"
+Prototype="long eldaq_UnlockSession(unsigned long vi, unsigned short *callerHasLock);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1375:1"
+
+[eldaq_GetError]
+Class="Function"
+Prototype="long eldaq_GetError(unsigned long vi, long *errorCode, long bufferSize, char description[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1392:1"
+
+[eldaq_ClearError]
+Class="Function"
+Prototype="long eldaq_ClearError(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1423:1"
+
+[eldaq_GetErrorInfo]
+Class="Function"
+Prototype="long eldaq_GetErrorInfo(unsigned long vi, long *primaryError, long *secondaryError, char errorElaboration[256]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1448:1"
+
+[eldaq_ClearErrorInfo]
+Class="Function"
+Prototype="long eldaq_ClearErrorInfo(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1484:1"
+
+[eldaq_GetNextCoercionRecord]
+Class="Function"
+Prototype="long eldaq_GetNextCoercionRecord(unsigned long vi, long bufferSize, char recordBuf[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1512:1"
+
+[eldaq_GetSpecificDriverCHandle]
+Class="Function"
+Prototype="long eldaq_GetSpecificDriverCHandle(unsigned long vi, unsigned long *specificHandle);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1534:1"
+
+[eldaq_GetSpecificDriverIUnknownPtr]
+Class="Function"
+Prototype="long eldaq_GetSpecificDriverIUnknownPtr(unsigned long vi, void *ref);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1554:1"
+
+[eldaq_GetNextInterchangeWarning]
+Class="Function"
+Prototype="long eldaq_GetNextInterchangeWarning(unsigned long vi, long bufferSize, char warnString[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1584:1"
+
+[eldaq_ResetInterchangeCheck]
+Class="Function"
+Prototype="long eldaq_ResetInterchangeCheck(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1606:1"
+
+[eldaq_ClearInterchangeWarnings]
+Class="Function"
+Prototype="long eldaq_ClearInterchangeWarnings(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1623:1"
+
+[eldaq_ConfigureMeasurement]
+Class="Function"
+Prototype="long eldaq_ConfigureMeasurement(unsigned long vi, char measuredChannels[], long sampleRate, double measuredIntervals);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1643:1"
+
+[eldaq_StartMeasurement]
+Class="Function"
+Prototype="long eldaq_StartMeasurement(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1674:1"
+
+[eldaq_StopMeasurement]
+Class="Function"
+Prototype="long eldaq_StopMeasurement(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1696:1"
+
+[eldaq_ReadMeasurement]
+Class="Function"
+Prototype="long eldaq_ReadMeasurement(unsigned long vi, char channelName[], void *scaleInfo, long measurementType, double *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1718:1"
+
+[eldaq_ReadWaveform]
+Class="Function"
+Prototype="long eldaq_ReadWaveform(unsigned long vi, char channelName[], char scale[], long arraySize, double data[], double *startTime, double *xIncrement);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1757:1"
+
+[eldaq_ReadForce]
+Class="Function"
+Prototype="long eldaq_ReadForce(unsigned long vi, char channels[], char clockSource[], double min, double max, long sampsPerChan, long rate, double data[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1790:1"
+
+[eldaq_WriteDigitalLine]
+Class="Function"
+Prototype="long eldaq_WriteDigitalLine(unsigned long vi, char digitalChannels[], long status);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1825:1"
+
+[eldaq_GetChannelScale]
+Class="Function"
+Prototype="long eldaq_GetChannelScale(unsigned long vi, char channelName[], const char *scaleName, void *_pScaleInfo);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1847:1"
+
+[eldaq_LoadCalibration]
+Class="Function"
+Prototype="long eldaq_LoadCalibration(unsigned long vi, const char *calibrationFile);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1870:1"
+
+[ClassUtil_TestNewSession]
+Class="Function"
+Prototype="long ClassUtil_TestNewSession(unsigned long *newVi, long secondError);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1981:1"
+
+[ClassUtil_BuildRevision]
+Class="Function"
+Prototype="void ClassUtil_BuildRevision(char *revString, char *className, long classMajor, long classMinor);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:1997:1"
+
+[ClassUtil_GetCoercionRecord]
+Class="Function"
+Prototype="long ClassUtil_GetCoercionRecord(unsigned long vi, long bufferSize, char recordBuf[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2017:1"
+
+[ClassUtil_GetNextInterchangeWarning]
+Class="Function"
+Prototype="long ClassUtil_GetNextInterchangeWarning(unsigned long vi, long bufferSize, char warnString[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2039:1"
+
+[ClassUtil_ClearInterchangeWarnings]
+Class="Function"
+Prototype="long ClassUtil_ClearInterchangeWarnings(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2070:1"
+
+[ClassUtil_ResetInterchangeCheck]
+Class="Function"
+Prototype="long ClassUtil_ResetInterchangeCheck(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2088:1"
+
+[ClassUtil_GetError]
+Class="Function"
+Prototype="long ClassUtil_GetError(unsigned long vi, long *errorCode, long bufferSize, char description[], struct IviStringValueEntry errorMessageTable[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2107:1"
+
+[ClassUtil_ClearError]
+Class="Function"
+Prototype="long ClassUtil_ClearError(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2214:1"
+
+[ClassUtil_error_message]
+Class="Function"
+Prototype="long ClassUtil_error_message(unsigned long vi, long statusCode, char message[], struct IviStringValueEntry ClassErrorMessagesTable[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2234:1"
+
+[ClassUtil_IsClassAttribute]
+Class="Function"
+Prototype="unsigned short ClassUtil_IsClassAttribute(long attributeId);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2278:1"
+
+[ClassUtil_GetSimulationDriverInfo]
+Class="Function"
+Prototype="long ClassUtil_GetSimulationDriverInfo(unsigned long vi, const char *defaultSoftwareModule, const char *functionName, unsigned long *simVi, void **functionPtr, char *functionNames[]);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2296:1"
+
+[ClassUtil_CreateNewSession]
+Class="Function"
+Prototype="long ClassUtil_CreateNewSession(const char *logicalName, const char *optionString, unsigned short idQuery, unsigned short resetDevice, unsigned long *newSession, const char *className, char *functionNames[], long (*InitAttributes)(unsigned long));"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2327:1"
+
+[ClassUtil_DisposeSession]
+Class="Function"
+Prototype="long ClassUtil_DisposeSession(unsigned long vi);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2373:1"
+
+[ClassUtil_GetAttributeViBooleanFromSpecificDriver]
+Class="Function"
+Prototype="long ClassUtil_GetAttributeViBooleanFromSpecificDriver(unsigned long vi, const char *channelName, unsigned long attributeId, unsigned short *value);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\shared\eldaq\class\eldaq.c:2395:1"
+

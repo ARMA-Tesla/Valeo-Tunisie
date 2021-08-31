@@ -1,0 +1,16 @@
+eleventdata.obj
+elstring.obj
+Exception.obj
+language.obj
+login.obj
+cvi.lib
+cviauto.lib
+cvistart.lib
+kernel32.lib
+msxmldom.obj
+user32.lib
+uuid.lib
+CVI_UP_Product_Dependencies_Private_Object
+EXE Symbol Module
+Exports Module
+Resource Module

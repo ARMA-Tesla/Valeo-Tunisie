@@ -1,0 +1,28 @@
+#include "winver.h"
+
+1 VERSIONINFO
+    FILEVERSION     2,0,0,1
+    PRODUCTVERSION  2,0,0,1
+    FILEOS          VOS__WINDOWS32
+    FILETYPE        VFT_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040504b0"
+        BEGIN
+            VALUE "CompanyName", "ELCOM, a.s."
+            VALUE "FileDescription", "CAN/LIN Module"
+            VALUE "FileVersion", "2, 0, 0, 1"
+            VALUE "InternalName", "module_can"
+            VALUE "LegalCopyright", "Copyright (C) 2007, ELCOM, a.s."
+            VALUE "OriginalFilename", "can.dll"
+            VALUE "ProductName", "CAN/LIN Module"
+            VALUE "ProductVersion", "2, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 1029, 1200
+    END
+END
+

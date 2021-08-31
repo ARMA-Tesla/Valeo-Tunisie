@@ -1,0 +1,9 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\resources.out.rc
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\counter.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\counter.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\counter_module.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\eleventdata.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\elstring.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\counter\cvibuild.counter\Release\Exception.obj.cvidefprots
+-dllName counter.dll
