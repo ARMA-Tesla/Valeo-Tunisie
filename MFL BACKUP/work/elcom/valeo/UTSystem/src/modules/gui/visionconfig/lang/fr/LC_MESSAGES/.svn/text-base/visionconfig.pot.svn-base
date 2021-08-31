@@ -1,0 +1,185 @@
+msgid "IMAQ Panel"
+msgstr "Panneau de contrôle IMAQ"
+
+msgid "Plug-in info"
+msgstr "Info plug-in"
+
+msgid "Version:"
+msgstr "Version:"
+
+msgid "Build Date:"
+msgstr "Date de création:"
+
+msgid "Plug-in Vendor:"
+msgstr "Plug-in vendeur"
+
+msgid "Changes in Imaq configuration appear after restart the main application!"
+msgstr "Les modifications dans la configuration Imaq ne seront effectifs qu'après le redémarage de l'application principale"
+
+msgid "Vision Config"
+msgstr "Configuration de la vue"
+
+msgid "Camera"
+msgstr "Camera"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Config"
+msgstr "Configuration"
+
+msgid "Task"
+msgstr "Tâche"
+
+msgid "Camera Config"
+msgstr "Configuration de la camera"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Shutter Speed"
+msgstr "Vitesse d'obturation"
+
+msgid "Gain"
+msgstr "Gain"
+
+msgid "Image Avarage"
+msgstr "Image moyenne"
+
+msgid "Frame Rate"
+msgstr "Nb d'images/sec"
+
+msgid "Configure Task"
+msgstr "Configurer la tâche"
+
+msgid "Step Type"
+msgstr "Type d'étape"
+
+msgid "Task Name:"
+msgstr "Nom de la tâche:"
+
+msgid "Task/Steps"
+msgstr "Tâche/Etapes"
+
+msgid "oreginal image"
+msgstr "Image originale"
+
+msgid "Pattern Matching"
+msgstr "Echantillon correspondant"
+
+msgid "Step Name:"
+msgstr "Nom de l'étape:"
+
+msgid "Pattern"
+msgstr "Echantillons"
+
+msgid "Search Conditions"
+msgstr "Paramètres de recherche"
+
+msgid "Search Region"
+msgstr "Zone de recherche"
+
+msgid "Number of matches"
+msgstr "Nombre de resultats"
+
+msgid "Match Score"
+msgstr "Pertinence"
+
+msgid "Contrast"
+msgstr "Contraste"
+
+msgid "Mode"
+msgstr "Mode"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Golden Pattern Matching"
+msgstr "Echantillon doré correspondant"
+
+msgid "Bright Level"
+msgstr "Luminosité"
+
+msgid "Dark Level"
+msgstr "Opacité"
+
+msgid "Histogram"
+msgstr "Histogramme"
+
+msgid "Histogram Region"
+msgstr "Zone de l'histogramme"
+
+msgid "Math Operations"
+msgstr "Opérations mathématiques"
+
+msgid "Source Image"
+msgstr "Image source"
+
+msgid "Constant"
+msgstr "Constante"
+
+msgid "Resample"
+msgstr "Ré-échantillonner"
+
+msgid "Images Buffer"
+msgstr "Tampon d'images"
+
+msgid "Interpolation"
+msgstr "Interpolation"
+
+msgid "Template Path"
+msgstr "Chemin d'accès du format"
+
+msgid "New Buffer"
+msgstr "Nouveau Buffer"
+
+msgid "Buffer"
+msgstr "Buffer"
+
+msgid "Buffer Name"
+msgstr "Nom du buffer"
+
+msgid "Snap or Load Image"
+msgstr "Prendre ou charger une image"
+
+msgid "Before you configure any task, you should load or snap an image"
+msgstr "Avant de configurer une tâchen, veuillez charger ou prendre une image"
+
+msgid "You must specify buffer name!"
+msgstr "Précisez le nom du buffer"
+
+msgid "Name \"image\" or names with @ character on begin are reserved for internal use"
+msgstr "Nom \"image\" ou noms commençant par le caractère @ sont réservés pour le fonctionnement interne"
+
+msgid "No valid template path defined"
+msgstr "Le chemin d'accès du format est incorrect"
+
+msgid "Region is not defined"
+msgstr "La zone n'est pas définie"
+
+msgid "Unknown Math Operation!"
+msgstr "Opération mathématique inconnue"
+
+msgid "Operation has not been selected. Step has not been created."
+msgstr "Aucune opération sélectionnée. L'étape n'a pas été créée."
+
+msgid "The specified image name \"%s\" has not befound."
+msgstr "L'image \"%s\" n'a pas été trouvée"
+
+msgid "Configuration is empty!"
+msgstr "Aucune configuration"
+
+msgid "Buffer with name \"%s\" already exist. Do you want replace it?"
+msgstr "Le nom de buffer \"%s\" existe déjà. Souhaitez-vous le remplacer?"
+
+msgid "Sharpen Settings"
+msgstr "Paramètres avancés"
+
+msgid "Mean Value"
+msgstr "Valeur moyenne"
+
+msgid ""
+msgstr ""

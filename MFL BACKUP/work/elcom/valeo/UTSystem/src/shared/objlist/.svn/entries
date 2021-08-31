@@ -1,0 +1,52 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/shared/objlist
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2007-05-31T05:22:36.087933Z
+550
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+objlist.c
+file
+
+
+
+
+2008-11-12T09:47:27.968750Z
+4929cd91c869ab07a89d58f5e2dd3082
+2007-05-31T05:22:36.087933Z
+550
+turcar
+
+objlist.h
+file
+
+
+
+
+2008-11-12T09:47:27.968750Z
+cd03c6e49bcd0be9a16dc2e152165ffc
+2007-03-15T07:19:17.128285Z
+29
+turcar
+

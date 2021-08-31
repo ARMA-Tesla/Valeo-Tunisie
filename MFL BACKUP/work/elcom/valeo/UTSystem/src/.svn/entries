@@ -1,0 +1,85 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2008-11-12T13:07:04.565341Z
+2256
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+line.new
+dir
+
+app
+dir
+
+to_do.txt
+file
+
+
+
+
+2008-11-12T09:49:12.828125Z
+6f74b0ff9dcd91ab21672a051b38892c
+2007-08-01T16:02:34.224886Z
+891
+turcar
+
+config
+dir
+
+shared
+dir
+
+line
+dir
+
+modules
+dir
+
+shared_reg.bat
+file
+
+
+
+
+2008-11-12T09:49:12.828125Z
+2cce4902133a0e2636d1785c8693d34c
+2008-01-10T15:24:57.394890Z
+1612
+turcar
+
+_backup.bat
+file
+
+
+
+
+2008-11-12T09:49:12.828125Z
+dffc67d26e347ba13ed7466184547602
+2007-12-03T15:46:16.004585Z
+1472
+tomisr
+
+wago
+dir
+

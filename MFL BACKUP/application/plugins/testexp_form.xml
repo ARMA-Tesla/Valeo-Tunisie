@@ -1,0 +1,127 @@
+<testseq>
+	<product>
+		<id>422</id>
+		<branch_id>406</branch_id>
+		<name>VW253CS</name>
+		<description></description>
+		<mode></mode>
+		<date_time></date_time>
+		<barcode></barcode>
+		<duration></duration>
+		<failed>0</failed>
+	</product>
+	<global>
+		<parameter>
+			<id>0</id>
+			<name>Camera:Configuration</name>
+			<description></description>
+			<value type="string">camera_PQ26_climatronic.xml</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Camera:ROI</name>
+			<description></description>
+			<value type="string">60,260,1290,390</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>GML</name>
+			<description></description>
+			<value type="string">01</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Index EEP</name>
+			<description>count to hex</description>
+			<value type="string">22.68</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Index HW</name>
+			<description></description>
+			<value type="string">01.01</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Index SW</name>
+			<description></description>
+			<value type="string">05.03</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>JigCode</name>
+			<description></description>
+			<value type="string">8</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Label:Check</name>
+			<description></description>
+			<value type="string">######################################################################################</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>LineID</name>
+			<description></description>
+			<value type="string">1</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>PCB Index</name>
+			<description></description>
+			<value type="string">XX.XX</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>ProductCustomerRef</name>
+			<description></description>
+			<value type="string">6C0.907.044</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>ProductName</name>
+			<description></description>
+			<value type="string">VW253CS</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>ProductPartNumber</name>
+			<description></description>
+			<value type="string">E1082397</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>ProductPicture</name>
+			<description></description>
+			<value type="string">VW253CS.jpg</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>ProductTestFile</name>
+			<description></description>
+			<value type="string">test_PQ26_climatronic.dll</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>SN Customer</name>
+			<description></description>
+			<value type="string">VW</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>Supplier Number</name>
+			<description></description>
+			<value type="string">XXXXXXXX</value>
+		</parameter>
+		<parameter>
+			<id>0</id>
+			<name>TesterName</name>
+			<description></description>
+			<value type="string">PQ26_CLIMATRONIC</value>
+		</parameter>
+	</global>
+	<testseq_init>
+		<failed>0</failed>
+		<duration></duration>
+	</testseq_init>
+</testseq>

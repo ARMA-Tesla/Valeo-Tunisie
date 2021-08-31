@@ -1,0 +1,64 @@
+CCFLAGS = -g ;
+HDRS = 	"c:\\work\\elcom\\valeo\\UTSystem\\src\\modules"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared"
+	"c:\\work\\elcom\\valeo\\UTSystem\\include"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\activex\\word"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\activex\\excel"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\custctrl"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\custctrl\\custsupp"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\cvirtsup"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\datasock"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\daqUtil"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\printing"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\toolbox"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\reportgen"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\toolslib\\localui"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\instr"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2019\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\include\\ansi"
+	"c:\\programdata\\ivi foundation\\ivi\\cvi2019\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\eldaq\\class"
+	"c:\\Program Files (x86)\\IVI Foundation\\IVI\\Drivers\\ividcpwr"
+	"c:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\niDMM"
+	"c:\\ProgramData\\IVI Foundation\\IVI\\CVI2019\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+LOCATE on "elstring.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\string" ;
+LOCATE on "eltest.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "eltest.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "eltypes.h" = "c:\\work\\elcom\\valeo\\UTSystem\\include" ;
+LOCATE on "Exception.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\exception" ;
+LOCATE on "export.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\automat" ;
+LOCATE on "multithread.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\multithread" ;
+LOCATE on "niDMMErrorHandler.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "OFF.c" = "c:\\Users\\MFL\\Desktop" ;
+LOCATE on "PeaksDetector.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\PeakDetactor DLL" ;
+LOCATE on "sws_mfl.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "sws_mfl.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "sws_mfl_utils.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "sws_mfl_utils.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "test.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH" ;
+LOCATE on "test_helper_functions.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH" ;
+LOCATE on "test_helper_functions.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH" ;
+LOCATE on "test_panel.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH" ;
+LOCATE on "test_panel.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH" ;
+LOCATE on "test_plugin.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl" ;
+LOCATE on "testseq.c" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+LOCATE on "testseq.h" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\shared\\test" ;
+Object "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj" : "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\sws_mfl.c" ;
+FILENUM on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj" = 1 ;
+DEFPROTS on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj.cvidefprots" ;
+OUTFILE on "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj" = "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj.out" ;
+PrjObjects += "c:\\work\\elcom\\valeo\\UTSystem\\src\\modules\\test 24052021 CRUSH\\sws_mfl\\cvibuild.test_sws_mfl\\Debug\\sws_mfl.obj" ;
+Always $(PrjObjects) ;
+Depends all : $(PrjObjects) ;

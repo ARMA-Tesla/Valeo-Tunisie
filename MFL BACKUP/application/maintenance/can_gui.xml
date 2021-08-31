@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<configuration>
+    <plugins>
+        <plugin id="{E87E3CB8-8543-4F55-B847-12E4C6165E6E}">
+          <name>LIN Maintenance GUI</name>
+          <KWPCommands>
+          	<defaultWriteIdentifier>0x03</defaultWriteIdentifier>
+          	<defaultReadIdentifier>0x01</defaultReadIdentifier>
+          	<command id="1">
+          		<name>Read Number_Of_DTCs</name>
+          		<size>3</size>
+          		<data>0x22 0xFD 0x30</data>
+          	</command>
+			<command id="2">
+          		<name>Write Valeo_Production_Key</name>
+          		<size>3</size>
+          		<data>0x22 0xFD 0x30</data>
+          	</command>		
+          </KWPCommands>
+          <LowLevel>
+          	<defaultWriteIdentifier>0X3C</defaultWriteIdentifier>
+          	<AsyncFrames>
+          		<Frame id="1">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0x61 0x06 0xB1 0x02 0x00 0x02 0x32 0x85</data>
+          		</Frame>
+          		<Frame id="2">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X61 0X06 0XB1 0X02 0X00 0X03 0X32 0X03</data>
+          		</Frame>
+				<Frame id="3">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X61 0X06 0XB1 0X02 0X00 0X04 0X32 0XC4</data>
+          		</Frame>
+				<Frame id="4">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X06 0X08 0X85</data>
+          		</Frame>
+				<Frame id="5">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X03 0X08 0X03</data>
+          		</Frame>
+				<Frame id="6">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X02 0X08 0X2B</data>
+          		</Frame>
+				<Frame id="7">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X00 0X08 0X80</data>
+          		</Frame>
+				<Frame id="8">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X05 0X08 0X14</data>
+          		</Frame>
+				<Frame id="9">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X01 0X08 0X42</data>
+          		</Frame>
+				<Frame id="10">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2F 0X06 0XB1 0X02 0X00 0X04 0X08 0X20</data>
+          		</Frame>
+				<Frame id="11">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2E 0X06 0XB1 0X49 0X00 0X03 0X10 0X03</data>
+          		</Frame>
+				<Frame id="12">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>2000000</repeatTime>
+          			<size>8</size>
+          			<data>0X2E 0X06 0XB1 0X49 0X00 0X00 0X10 0X2B</data>
+          		</Frame>
+				<Frame id="13">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+          			<repeatTime>2000000</repeatTime>
+          			<size>8</size>
+          			<data>0X2E 0X06 0XB1 0X49 0X00 0X01 0X10 0XC1</data>
+          		</Frame>
+				<Frame id="14">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X2E 0X06 0XB1 0X49 0X00 0X02 0X10 0XA3</data>
+          		</Frame>
+				<Frame id="15">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X21 0X06 0XB1 0X02 0X00 0X00 0X13 0XE2</data>
+          		</Frame>
+				<Frame id="16">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X21 0X06 0XB1 0X02 0X00 0X01 0X13 0X2B</data>
+          		</Frame>
+				<Frame id="17">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X21 0X06 0XB1 0X02 0X00 0X02 0X13 0X1F</data>
+          		</Frame>
+				<Frame id="18">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X21 0X06 0XB1 0X02 0X00 0X03 0X13 0X61</data>
+          		</Frame>
+				<Frame id="19">
+          			<channel>LIN0</channel>
+          			<identifier>0X3C</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>8</size>
+          			<data>0X21 0X06 0XB1 0X02 0X00 0X04 0X13 0X20</data>
+          		</Frame>
+				<Frame id="20">
+          			<channel>LIN0</channel>
+          			<identifier>0X01</identifier>
+					<TypeFrame>17</TypeFrame>
+          			<repeatTime>200000</repeatTime>
+          			<size>0</size>
+          			<data>0XFF 0X06 0XB1 0X02 0X00 0X04 0X13 0X20</data>
+          		</Frame>
+				<Frame id="21">
+          			<channel>LIN0</channel>
+          			<identifier>0X04</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>0</repeatTime>
+          			<size>8</size>
+          			<data>0XFF 0XFF 0XFF 0XFF 0XFF 0XFF 0X0F 0X9D</data>
+          		</Frame>
+				<Frame id="22">
+          			<channel>LIN0</channel>
+          			<identifier>0X21</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>10</repeatTime>
+          			<size>8</size>
+          			<data>0X0F 0XFF 0XFF 0XFF 0XFF 0XFF 0XFE 0XFF</data>
+          		</Frame>
+				<Frame id="23">
+          			<channel>LIN0</channel>
+          			<identifier>0X02</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>20</repeatTime>
+          			<size>8</size>
+          			<data>0XFF 0X00 0X00 0XFF 0XFF 0XFF 0XFF 0X00</data>
+          		</Frame>
+				<Frame id="24">
+          			<channel>LIN0</channel>
+          			<identifier>0X02</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>30</repeatTime>
+          			<size>2</size>
+          			<data>0XFF 0X7F</data>
+          		</Frame>
+				<Frame id="25">
+          			<channel>LIN0</channel>
+          			<identifier>0X21</identifier>
+					<TypeFrame>18</TypeFrame>
+          			<repeatTime>35</repeatTime>
+          			<size>2</size>
+          			<data>0XFF 0XFF</data>
+          		</Frame>
+				<Frame id="25">
+          			<channel>LIN0</channel>
+          			<identifier>0X01</identifier>
+					<TypeFrame>17</TypeFrame>
+          			<repeatTime>35</repeatTime>
+          			<size>0</size>
+          			<data>0XFF 0XFF</data>
+          		</Frame>
+          	</AsyncFrames>
+          	<Filters>
+          		<exclude enabled="0"></exclude>
+          	</Filters>
+          </LowLevel>
+        </plugin>
+    </plugins>
+</configuration>

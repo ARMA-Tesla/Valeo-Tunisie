@@ -1,0 +1,603 @@
+#include <msxmldom.h>
+#include <eventfactory/EventFactory.h> 
+#include <guid.h>
+#include <utility.h>
+#include <language/language.h>
+#include "expertise_plugin.h"
+#include "trans_language.h"
+
+const char* HISTORY = \
+"[2007-12-13] rT 1.10\n"
+" * Added reset after product was selected. LoadTestSequence() was edited\n";
+
+#ifndef _FORCE_REFRESH_LIST_BY_SCROLLING
+#define _FORCE_REFRESH_LIST_BY_SCROLLING
+#endif
+
+#define PATH_TEST_FILE_FORM_XML			"\\plugins\\test_form.xml" 
+#define PATH_TESTEXP_FILE_FORM_XML		"\\plugins\\testexp_form.xml"  
+
+#define NB_OF_PANEL 		1  
+static int					gs_panel[NB_OF_PANEL + 1];
+static SElEventFactoryPtr	gs_EventFactory = NULL;  
+static SObjListPtr 			gs_Modules = NULL;  
+SLanguagePtr				gs_pLanguage = NULL;
+
+static SElExceptionPtr LoadTestSequence(const char* fileXml);
+
+void CVICALLBACK PostDeferredHidePanel (void *callbackData) { HidePanel(gs_panel[EXPERTISE]);}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "OnList"
+int CVICALLBACK OnList (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+#ifdef _FORCE_REFRESH_LIST_BY_SCROLLING
+
+	int32_t			error = 0;
+	SElExceptionPtr	pexception = NULL;
+	int32_t			width;
+
+	switch(event)
+	{
+		case EVENT_VSCROLL:
+			GetCtrlAttribute(panel, control, ATTR_WIDTH, &width);			
+			SetCtrlAttribute(panel, control, ATTR_WIDTH, width+1);			
+			SetCtrlAttribute(panel, control, ATTR_WIDTH, width);			
+			break;
+	}
+
+Error:
+#endif
+	return 0;
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "OnButton"
+int CVICALLBACK OnButton (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	int32_t			error = 0;
+	SElExceptionPtr	pexception = NULL;
+	int				count_source, count_target, i, step, checked, target_i;
+	char			buffer[512];
+	
+	switch (event)
+	{
+		case EVENT_COMMIT:
+
+			EXCCHECKCVI( GetNumListItems (panel, EXPERTISE_SOURCE, &count_source));
+			EXCCHECKCVI( GetNumListItems (panel, EXPERTISE_TARGET, &count_target));
+			
+			switch(control)
+			{
+				case EXPERTISE_ADD:
+					EXCCHECKCVI( SetActiveCtrl (panel, EXPERTISE_TARGET));
+					EXCCHECKCVI( ProcessDrawEvents());
+					EXCCHECKCVI( GetCtrlIndex (panel, EXPERTISE_TARGET, &target_i));  
+					
+					for(i=0; i<count_source; i++)
+					{
+						EXCCHECKCVI( IsListItemChecked (panel, EXPERTISE_SOURCE, i, &checked));
+						if(checked)
+						{
+							EXCCHECKCVI( GetValueFromIndex (panel, EXPERTISE_SOURCE, i, &step));
+							EXCCHECKCVI( GetLabelFromIndex (panel, EXPERTISE_SOURCE, i, buffer));
+							
+							target_i++; 
+							EXCCHECKCVI( InsertListItem (panel, EXPERTISE_TARGET, target_i, buffer, step));
+						}
+					}
+					break;
+				case EXPERTISE_DEL:
+					for(i=0; i<count_target; i++)
+					{
+						EXCCHECKCVI( IsListItemChecked (panel, EXPERTISE_TARGET, i, &checked));
+						if(checked)
+						{
+							EXCCHECKCVI( DeleteListItem (panel, EXPERTISE_TARGET, i, 1));
+							count_target--;  
+							i = -1;
+						}
+					}
+					break;
+				case EXPERTISE_UP:
+					EXCCHECKCVI( SetActiveCtrl (panel, EXPERTISE_TARGET));
+					EXCCHECKCVI( ProcessDrawEvents());
+					EXCCHECKCVI( GetCtrlIndex (panel, EXPERTISE_TARGET, &i));
+					if(i>0)
+					{
+						EXCCHECKCVI( GetValueFromIndex (panel, EXPERTISE_TARGET, i, &step));
+						EXCCHECKCVI( GetLabelFromIndex (panel, EXPERTISE_TARGET, i, buffer));
+						
+						EXCCHECKCVI( DeleteListItem (panel, EXPERTISE_TARGET, i, 1));
+						i--;
+						EXCCHECKCVI( InsertListItem (panel, EXPERTISE_TARGET, i, buffer, step));
+						EXCCHECKCVI( SetCtrlIndex (panel, EXPERTISE_TARGET, i));
+						
+					}
+					break;
+				case EXPERTISE_DOWN:
+					EXCCHECKCVI( SetActiveCtrl (panel, EXPERTISE_TARGET));
+					EXCCHECKCVI( ProcessDrawEvents());
+					EXCCHECKCVI( GetCtrlIndex (panel, EXPERTISE_TARGET, &i));
+					if(i<(count_target-1))
+					{
+						EXCCHECKCVI( GetValueFromIndex (panel, EXPERTISE_TARGET, i, &step));
+						EXCCHECKCVI( GetLabelFromIndex (panel, EXPERTISE_TARGET, i, buffer));
+						
+						EXCCHECKCVI( DeleteListItem (panel, EXPERTISE_TARGET, i, 1));
+						i++;
+						EXCCHECKCVI( InsertListItem (panel, EXPERTISE_TARGET, i, buffer, step));
+						EXCCHECKCVI( SetCtrlIndex (panel, EXPERTISE_TARGET, i));
+						
+					}
+					break;
+			}
+			
+			break;
+	}
+	
+Error:
+	return 0;
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "SaveTestSequence"
+static SElExceptionPtr SaveTestSequence(const char* fileSourceXml, const char* fileTargetXml)
+{
+	int32_t			error = 0;
+	SElExceptionPtr	pexception = NULL;
+	HRESULT         hr = 0;
+	CAObjHandle     pxml = 0, pxml_t = 0;
+	CAObjHandle     pnode = 0, pnode_t = 0, pnode2 = 0, pnode2clon = 0, pnode2old = 0, pnode2new = 0;
+	CAObjHandle     pparameter = 0;
+	const char*     pfile_xml = (fileSourceXml) ? fileSourceXml : "test_form.xml";
+	const char*     pfile_xml_t = (fileTargetXml) ? fileTargetXml : "testexp_form.xml";     
+	VBOOL           is_xml_success = 1;
+	VARIANT         pfile_name_var = CA_VariantEmpty();
+	VARIANT         pfile_name_var_t = CA_VariantEmpty();
+	char*           ptext= NULL;
+	int				step = 0;
+	char			buffer[512];
+	char			path[512];
+	int				i, r, count, repeat;
+
+	if(0==CopyFile(pfile_xml, pfile_xml_t))
+	{
+		/* sequence target from XML */
+		EXCCHECKMSXML( MSXML_NewDOMDocumentIXMLDOMDocument (NULL, 1, LOCALE_NEUTRAL, 0, &pxml_t));
+		EXCCHECKCVI( CA_VariantSetCString(  &pfile_name_var_t, pfile_xml_t));
+		EXCCHECKMSXMLLOAD( MSXML_IXMLDOMDocumentload (pxml_t, NULL, pfile_name_var_t, &is_xml_success));
+		
+		/* clear old testsequence */
+		EXCCHECKMSXML( MSXML_IXMLDOMDocumentselectSingleNode (pxml_t, NULL, "//testseq", &pnode_t));	
+		EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode_t, NULL, "test", &pnode2));
+		while(pnode2!=0)
+		{
+			pnode2old = pnode2;
+			MSXML_IXMLDOMNodeGetnextSibling (pnode2, NULL, &pnode2);
+			
+			EXCCHECKMSXML( MSXML_IXMLDOMNoderemoveChild (pnode_t, NULL, pnode2old, &pnode2old));  
+			
+			EXCCHECKCVI( CA_DiscardObjHandle(pnode2old));
+			pnode2old = 0;  
+		}
+		
+		EXCCHECKMSXML( MSXML_IXMLDOMDocumentsave (pxml_t, NULL, pfile_name_var_t));
+		
+		/* sequence source from XML */
+		EXCCHECKMSXML( MSXML_NewDOMDocumentIXMLDOMDocument (NULL, 1, LOCALE_NEUTRAL, 0, &pxml));
+		EXCCHECKCVI( CA_VariantSetCString(  &pfile_name_var, pfile_xml));
+		EXCCHECKMSXMLLOAD( MSXML_IXMLDOMDocumentload (pxml, NULL, pfile_name_var, &is_xml_success));
+		EXCCHECKMSXML( MSXML_IXMLDOMDocumentselectSingleNode (pxml, NULL, "//testseq", &pnode));
+		
+		EXCCHECKCVI( GetCtrlVal (gs_panel[EXPERTISE], EXPERTISE_REPEAT, &repeat)); 
+		EXCCHECKCVI( GetNumListItems (gs_panel[EXPERTISE], EXPERTISE_TARGET, &count));   
+		
+		for(r=0; r<repeat;r++)
+		{
+			for(i=0; i<count;i++)
+			{
+				EXCCHECKCVI( GetValueFromIndex (gs_panel[EXPERTISE], EXPERTISE_TARGET, i, &step));  
+		
+				sprintf(path, "test[@step='%d']", step);
+				EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode, NULL, path, &pnode2));
+				if(pnode2)
+				{
+					EXCCHECKMSXML( MSXML_IXMLDOMNodecloneNode (pnode2, NULL, VTRUE, &pnode2clon));
+				
+					/* recount steps */
+					EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode2clon, NULL, "@step", &pparameter));  
+					if(pparameter)
+					{
+						sprintf(path, "%d", i + 1 + r*count);
+						EXCCHECKMSXML( MSXML_IXMLDOMNodeSettext( pparameter, NULL, path));
+					
+						EXCCHECKCVI( CA_DiscardObjHandle(pparameter)); 
+						pparameter = 0;
+					}
+				
+					EXCCHECKMSXML( MSXML_IXMLDOMNodeappendChild (pnode_t, NULL, pnode2clon, &pnode2new));  
+				
+					EXCCHECKCVI( CA_DiscardObjHandle(pnode2new));
+					pnode2new = 0;  
+					EXCCHECKCVI( CA_DiscardObjHandle(pnode2clon));
+					pnode2clon = 0;  
+					EXCCHECKCVI( CA_DiscardObjHandle(pnode2));
+					pnode2 = 0;  
+				}
+			}
+		}
+		EXCCHECKMSXML( MSXML_IXMLDOMDocumentsave (pxml_t, NULL, pfile_name_var_t));    
+	}
+	
+Error:
+	CA_FreeMemory(ptext);
+	CA_VariantClear(&pfile_name_var);
+	if (pparameter) CA_DiscardObjHandle(pparameter);
+	if (pnode) CA_DiscardObjHandle(pnode);
+	if (pnode_t) CA_DiscardObjHandle(pnode_t); 
+	if (pnode2clon) CA_DiscardObjHandle(pnode2clon);  
+	if (pnode2) CA_DiscardObjHandle(pnode2);
+	if (pnode2old) CA_DiscardObjHandle(pnode2old);
+	if (pnode2new) CA_DiscardObjHandle(pnode2new); 
+	if (pxml) CA_DiscardObjHandle(pxml);
+	EXCRETHROW( pexception);
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "LoadTestSequence"
+static SElExceptionPtr LoadTestSequence(const char* fileXml)
+{
+	int32_t			error = 0;
+	SElExceptionPtr	pexception = NULL;
+	HRESULT         hr = 0;
+	CAObjHandle     pxml  = 0;
+	CAObjHandle     pnode = 0, ptest_list = 0;
+	CAObjHandle     pparameter = 0;
+	const char*     pfile_xml = (fileXml) ? fileXml : "test_form.xml";
+	VBOOL           is_xml_success = 1;
+	VARIANT         pfile_name_var = CA_VariantEmpty();
+	char*           ptext= NULL;
+	int				step = 0;
+	char			buffer[512];
+	
+	EXCCHECKCVI( ClearListCtrl (gs_panel[EXPERTISE], EXPERTISE_SOURCE));
+
+	/* sequence from XML */
+	EXCCHECKMSXML( MSXML_NewDOMDocumentIXMLDOMDocument (NULL, 1, LOCALE_NEUTRAL, 0, &pxml));
+	EXCCHECKCVI( CA_VariantSetCString(  &pfile_name_var, pfile_xml));
+	EXCCHECKMSXMLLOAD( MSXML_IXMLDOMDocumentload (pxml, NULL, pfile_name_var, &is_xml_success));
+	EXCCHECKMSXML( MSXML_IXMLDOMDocumentselectNodes (pxml, NULL, "//testseq/test", &ptest_list));
+	if(ptest_list)
+	{
+		EXCCHECKMSXML( MSXML_IXMLDOMNodeListreset(ptest_list, NULL));
+		EXCCHECKMSXML( MSXML_IXMLDOMNodeListnextNode(ptest_list, NULL, &pnode));
+		
+		while(pnode)
+		{
+			buffer[0] = '\0';
+			step = 0;
+			
+			EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode, NULL, "@step", &pparameter));
+			if ( pparameter )
+			{
+				EXCCHECKMSXML( MSXML_IXMLDOMNodeGettext (pparameter, NULL, &ptext));
+				if(ptext)
+				{
+					step = strtol(ptext, NULL, 10);
+					CA_FreeMemory(ptext);
+					ptext=NULL;
+				}
+					
+				EXCCHECKCVI( CA_DiscardObjHandle(pparameter));
+				pparameter = 0;
+			}
+			
+			EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode, NULL, "name", &pparameter));
+			if ( pparameter )
+			{
+				EXCCHECKMSXML( MSXML_IXMLDOMNodeGettext (pparameter, NULL, &ptext));
+				if(ptext)
+				{
+					strcat(buffer, ptext);
+					CA_FreeMemory(ptext);
+					ptext=NULL;
+				}
+				
+				EXCCHECKCVI( CA_DiscardObjHandle(pparameter));
+				pparameter = 0;
+			}
+			
+			EXCCHECKMSXML( MSXML_IXMLDOMNodeselectSingleNode (pnode, NULL, "description", &pparameter));
+			if ( pparameter )
+			{
+				EXCCHECKMSXML( MSXML_IXMLDOMNodeGettext (pparameter, NULL, &ptext));
+				if(ptext)
+				{
+					strcat(buffer, " - ");
+					strcat(buffer, ptext);  
+
+					CA_FreeMemory(ptext);
+					ptext=NULL;
+				}
+				
+				EXCCHECKCVI( CA_DiscardObjHandle(pparameter));
+				pparameter = 0;
+			}
+			
+			if(step>0)
+			{
+				EXCCHECKCVI( InsertListItem (gs_panel[EXPERTISE], EXPERTISE_SOURCE, -1, buffer, step));	
+			}
+			
+			CA_DiscardObjHandle(pnode); 
+			pnode = 0;
+			EXCCHECKMSXML( MSXML_IXMLDOMNodeListnextNode(ptest_list, NULL, &pnode));
+		}
+	}
+
+Error:
+	CA_FreeMemory(ptext);
+	CA_VariantClear(&pfile_name_var);
+	if (pparameter) CA_DiscardObjHandle(pparameter);
+	if (pnode) CA_DiscardObjHandle(pnode);
+	if (ptest_list) CA_DiscardObjHandle(ptest_list);
+	if (pxml) CA_DiscardObjHandle(pxml);
+	EXCRETHROW( pexception);
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "EventFunctionCallback"
+static SElExceptionPtr ShowPanel(void) 
+{
+	int32_t			error = 0;
+	SElExceptionPtr pexception = NULL;
+	char			path[MAX_PATHNAME_LEN] = "";
+
+	EXCCHECKCVI( GetProjectDir(path));
+	strcat(path, PATH_TEST_FILE_FORM_XML);
+
+	EXCCHECK( LoadTestSequence(path)); 
+	EXCCHECKCVI( DisplayPanel(gs_panel[EXPERTISE]));
+
+Error:                       
+	EXCRETHROW( pexception);
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "EventFunctionCallback"
+static SElExceptionPtr EventFunctionCallback( const char* eventName, void* pData)
+{
+	int32_t			error = 0;
+	SElExceptionPtr pexception = NULL;
+	char			path[MAX_PATHNAME_LEN] = "", 
+					path_t[MAX_PATHNAME_LEN] = "";   
+
+	if(0==strcmp(eventName, "EVNT_GUI_EXPERTISE_SEQUENCE_NEW"))
+	{
+		EXCCHECKCVI( GetProjectDir(path));
+		strcat(path, PATH_TEST_FILE_FORM_XML);
+
+		EXCCHECKCVI( GetProjectDir(path_t)); 
+		strcat(path_t, PATH_TESTEXP_FILE_FORM_XML); 
+
+		EXCCHECKCVI( PostDeferredCall(PostDeferredHidePanel, NULL) ); 
+		EXCCHECK( SaveTestSequence(path, path_t));  
+		
+		if ( gs_EventFactory )
+   		{
+			EXCCHECK( gs_EventFactory->PulseEvent(gs_EventFactory, "EVNT_GUI_EXPERTISE_SEQUENCE_CREATED", NULL));
+		}
+	}
+	else if(0==strcmp(eventName, "EVNT_GUI_PRODUCT_SELECTED"))
+	{
+		EXCCHECKCVI( ClearListCtrl (gs_panel[EXPERTISE], EXPERTISE_TARGET));
+	}
+	
+Error:                       
+	EXCRETHROW( pexception);
+}
+
+/*---------------------------------------------------------------------------*/
+#undef __FUNC__
+#define __FUNC__ "RegisterEventFunction"
+static SElExceptionPtr RegisterEventFunction(void)
+{
+   int            error = 0;
+   SElExceptionPtr   pexception = NULL;
+   
+   if ( gs_EventFactory )
+   {
+		EXCCHECK( gs_EventFactory->RegisterEventFunction(gs_EventFactory,
+		                                   "EVNT_GUI_EXPERTISE_SEQUENCE_NEW",
+		                                   EventFunctionCallback));
+		EXCCHECK( gs_EventFactory->RegisterEventFunction(gs_EventFactory,
+										  "EVNT_GUI_PRODUCT_SELECTED",
+										  EventFunctionCallback));
+   }
+   
+Error:
+   EXCRETHROW(pexception);
+}   /* RegisterEventFunction */
+
+/*---------------------------------------------------------------------------*/
+#if defined(_CVI_DLL_) || \
+	defined(_WINDLL)
+void DiscardUIObjectsForDLL (void)
+{
+	/* Discard the panels loaded in InitUIForDLL */
+}
+
+int __stdcall DllMain(
+	HINSTANCE hinstDLL,
+	DWORD fdwReason,
+	LPVOID lpvReserved
+)
+{
+	switch (fdwReason)
+		{
+		case DLL_PROCESS_ATTACH:
+			if (InitCVIRTE (hinstDLL, 0, 0) == 0)		
+				return 0;	/* out of memory */
+			break;
+		case DLL_PROCESS_DETACH:
+			if (!CVIRTEHasBeenDetached())		/* Do not call CVI functions if cvirte.dll has already been detached. */
+			{
+				DiscardUIObjectsForDLL ();		/* Discard the panels loaded in InitUIForDLL */
+				CloseCVIRTE ();		
+			}
+#if !defined(_CVI_) && defined(_DEBUG) && defined(DUMP_MEMORY_LEAKS)
+			_CrtDumpMemoryLeaks();
+#endif
+			break;
+		}
+
+	return 1;
+}
+
+int __stdcall DllEntryPoint(
+	HINSTANCE hinstDLL,
+	DWORD fdwReason,
+	LPVOID lpvReserved
+)
+{
+	/* Included for compatibility with Borland */
+
+	 return DllMain (hinstDLL, fdwReason, lpvReserved);
+}
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Initialize"
+PLUGIN_API SElExceptionPtr PLUGIN_INIT_NAME_CODE( SPluginArgsPtr a_pPluginArgs )
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+	int32_t			main_panel = 0;
+	int				monitor_id, top, height;  
+	
+	EXCCHECK( a_pPluginArgs->GetArg( a_pPluginArgs,
+									 "MainPanel",
+									 sizeof(main_panel),
+									 &main_panel));
+
+	EXCCHECK( a_pPluginArgs->GetArg( a_pPluginArgs,
+									 "WindowHandle",
+									 sizeof(hWnd),
+									 &hWnd));
+	
+	EXCCHECK( a_pPluginArgs->GetArg( a_pPluginArgs,
+									 "Modules",
+									 sizeof(SObjListPtr),
+									 &gs_Modules));
+	/*Gettext*/
+	if(gs_Modules)
+	{
+		gs_pLanguage = (SLanguagePtr)gs_Modules->Get(gs_Modules, MODULE_LANGUAGE);  
+		if(gs_pLanguage)
+		{
+			char pathname[MAX_PATHNAME_LEN];
+			EXCCHECKCVI( GetProjectDir( pathname));
+			strcat(pathname, "\\lang");
+			LANGUAGE_PTR->bindtextdomain (LANGUAGE_PTR, PACKAGE, pathname);
+			LANGUAGE_PTR->textdomain (LANGUAGE_PTR, PACKAGE);
+		}
+	}
+	
+	EXCCHECK( LoadPanelExWithLanguage(main_panel,    "expertise.uir", EXPERTISE, EXPERTISElang, &gs_panel[EXPERTISE]));
+	EXCCHECKCVI( GetSystemAttribute( ATTR_PRIMARY_MONITOR, &monitor_id));
+    EXCCHECKCVI( GetMonitorAttribute (monitor_id, ATTR_TOP,    &top));
+    EXCCHECKCVI( GetMonitorAttribute( monitor_id, ATTR_HEIGHT, &height));
+	
+	EXCCHECKCVI( SetPanelAttribute (gs_panel[EXPERTISE], ATTR_TOP, top + height - 80 - 754));
+	EXCCHECKCVI( SetPanelAttribute (gs_panel[EXPERTISE], ATTR_LEFT, 11));
+
+	EXCCHECK( a_pPluginArgs->GetArg( a_pPluginArgs,
+									 "EventFactory",
+									 sizeof(SElEventFactoryPtr),
+									 &gs_EventFactory));
+	
+	
+	
+	EXCCHECK( RegisterEventFunction()); 
+
+Error:	
+	EXCRETHROW( pexception);
+}
+
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Run"
+PLUGIN_API SElExceptionPtr PLUGIN_RUN_NAME_CODE( SPluginArgsPtr a_pPluginArgs, const char* uuid)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+		
+	if( 0==strcmp( uuid, PLUGIN_EXPERTISE))
+	{
+		EXCCHECK( ShowPanel());
+	}
+
+Error:	
+	EXCRETHROW( pexception);
+}
+
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Leave"
+PLUGIN_API SElExceptionPtr PLUGIN_LEAVE_NAME_CODE( SPluginArgsPtr a_pPluginArgs, const char* uuid)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+	
+	EXCCHECKCVI( HidePanel(gs_panel[EXPERTISE]));
+
+Error:	
+	EXCRETHROW( pexception);
+
+}
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Shutdown"
+PLUGIN_API SElExceptionPtr PLUGIN_SHUTDOWN_NAME_CODE( SPluginArgsPtr a_pPluginArgs)
+{
+	SElExceptionPtr	pexception = NULL;
+	int32_t			error = 0;
+	
+	EXCCHECKCVI( DiscardPanel(gs_panel[EXPERTISE]));
+
+Error:	
+	EXCRETHROW( pexception);
+}
+
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Info"
+PLUGIN_API SElExceptionPtr PLUGIN_GETINFO_NAME_CODE( SPluginInfoPtr* a_pInfo)
+{
+	SElExceptionPtr	pexception = NULL;  
+	
+	if(a_pInfo) EXCCHECK( (*a_pInfo)->SetInfoData(*a_pInfo, &gs_InfoData));
+	
+Error:	
+	EXCRETHROW( pexception);
+}
+
+#undef __FUNC__
+#define __FUNC__ "{Expertise Plugin}::Attribute"
+PLUGIN_API SElExceptionPtr PLUGIN_GETATTR_NAME_CODE( uint32_t  attrID, uint32_t size, void* value)
+{
+	return NULL;
+}
+
+#endif 
+
+
+

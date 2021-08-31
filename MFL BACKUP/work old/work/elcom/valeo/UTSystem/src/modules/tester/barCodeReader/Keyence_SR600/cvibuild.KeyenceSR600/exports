@@ -1,0 +1,10 @@
+[_bcr_delete]
+callConv = 102
+name = bcr_delete
+paramSize = 4
+
+[_bcr_new]
+callConv = 102
+name = bcr_new
+paramSize = 4
+

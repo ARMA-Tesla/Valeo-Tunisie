@@ -1,0 +1,8 @@
+<Lasers>
+	<Laser name="Keyence">
+		<Configuration type="Serial" specificDll="modules/KeyenceLaser.dll">
+			<Port>24</Port>
+			<BaudRate>38400</BaudRate>
+		</Configuration>
+	</Laser>
+</Lasers>

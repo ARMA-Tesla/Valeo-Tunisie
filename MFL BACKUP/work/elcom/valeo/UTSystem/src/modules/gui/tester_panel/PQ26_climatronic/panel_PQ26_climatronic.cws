@@ -1,0 +1,368 @@
+[Workspace Header]
+Version = 1000
+Pathname Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Pathname Line0002 = "_PQ26_climatronic.cws"
+CVI Dir = "/c/program files/national instruments/cvi2010"
+CVI Shared Dir = "/C/Program Files/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2010"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "panel_PQ26_climatronic.prj"
+Drag Bar Left = 305
+Window Top = 186
+Window Left = 367
+Window Bottom = 612
+Window Right = 1093
+Maximized = True
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win For Warnings = True
+Show Build Dialog = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 11
+Window Confinement Region Enabled = True
+MainColumnWidth = 288
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+StatusColumnWidth = 70
+
+[Project Header 0001]
+Version = 1000
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+Force Rebuild = False
+
+[File 0001]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eldaq/class/eldaq.fp"
+File Type = "Function Panel"
+Disk Date = 3309324452
+In Projects = "1,"
+
+[File 0002]
+Path = "/C/Program Files/IVI Foundation/IVI/Drivers/ividcpwr/IviDCPwr.fp"
+File Type = "Function Panel"
+Disk Date = 3517288570
+In Projects = "1,"
+
+[File 0003]
+Path = "/C/Program Files/IVI Foundation/IVI/Drivers/iviswtch/iviSwtch.fp"
+File Type = "Function Panel"
+Disk Date = 3517288572
+In Projects = "1,"
+
+[File 0004]
+Path = "/c/program files/national instruments/cvi2010/toolslib/toolbox/msxmldom.fp"
+File Type = "Function Panel"
+Disk Date = 3372051600
+In Projects = "1,"
+
+[File 0005]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/resistor/class/Resistor.fp"
+File Type = "Function Panel"
+Disk Date = 3309324458
+In Projects = "1,"
+
+[File 0006]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/test/testseq.h"
+File Type = "Include"
+Disk Date = 3568787894
+In Projects = "1,"
+Window Top = 48
+Window Left = 18
+Window Z-Order = 9
+Source Window State = "1,76,76,76,18,34,34,0,0,80,0,0,0,0,0,20,43,51,59,74,284,715,1,0,"
+
+[File 0007]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/guid.h"
+File Type = "Include"
+Disk Date = 3464326968
+In Projects = "1,"
+Window Top = 30
+Window Z-Order = 8
+Source Window State = "1,36,36,36,8,29,29,1,0,80,0,0,0,0,0,25,20,0,34,32,349,715,1,0,"
+
+[File 0008]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Path Line0002 = "_PQ26_climatronic.c"
+File Type = "CSource"
+Disk Date = 3452002454
+In Projects = "1,"
+Window Top = 32
+Window Left = 10
+Window Z-Order = 1
+Source Window State = "1,949,960,949,51,60,51,0,0,124,0,73,0,0,0,23,938,0,941,83,349,715,1,24,"
+Breakpoint 0001 = "1215,0,enabled,"
+Breakpoint 0002 = "1230,0,enabled,"
+
+[File 0009]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/test/testseq.c"
+File Type = "CSource"
+Disk Date = 3568787894
+In Projects = "1,"
+Window Top = 140
+Window Left = 66
+Window Z-Order = 7
+Source Window State = "1,504,504,504,27,28,27,0,0,80,0,0,0,0,0,25,495,0,510,14,349,715,1,0,"
+
+[File 0010]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginargs.c"
+File Type = "CSource"
+Disk Date = 3309324450
+In Projects = ""
+Window Top = 48
+Window Left = 18
+Window Z-Order = 11
+Source Window State = "1,284,284,284,20,40,40,0,3,80,0,0,0,0,0,20,279,0,284,20,284,715,1,0,"
+
+[File 0011]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/objlist/objlist.c"
+File Type = "CSource"
+Disk Date = 3309324448
+In Projects = "1,"
+Window Top = 94
+Window Left = 42
+Window Z-Order = 10
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,20,184,0,204,46,284,715,1,0,"
+
+[File 0012]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Path Line0002 = "_PQ26_climatronic_plugin.h"
+File Type = "Include"
+Disk Date = 3450330036
+In Projects = "1,"
+Window Top = 122
+Window Left = 58
+Window Z-Order = 2
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,22,0,0,0,0,310,715,1,0,"
+
+[File 0013]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+File Type = "CSource"
+Disk Date = 3309324452
+In Projects = "1,"
+Window Top = 30
+Window Left = 6
+Window Z-Order = 6
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,38,0,12,19,349,715,1,0,"
+
+[File 0014]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/plugins/el_pluginserver.h"
+File Type = "Include"
+Disk Date = 3564559239
+In Projects = ""
+Window Top = 122
+Window Left = 58
+Window Z-Order = 4
+Source Window State = "1,164,164,164,41,52,52,0,0,80,0,0,0,0,0,15,149,0,157,32,219,715,1,0,"
+
+[File 0015]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/card/card.c"
+File Type = "CSource"
+Disk Date = 3309324524
+In Projects = ""
+Window Top = 92
+Window Left = 42
+Window Z-Order = 3
+Source Window State = "1,153,154,153,0,0,0,0,0,80,0,0,0,0,0,15,146,0,160,39,219,715,1,0,"
+
+[File 0016]
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/database/dbs_gui.c"
+File Type = "CSource"
+Disk Date = 3564756594
+In Projects = ""
+Window Top = 62
+Window Left = 26
+Window Z-Order = 5
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,15,784,0,791,27,219,715,1,0,"
+
+[File 0017]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/eldaq/class/eldaq.h"
+File Type = "Include"
+Disk Date = 3309324452
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0018]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/test/eltest.c"
+File Type = "CSource"
+Disk Date = 3557807192
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0019]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+File Type = "CSource"
+Disk Date = 3309324456
+In Projects = "1,"
+Window Top = 182
+Window Left = 90
+Source Window State = "1,6,6,6,6,10,10,0,0,0,0,0,0,0,0,0,0,0,7,52,349,715,1,0,"
+
+[File 0020]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/lang_"
+Path Line0002 = "translation.h"
+File Type = "Include"
+Disk Date = 3450335274
+In Projects = "1,"
+Window Top = 152
+Window Left = 66
+Source Window State = "1,7,7,7,22,25,25,1,0,0,0,0,0,0,0,0,0,0,7,26,397,715,1,0,"
+
+[File 0021]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.c"
+File Type = "CSource"
+Disk Date = 3464160586
+In Projects = "1,"
+Window Top = 62
+Window Left = 26
+Source Window State = "1,98,98,98,18,30,30,0,0,0,0,0,0,0,0,0,84,0,97,19,310,715,1,0,"
+
+[File 0022]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+File Type = "CSource"
+Disk Date = 3309324458
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0023]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/objlist/objlist.h"
+File Type = "Include"
+Disk Date = 3309324448
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0024]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Path Line0002 = "_PQ26_climatronic.h"
+File Type = "Include"
+Disk Date = 3450794832
+In Projects = "1,"
+Window Top = 32
+Window Left = 10
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,0,14,22,349,715,1,0,"
+
+[File 0025]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Path Line0002 = "_PQ26_climatronic.uir"
+File Type = "User Interface Resource"
+Disk Date = 3451448714
+In Projects = "1,"
+Window Top = 32
+Window Left = 349
+Window Height = 822
+Window Width = 715
+Window Released = True
+
+[File 0026]
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/PQ26_climatronic/panel"
+Path Line0002 = "_PQ26_common.h"
+File Type = "Include"
+Disk Date = 3450156532
+In Projects = "1,"
+Window Top = 242
+Window Left = 72
+Source Window State = "1,16,16,16,8,42,42,1,0,0,0,0,0,0,0,0,0,0,18,4,397,715,1,0,"
+
+[File 0027]
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/resistor/class/Resistor.h"
+File Type = "Include"
+Disk Date = 3309324458
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+External Process Path = "/c/FlexiTester.OK/application.exe"
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+External Process Path = ""
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+

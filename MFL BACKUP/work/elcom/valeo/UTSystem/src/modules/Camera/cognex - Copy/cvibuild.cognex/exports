@@ -1,0 +1,55 @@
+[_Cognex_act_job]
+callConv = 102
+name = Cognex_act_job
+paramSize = 8
+
+[_Cognex_disconnect]
+callConv = 102
+name = Cognex_disconnect
+paramSize = 4
+
+[_Cognex_Job]
+callConv = 102
+name = Cognex_Job
+paramSize = 8
+
+[_Cognex_login]
+callConv = 102
+name = Cognex_login
+paramSize = 4
+
+[_Cognex_Offline]
+callConv = 102
+name = Cognex_Offline
+paramSize = 4
+
+[_Cognex_Online]
+callConv = 102
+name = Cognex_Online
+paramSize = 4
+
+[_Cognex_Read]
+callConv = 102
+name = Cognex_Read
+paramSize = 8
+
+[_Cognex_set_live]
+callConv = 102
+name = Cognex_set_live
+paramSize = 8
+
+[_Cognex_set_param]
+callConv = 102
+name = Cognex_set_param
+paramSize = 8
+
+[_Cognex_Trigger]
+callConv = 102
+name = Cognex_Trigger
+paramSize = 4
+
+[_openTCPserver]
+callConv = 102
+name = openTCPserver
+paramSize = 4
+

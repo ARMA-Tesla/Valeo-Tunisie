@@ -1,0 +1,7 @@
+<power>
+	<calibration_file>file://calibration_X95.xml</calibration_file>
+	<channel logical="CHANNEL1" physical="CHANNEL1" psw1="CH1A" psw2="CH1B" pswc1="C1A" pswc2="C1B" scale1="Channel1H" scale2="Channel1L"/>
+	<channel logical="CHANNEL2" physical="CHANNEL1" psw1="CH2A" psw2="CH2B" pswc1="C2A" pswc2="C2B" scale1="Channel2H" scale2="Channel2L"/>
+	<channel logical="CHANNEL3" physical="CHANNEL1" psw1="CH3A" psw2="CH3B" pswc1="C3A" pswc2="C3B" scale1="Channel3H" scale2="Channel3L"/>
+	<channel logical="CHANNEL4" physical="CHANNEL1" psw1="CH4A" psw2="CH4B" pswc1="C4A" pswc2="C4B" scale1="Channel4H" scale2="Channel4L"/>
+</power>

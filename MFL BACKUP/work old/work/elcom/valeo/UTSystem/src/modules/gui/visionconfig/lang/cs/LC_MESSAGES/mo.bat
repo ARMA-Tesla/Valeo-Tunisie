@@ -1,0 +1,1 @@
+msgfmt.exe -o visionconfig.mo visionconfig.pot

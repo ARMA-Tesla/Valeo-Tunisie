@@ -1,0 +1,105 @@
+[CheckDirectory]
+Class="Function"
+Prototype="void CheckDirectory(const char *directory);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:209:1"
+
+[LogSerialNumber]
+Class="Function"
+Prototype="void LogSerialNumber(int retest, char *Message_Erreur, char *char1, char *Char2);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:223:1"
+
+[DisplayWait]
+Class="Function"
+Prototype="struct _SElException *DisplayWait();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:363:1"
+
+[LoadJobCamera]
+Class="Function"
+Prototype="struct _SElException *LoadJobCamera(char *job);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:403:1"
+
+[CheckAxisPosition0]
+Class="Function"
+Prototype="struct _SElException *CheckAxisPosition0(struct _axis *paxis, int station, int axis, double timeout);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:455:1"
+
+[sledge_new]
+Class="Function"
+Prototype="struct _SElException *sledge_new(struct _SSledge **pSledge);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:1561:1"
+
+[sledge_delete]
+Class="Function"
+Prototype="struct _SElException *sledge_delete(struct _SSledge **pSledge);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:1583:1"
+
+[Thread_Barcode]
+Class="Function"
+Prototype="unsigned long Thread_Barcode(void *param);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:1843:1"
+
+[JigPanelLabel]
+Class="Function"
+Prototype="struct _SElException *JigPanelLabel(struct _SSledge *me, int *pError);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:1913:1"
+
+[JigPanelLabel2]
+Class="Function"
+Prototype="struct _SElException *JigPanelLabel2(struct _SSledge *me, int *pError);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:2483:1"
+
+[JigPanelLabelCheck]
+Class="Function"
+Prototype="struct _SElException *JigPanelLabelCheck(struct _SSledge *me, int *pError);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:2896:1"
+
+[GetNewSerial]
+Class="Function"
+Prototype="struct _SElException *GetNewSerial(int *counter, int *pError);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:2961:1"
+
+[DiscardUIObjectsForDLL]
+Class="Function"
+Prototype="void DiscardUIObjectsForDLL();"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:3943:1"
+
+[DllMain]
+Class="Function"
+Prototype="int DllMain(struct HINSTANCE__ *hinstDLL, unsigned long fdwReason, void *lpvReserved);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:3948:1"
+
+[DllEntryPoint]
+Class="Function"
+Prototype="int DllEntryPoint(struct HINSTANCE__ *hinstDLL, unsigned long fdwReason, void *lpvReserved);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:3978:1"
+
+[pluginInitialize]
+Class="Function"
+Prototype="struct _SElException *pluginInitialize(struct _SPluginArgs *a_pPluginArgs) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:3991:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+
+[pluginRun]
+Class="Function"
+Prototype="struct _SElException *pluginRun(struct _SPluginArgs *a_pPluginArgs, const char *uuid) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:4067:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+
+[pluginLeave]
+Class="Function"
+Prototype="struct _SElException *pluginLeave(struct _SPluginArgs *a_pPluginArgs, const char *uuid) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:4150:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+
+[PLUGIN_SHUTDOWN_NAME_CODE]
+Class="Function"
+Prototype="struct _SElException *PLUGIN_SHUTDOWN_NAME_CODE(struct _SPluginArgs *a_pPluginArgs) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:4168:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+
+[pluginGetInfo]
+Class="Function"
+Prototype="struct _SElException *pluginGetInfo(struct _SPluginInfo **a_pInfo) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:4187:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+
+[pluginGetAttribute]
+Class="Function"
+Prototype="struct _SElException *pluginGetAttribute(unsigned int attrID, unsigned int size, void *value) __declspec(dllexport);"
+SourceLocation="c:\work\elcom\valeo\UTSystem\src\modules\automat\automat.c:4199:1 <Spelling=c:\work\elcom\valeo\UTSystem\src\shared\plugins/el_plugin.h:15:22>"
+

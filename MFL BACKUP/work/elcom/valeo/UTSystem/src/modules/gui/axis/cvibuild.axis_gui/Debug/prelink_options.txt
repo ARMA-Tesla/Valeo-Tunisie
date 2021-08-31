@@ -1,0 +1,8 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\axis_gui_plugin.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\axis_gui.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\axis_gui.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\gui\axis\cvibuild.axis_gui\Debug\Exception.obj.cvidefprots
+-dllName axis_gui.dll
+-addNITypeInfo 

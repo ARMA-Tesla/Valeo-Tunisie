@@ -1,0 +1,324 @@
+[Project Header]
+Version = 801
+Pathname = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/panel_445L.prj"
+Project Label = "maintenance_panel_445L"
+CVI Dir = "/c/program files/national instruments/cvi80"
+IVI Standard Root Dir = "/C/Program Files/IVI"
+VXIplug&play Framework Dir = "/C/VXIPNP/winnt"
+Number of Files = 19
+Target Type = "Executable"
+Flags = 16
+
+[File 0001]
+File Type = "CSource"
+Res Id = 1
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/string/elstring.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/string/elstring.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "string"
+
+[File 0002]
+File Type = "CSource"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/timer/eltimer.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/timer/eltimer.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "timer"
+
+[File 0003]
+File Type = "Include"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/timer/eltimer.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/timer/eltimer.h"
+Exclude = False
+Project Flags = 0
+Folder = "timer"
+
+[File 0004]
+File Type = "CSource"
+Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/exception/Exception.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "exception"
+
+[File 0005]
+File Type = "Include"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/exception/Exception.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/exception/Exception.h"
+Exclude = False
+Project Flags = 0
+Folder = "exception"
+
+[File 0006]
+File Type = "CSource"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../language/lang_support.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/language/lang_support.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "language"
+
+[File 0007]
+File Type = "Include"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../language/lang_support.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/language/lang_support.h"
+Exclude = False
+Project Flags = 0
+Folder = "language"
+
+[File 0008]
+File Type = "Include"
+Res Id = 8
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "lang_translation.h"
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/lang_translation."
+Path Line0002 = "h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0009]
+File Type = "CSource"
+Res Id = 9
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/language/language.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "language"
+
+[File 0010]
+File Type = "Include"
+Res Id = 10
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/language/language.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/language/language.h"
+Exclude = False
+Project Flags = 0
+Folder = "language"
+
+[File 0011]
+File Type = "CSource"
+Res Id = 11
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../../shared/multithread/multithread.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/shared/multithread/multithread.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "thread"
+
+[File 0012]
+File Type = "CSource"
+Res Id = 12
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_445L.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/panel_445L.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0013]
+File Type = "Include"
+Res Id = 13
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_445L.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/panel_445L.h"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0014]
+File Type = "User Interface Resource"
+Res Id = 14
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_445L.uir"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/panel_445L.uir"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
+
+[File 0015]
+File Type = "Include"
+Res Id = 15
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "panel_445L_plugin.h"
+Path Line0001 = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/panel_445L_plugin"
+Path Line0002 = ".h"
+Exclude = False
+Project Flags = 0
+Folder = "Source Files"
+
+[File 0016]
+File Type = "CSource"
+Res Id = 16
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../sercomm/sercomm.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/sercomm/sercomm.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "sercomm"
+
+[File 0017]
+File Type = "Include"
+Res Id = 17
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../sercomm/sercomm.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/sercomm/sercomm.h"
+Exclude = False
+Project Flags = 0
+Folder = "sercomm"
+
+[File 0018]
+File Type = "CSource"
+Res Id = 18
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../vline/vline.c"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/vline/vline.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "Vline"
+
+[File 0019]
+File Type = "Include"
+Res Id = 19
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../../../vline/vline.h"
+Path = "/c/work/elcom/valeo/UTSystem/src/modules/vline/vline.h"
+Exclude = False
+Project Flags = 0
+Folder = "Vline"
+
+[Folders]
+Include Files Folder Not Added Yet = True
+User Interface Files Folder Not Added Yet = True
+Instrument Files Folder Not Added Yet = True
+Folder 0 = "User Interface Files"
+Folder 1 = "timer"
+Folder 2 = "string"
+Folder 3 = "language"
+Folder 4 = "exception"
+Folder 5 = "Vline"
+Folder 6 = "sercomm"
+Folder 7 = "Source Files"
+Folder 8 = "thread"
+
+[Compiler Options]
+Default Calling Convention = "cdecl"
+Require Prototypes = True
+Require Return Values = True
+Enable Pointer Mismatch Warning = False
+Enable Unreachable Code Warning = False
+Enable Unreferenced Identifiers Warning = False
+Enable Assignment In Conditional Warning = False
+O Option Compatible With 5.0 = False
+Uninitialized Locals Compile Warning = "Conservative"
+
+[Run Options]
+Stack Size = 250000
+Image Base Address = 4194304
+
+[Compiler Defines]
+Compiler Defines = "/DWIN32_LEAN_AND_MEAN /DPACKAGE=\\\"445l\\\""
+
+[Include Paths]
+Include Path 1 Is Rel = False
+Include Path 1 = "/c/work/elcom/valeo/UTSystem/include"
+Include Path 2 Is Rel = False
+Include Path 2 = "/c/work/elcom/valeo/UTSystem/src/modules"
+Include Path 3 Is Rel = False
+Include Path 3 = "/c/work/elcom/valeo/UTSystem/src/shared"
+
+[Create Executable]
+Executable File_Debug Is Rel = False
+Executable File_Debug = "/c/work/ELCOM/valeo/UTSystem/src/app/maintenance/panel_445l.exe"
+Executable File_Release Is Rel = False
+Executable File_Release = "/c/work/ELCOM/valeo/UTSystem/src/app/maintenance/panel_445l.exe"
+Icon File Is Rel = False
+Icon File = ""
+Application Title = ""
+DLL Exports = "Include File Symbols"
+Export File1 = "panel_445L_plugin.h"
+DLL Import Library Choice = "Gen Lib For Current Mode"
+Use IVI Subdirectories for Import Libraries = False
+Use VXIPNP Subdirectories for Import Libraries = False
+Use Dflt Import Lib Base Name = True
+Where to Copy DLL = "Do not copy"
+Add Type Lib To DLL = False
+Include Type Lib Help Links = False
+Type Lib FP File Is Rel = False
+Type Lib FP File = ""
+Type Lib Guid = ""
+Runtime Support = "Full Runtime Support"
+Instrument Driver Support Only = False
+Embed Project .UIRs = False
+Generate Map File = False
+
+[External Compiler Support]
+UIR Callbacks File Option = 2
+Using LoadExternalModule = False
+Create Project Symbols File = True
+UIR Callbacks Obj File Is Rel = True
+UIR Callbacks Obj File Rel To = "Project"
+UIR Callbacks Obj File Rel Path = "ecs.c"
+UIR Callbacks Obj File = "/c/work/elcom/valeo/UTSystem/src/modules/gui/tester_panel/445l/ecs.c"
+Project Symbols H File Is Rel = False
+Project Symbols H File = ""
+Project Symbols Obj File Is Rel = False
+Project Symbols Obj File = ""
+
+[ActiveX Server Options]
+Specification File Is Rel = False
+Specification File = ""
+Source File Is Rel = False
+Source File = ""
+Include File Is Rel = False
+Include File = ""
+IDL File Is Rel = False
+IDL File = ""
+Register ActiveX Server = False
+
+[tpcSection]
+tpcEnabled = 0
+tpcOverrideEnvironment = 0
+

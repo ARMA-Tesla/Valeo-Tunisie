@@ -1,0 +1,10 @@
+LIBRARY automat
+
+EXPORTS
+gs_InfoData
+pluginGetAttribute
+pluginGetInfo
+pluginLeave
+pluginRun
+pluginInitialize
+data_Analog

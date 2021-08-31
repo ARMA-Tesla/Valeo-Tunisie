@@ -1,0 +1,9 @@
+-inrc c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\resources.in.rc
+-outrc c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\resources.out.rc
+-inhdef c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\module.h.hdefs
+-outdef c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\labels.dll.defs
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\Exception.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\tester_labels.obj.cvidefprots
+-indefprot c:\work\elcom\valeo\UTSystem\src\modules\labels - NXP L2  V1\cvibuild.labels\Debug\tester_labels_module.obj.cvidefprots
+-dllName labels.dll
+-addNITypeInfo 

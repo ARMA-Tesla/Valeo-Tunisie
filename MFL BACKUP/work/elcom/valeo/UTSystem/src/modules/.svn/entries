@@ -1,0 +1,109 @@
+8
+
+dir
+2256
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem/src/modules
+svn+ssh://svn@dvi.elcom.cz/valeo/UTSystem
+
+
+
+2008-11-12T13:06:19.431140Z
+2255
+turcar
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f28f5bb5-14c0-4e01-8f02-bd043d1da346
+
+test
+dir
+
+counter
+dir
+
+log
+dir
+
+printer
+dir
+
+language
+dir
+
+gui
+dir
+
+ibutton
+dir
+
+Calibration
+dir
+
+sap_module
+dir
+
+box
+dir
+
+camera
+dir
+
+sensors
+dir
+
+line_production
+dir
+
+users
+dir
+
+can
+dir
+
+labels
+dir
+
+IviBridge
+dir
+
+sercomm
+dir
+
+tester
+dir
+
+line_tools
+dir
+
+dbs
+dir
+
+BatteryCheck
+dir
+
+jig
+dir
+
+automat
+dir
+
+line_ctrl
+dir
+
+vline
+dir
+
+line_io
+dir
+
